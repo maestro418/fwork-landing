@@ -2,7 +2,7 @@ import React, { Suspense } from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
 import Provider from './context';
-import Blog from './pages/blog';
+import Blogs from './pages/blog';
 import DevService from './pages/dev-service';
 import HireDev from './pages/hire-dev';
 import Loading from './pages/loading';
@@ -31,7 +31,9 @@ const routers = Object.entries({
   'workProcess': < Suspense fallback={< Loading />}> <WorkProcess /></Suspense >,
   'privacy': < Suspense fallback={< Loading />}> <Privacy /></Suspense >,
   'terms': < Suspense fallback={< Loading />}> <Terms /></Suspense >,
+  ...Blogs
 })
+
 
 function App() {
   return (
@@ -44,6 +46,7 @@ function App() {
           <Route path='service/:slug?' element={<DevService />} />
           <Route path='developer/:slug?' element={<DevProfile />} />
           <Route path='itv-tip/:slug?' element={< InterviewTip />} />
+          <Route path='case-study/:slug?' element={< CaseStudy />} />
           {routers.map((i, k) =>
             <Route key={k} path={i[0]} element={i[1]} />
           )}

@@ -1,5 +1,5 @@
 import React, { Suspense } from "react";
-import { Route, Routes, useParams } from "react-router-dom";
+import { useParams } from "react-router-dom";
 
 import HireCategory from "./hire-category";
 import HireDetail from "./hire-detail";
