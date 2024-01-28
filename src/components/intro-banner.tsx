@@ -14,8 +14,8 @@ const IntroBanner = ({ title, subTitle, desc, btnContent }: IntroBannerProps) =>
     return (
         <StyledBanner>
             <div className="container">
-                <div className="row">
-                    <div className="col-md-8 main-content">
+                <div className="row main-content">
+                    <div className="col-md-7">
                         <div className="h1 bold-550">
                             {title}
                         </div>
@@ -27,8 +27,10 @@ const IntroBanner = ({ title, subTitle, desc, btnContent }: IntroBannerProps) =>
                         </div>
 
                     </div>
+                    <img src="banner.png" className="col-md-5" width={700} alt="" />
 
                 </div>
+
                 <StyledButton className="d center gap middle mt-2">
                     <div>Hire Developer</div>
                     <img src="hire.svg" alt="" width={25} />
@@ -41,9 +43,11 @@ const IntroBanner = ({ title, subTitle, desc, btnContent }: IntroBannerProps) =>
 const StyledBanner = styled.div`
     width: 100%;
     padding: 6em 0em;
-    background-image: linear-gradient(106deg, rgba(0, 41, 107, 0.94) 17.28%, rgba(0, 41, 107, 0.52) 94%);
-    .row {
-        .main-content {
+    background-image: url("header.png");
+    background-repeat: no-repeat;
+    .main-content {
+        position: relative;
+        &>:first-child {
             display: flex;
             flex-direction: column;
             gap: 2em;
@@ -56,7 +60,12 @@ const StyledBanner = styled.div`
             .h4 {
                 font-size: 1em;
                 line-height: 2;
-            }
+            }                                               
+        }
+        img {
+            position: absolute;
+            bottom: 0;
+            right: 0;
         }
     }
     
