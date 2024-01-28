@@ -100,6 +100,7 @@ const Home = () => {
 
                 </div>
                 <div className="container">
+                    <label className="h1">Developer Hiring Process</label>
                     <div className="process-content">
                         {process.map((i) => (
                             <HireProcess key={i.id} id={i.id} title={i.title} desc={i.desc} />
@@ -113,13 +114,12 @@ const Home = () => {
 
 const StyledHome = styled.div`
     
-    color: white;
-
     .process-content {
         display: flex;
+        justify-content: center;
         color: var(--text);
-        box-shadow: 0 0 10px 0 var(--shadow);
-        margin: 2em 0;
+        box-shadow: 0 0 20px 0 var(--shadow);
+        margin-bottom: 2em;
     }   
     
 

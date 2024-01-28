@@ -13,12 +13,12 @@ const HireProcess = (props: processType) => {
 
 
     return (
-        <StyledHireProcess style={id === 1 ? { backgroundColor: 'rgba(0, 98, 255, 0.94)', color: "white" } : { backgroundColor: '', color: "" }}>
+        <StyledHireProcess style={id === 1 ? { backgroundColor: 'rgb(47, 78, 131)', color: "white" } : { backgroundColor: '', color: "" }}>
             <div>
-                <img src={`${id}.svg`} alt="" />
+                <img style={{background: id === 1? "linear-gradient(to bottom,transparent, rgb(62, 97, 156)" : "linear-gradient(to bottom,transparent, rgb(227, 241, 252))"}} src={`${id}.svg`} alt="" />
             </div>
             <div className="d middle">
-                <span className="pr">{id}</span>
+                <span >{id}</span>
                 <div>{title}</div>
             </div>
             <div>{desc}</div>
@@ -27,13 +27,24 @@ const HireProcess = (props: processType) => {
 }
 
 const StyledHireProcess = styled.div`
-    padding: 1em;
+    padding: 2em 1em;
     border: 1px solid var(--shadow);
     box-shadow: 0 12px 25px 0 rgba(189, 189, 189, 0);   
+    width: 25%;
+    &>:first-child {
+        img {
+            border-radius: 50%;
+            padding: 0.3em;
+            background: linear-gradient(to bottom,transparent, rgb(235, 245, 253));
+        }
+
+    }
+
     &>:nth-child(2) {
         span {
             font-size: 3em;
             font-weight: bold;
+            padding-right: 0.3em;
         }
 
         div {
