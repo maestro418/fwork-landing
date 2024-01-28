@@ -115,7 +115,6 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
             },
         ]
     }
-
     return (
         <StyledLayout className="d column">
             <Header logo={headerProps.logo} menuItems={headerProps.menuItems} />
