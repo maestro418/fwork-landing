@@ -11,8 +11,6 @@ const InterviewTip = () => {
             </Routes>
         </>
     )
-
-
 }
 
 export default InterviewTip

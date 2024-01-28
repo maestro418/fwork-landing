@@ -15,12 +15,7 @@ const DevService = () => {
     return (
         <Suspense fallback={<Loading />}><ServiceCategory /></Suspense>
     )
-
 }
 
-const DevServices = {
-    'service': <DevService />,
-    'service/:slug?': <DevService />
-}
 
 export default DevService
