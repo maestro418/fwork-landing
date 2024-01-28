@@ -112,8 +112,7 @@ const Home = () => {
 }
 
 const StyledHome = styled.div`
-    background-image: linear-gradient(106deg, rgba(0, 41, 107, 0.94) 17.28%, rgba(0, 41, 107, 0.52) 94%);
-    padding: 4em 0em;
+    
     color: white;
    
 `

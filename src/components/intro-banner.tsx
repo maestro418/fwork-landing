@@ -40,7 +40,8 @@ const IntroBanner = ({ title, subTitle, desc, btnContent }: IntroBannerProps) =>
 
 const StyledBanner = styled.div`
     width: 100%;
-    padding: 3em 0em;
+    padding: 6em 0em;
+    background-image: linear-gradient(106deg, rgba(0, 41, 107, 0.94) 17.28%, rgba(0, 41, 107, 0.52) 94%);
     .row {
         .main-content {
             display: flex;
