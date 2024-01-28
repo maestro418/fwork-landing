@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 import styled from "styled-components";
-import Button from "../button";
+import {StyledButton} from "../button";
 
 interface footerProps {
     logo: string
@@ -147,7 +147,7 @@ const Footer = ({ logo }: footerProps) => {
                         Tell Us About Your Challenge & Get a Free Strategy Session
                     </div>
                     <div className="">
-                        <Button content="Hire Expert Developers" bgColor="#152026" />
+                        {/* <Button content="Hire Expert Developers" bgColor="#152026" /> */}
                     </div>
                 </div>
                 <div className="d between">

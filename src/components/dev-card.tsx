@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import Button from "./button";
+// import Button from "./button";
 import { Link } from "react-router-dom";
 
 interface DevCardProps {
@@ -31,7 +31,7 @@ const DevCard = ({ avatar, name, uid, location, skill }: DevCardProps) => {
                 </div>
             </div>
             <Link to={`developer/${uid}`}>
-                <Button content="View Profile" />
+                {/* <Button content="View Profile" /> */}
             </Link>
         </StyledDevCard>
     )

@@ -18,19 +18,6 @@ import Poynt from '../assets/img/companies/poynt.png';
 import Nec from '../assets/img/companies/NEC-logo.png';
 import Startups from '../assets/img/companies/startups.jpg'
 import DevCard from "../components/dev-card";
-import Tab from "../components/tab";
-
-const bannerContents = {
-    title: 'Hire Developers',
-    subTitle: 'Expert Developers from Europe and North America',
-    desc: 'DevTeam.Space is a vetted community of expert development teams supported by an AI-powered Agile process. Top companies and startups rely on us to help them to build great products. We can help you too, by enabling you to hire and effortlessly manage expert developers.',
-    btnContent: 'Hire Expert Developers'
-}
-
-const trustedContents = {
-    title: 'Trusted by Over 300 Companies Since 2016 Including',
-    items: [Disney, Airbus, Poynt, Nec, Startups]
-}
 
 const devContents = [
     {
@@ -67,26 +54,16 @@ const devContents = [
         uid: 'alex',
         location: 'Euroupe',
         skill: ['AWS', 'Javascript', 'Node.Js']
-    }
-]
-
-
+    }]
 
 const Home = () => {
     return (
         <Layout>
             <StyledHome>
-                <div>
-                    <IntroBanner title={bannerContents.title} subTitle={bannerContents.subTitle} desc={bannerContents.desc} btnContent={bannerContents.btnContent} />
-                </div>
-                <div className="container">
-                    <TrustedCompany title={trustedContents.title} items={trustedContents.items} />
-                </div>
-                <div className="d container between pb-3">
-                    { }
-                    {/* {devContents.map((i, k) => (
+                <div className="d center gap">
+                    {devContents.map((i, k) => (
                         <DevCard key={k} avatar={i.avatar} name={i.name} uid={i.uid} location={i.location} skill={i.skill} />
-                    ))} */}
+                    ))}
                 </div>
             </StyledHome>
         </Layout>
