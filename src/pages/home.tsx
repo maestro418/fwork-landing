@@ -114,7 +114,16 @@ const Home = () => {
 const StyledHome = styled.div`
     
     color: white;
-   
+
+    .process-content {
+        display: flex;
+        color: var(--text);
+        box-shadow: 0 0 10px 0 var(--shadow);
+        margin: 2em 0;
+    }   
+    
+
 `
+
 
 export default Home
