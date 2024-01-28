@@ -1,22 +1,20 @@
-import React from "react";
+import React, { Suspense } from "react";
 import { useParams } from "react-router-dom";
 
-const DevProfile = () => {
+import DevSummary from "./dev-summary";
+import DevDetail from "./dev-detail";
+import Loading from "../loading";
+
+const DevMain = () => {
     const { slug } = useParams<{ slug?: string }>();
     if (!!slug) {
         return (
-            <>
-                thisis {slug} dev page
-            </>
+            <Suspense fallback={<Loading />}><DevDetail id={slug} /></Suspense>
         )
     }
     return (
-        <>
-            <div>
-                Not Found
-            </div>
-        </>
+        <Suspense fallback={<Loading />}><DevSummary /></Suspense>
     )
 }
 
-export default DevProfile
+export default DevMain
