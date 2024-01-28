@@ -167,11 +167,11 @@ const Footer = ({ logo }: footerProps) => {
 
 const StyledFooter = styled.div`
     width: 100%;
-    color: var(--rb-back-tertiary);
-    background-color: var(--rb-back);
+    color: var(--back-tertiary);
+    background-color: var(--back);
     padding: 2em 0em;
     a {
-        color: var(--rb-back-tertiary);
+        color: var(--back-tertiary);
     }
 `
 

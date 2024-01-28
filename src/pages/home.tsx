@@ -18,6 +18,7 @@ import Poynt from '../assets/img/companies/poynt.png';
 import Nec from '../assets/img/companies/NEC-logo.png';
 import Startups from '../assets/img/companies/startups.jpg'
 import DevCard from "../components/dev-card";
+import HireProcess from "../components/hire-process";
 
 const devContents = [
     {
@@ -55,6 +56,30 @@ const devContents = [
         location: 'Euroupe',
         skill: ['AWS', 'Javascript', 'Node.Js']
     }]
+
+const process = [
+    {
+        id: 1,
+        title: "Tell Us About Your Project or Hiring Needs",
+        desc: "Submit a request. Your dedicated tech account manager will then contact you to assess your needs in detail and answer any questions."
+    },
+    {
+        id: 2,
+        title: "Hire Top Developers with Relevant Expertise",
+        desc: "Top developers with relevant expertise will be assigned to your project. Once approved by you, we will set up the process and get started."
+    },
+    {
+        id: 3,
+        title: "Experience World-class Development Process",
+        desc: "Get supportable and maintainable code, easily communicate, track developers’ performance and payments, and receive regular updates."
+    },
+    {
+        id: 4,
+        title: "Start Small - Scale with Ease",
+        desc: "Once satisfied with our exceptional quality and dedication, you can easily hire more expert engineers to scale your team."
+    }
+]
+
 const bannerContents = {
     title: 'Hire Developers',
     subTitle: 'Expert Developers from Europe and North America',
@@ -73,6 +98,13 @@ const Home = () => {
                         <DevCard key={k} avatar={i.avatar} name={i.name} uid={i.uid} location={i.location} skill={i.skill} />
                     ))} */}
 
+                </div>
+                <div className="container">
+                    <div className="process-content">
+                        {process.map((i) => (
+                            <HireProcess key={i.id} id={i.id} title={i.title} desc={i.desc} />
+                        ))}
+                    </div>
                 </div>
             </StyledHome>
         </Layout>
