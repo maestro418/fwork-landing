@@ -11,9 +11,7 @@ import Danili from '../assets/img/developers/3-Daniil-B-219x222.webp';
 import Evgeny from '../assets/img/developers/7-Evgeny-219x222.webp';
 import Dan from '../assets/img/developers/4-Daniil-K-219x222.webp';
 import Alex from '../assets/img/developers/8-Alexander-219x222.webp'
-import Valeria from '../assets/img/developers/Valeria-Node.webp';
 
-import SamSung from '../assets/img/companies/samsung-logo.png';
 import Disney from '../assets/img/companies/disney.jpg';
 import Airbus from '../assets/img/companies/airbus.png';
 import Poynt from '../assets/img/companies/poynt.png';
@@ -56,13 +54,6 @@ const devContents = [
         uid: 'alex',
         location: 'Euroupe',
         skill: ['AWS', 'Javascript', 'Node.Js']
-    },
-    {
-        avatar: Valeria,
-        name: 'Valeria',
-        uid: 'valeria',
-        location: 'Euroupe',
-        skill: ['Javascript', 'Node.Js', 'React.JS']
     }]
 
 const Home = () => {
@@ -80,7 +71,6 @@ const Home = () => {
 }
 
 const StyledHome = styled.div`
-    
     
    
 `

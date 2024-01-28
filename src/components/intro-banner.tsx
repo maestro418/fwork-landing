@@ -6,7 +6,7 @@ import { StyledButton } from "./button";
 interface IntroBannerProps {
     title: string,
     subTitle: string,
-    desc: string,
+    desc?: string,
     btnContent: string
 }
 

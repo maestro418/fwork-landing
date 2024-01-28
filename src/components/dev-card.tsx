@@ -15,7 +15,7 @@ const DevCard = ({ avatar, name, uid, location, skill }: DevCardProps) => {
     return (
         <StyledDevCard>
             <div className="">
-                <img src={avatar} width={100} />
+                <img src={avatar} width='100%' />
             </div>
             <div className="d column">
                 <div className="d between">
@@ -33,7 +33,6 @@ const DevCard = ({ avatar, name, uid, location, skill }: DevCardProps) => {
             <Link to={`developer/${uid}`}>
                 {/* <Button content="View Profile" /> */}
             </Link>
-
         </StyledDevCard>
     )
 }
@@ -41,6 +40,7 @@ const DevCard = ({ avatar, name, uid, location, skill }: DevCardProps) => {
 const StyledDevCard = styled.div`
     display: flex;
     flex-direction: column;
+    align-items: center;
     gap: 1em;
 `
 

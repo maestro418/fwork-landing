@@ -1,7 +1,7 @@
 import React from "react";
 import styled from 'styled-components'
 
-import {StyledButton} from "../button";
+import { StyledButton } from "../button";
 import { Link } from "react-router-dom";
 import IntroBanner from "../intro-banner";
 
@@ -19,7 +19,7 @@ const bannerContents = {
 
 const Header = ({ logo, menuItems }: HeaderProps) => {
     return (
-        <StyledHeader style={{backgroundImage: "http://www.w3.org/2000/svg"}}>
+        <StyledHeader style={{ backgroundImage: "http://www.w3.org/2000/svg" }}>
             <div className="d middle between container">
                 <Link to='/' >
                     <img src={logo} alt="No image" width={100} />
