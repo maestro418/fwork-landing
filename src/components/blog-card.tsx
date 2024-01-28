@@ -32,13 +32,13 @@ const blogCard = (props: blogCardPropsType) => {
 
 const StyledBlogCard = styled.div`
     max-width: 457px;
-    box-shadow: 0 0 10px 0 var(--rb-shadow);
+    box-shadow: 0 0 10px 0 var(--shadow);
     border-radius: 0.75em;
     margin: 1em 0;
     opacity: .9;
     .card-header {
         position: relative;
-        color: var(--rb-text-tertiary);
+        color: var(--text-tertiary);
         
         img {
             border-radius: 0.75em;
@@ -73,11 +73,11 @@ const StyledBlogCard = styled.div`
         .desc {
             font-size: .9em;
             padding-bottom: 0.5em;
-            color: var(--rb-text);
+            color: var(--text);
         }
 
         .link {
-            color: var(--rb-tertiary);
+            color: var(--tertiary);
         }
     }
 

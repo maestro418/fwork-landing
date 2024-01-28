@@ -30,8 +30,8 @@ const StyledTab = styled.div`
     flex-direction: column;
     gap: 2em;
     .selected {
-        color: var(--rb-secondary-border);
-        border-bottom: 1px solid var(--rb-secondary-border);
+        color: var(--secondary-border);
+        border-bottom: 1px solid var(--secondary-border);
     }
 `
 

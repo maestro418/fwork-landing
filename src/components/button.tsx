@@ -10,10 +10,9 @@ const buttonStyle = css`
     background-size: 200% auto;
     color: white;
     border-radius: 10px;
-    border: 0px;
     font-weight: 700;
-    box-shadow: 0px 0px 14px -7px #6b19f0;
-    background-image: linear-gradient(45deg, rgba(0, 41, 107, 0.94) 0%, rgba(2, 96, 247, 0.52) 51%,rgba(0, 41, 107, 0.94) 100%);
+    border: 0;
+    background-image: linear-gradient(45deg, rgba(0, 98, 255, 0.94) 0%, rgba(2, 96, 247, 0.52) 51%,rgba(0, 41, 107, 0.94) 100%);
     cursor: pointer;
     user-select: none;
     -webkit-user-select: none;
@@ -21,7 +20,6 @@ const buttonStyle = css`
 
     &:hover {
         background-position: right center;
-        /* change the direction of the change here */
         color: #fff;
         text-decoration: none;
     }
@@ -29,6 +27,7 @@ const buttonStyle = css`
     &:active {
         transform: scale(0.95);
     }
+
 `
 export const StyledButton = styled.button`
   ${buttonStyle}
