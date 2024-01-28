@@ -61,9 +61,10 @@ const Home = () => {
         <Layout>
             <StyledHome>
                 <div className="d center gap">
-                    {devContents.map((i, k) => (
+                    {/* {devContents.map((i, k) => (
                         <DevCard key={k} avatar={i.avatar} name={i.name} uid={i.uid} location={i.location} skill={i.skill} />
-                    ))}
+                    ))} */}
+
                 </div>
             </StyledHome>
         </Layout>
