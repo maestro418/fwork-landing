@@ -7,7 +7,7 @@ import BackImg from '../assets/img/bg.png'
 interface IntroBannerProps {
     title: string,
     subTitle: string,
-    desc: string,
+    desc?: string,
     btnContent: string
 }
 

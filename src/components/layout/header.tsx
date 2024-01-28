@@ -31,7 +31,7 @@ const StyledHeader = styled.div`
     width: 100%;
     background-color: var(--rb-back);
     color: var(--rb-text-tertiary);
-    padding: 2em 0em;
+    padding: 1em 0em;
     a {
         color: var(--rb-text-tertiary);
     }

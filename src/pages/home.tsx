@@ -11,16 +11,14 @@ import Danili from '../assets/img/developers/3-Daniil-B-219x222.webp';
 import Evgeny from '../assets/img/developers/7-Evgeny-219x222.webp';
 import Dan from '../assets/img/developers/4-Daniil-K-219x222.webp';
 import Alex from '../assets/img/developers/8-Alexander-219x222.webp'
-import Valeria from '../assets/img/developers/Valeria-Node.webp';
 
-import SamSung from '../assets/img/companies/samsung-logo.png';
 import Disney from '../assets/img/companies/disney.jpg';
 import Airbus from '../assets/img/companies/airbus.png';
 import Poynt from '../assets/img/companies/poynt.png';
 import Nec from '../assets/img/companies/NEC-logo.png';
 import Startups from '../assets/img/companies/startups.jpg'
 import DevCard from "../components/dev-card";
-
+import Tab from "../components/tab";
 
 const bannerContents = {
     title: 'Hire Developers',
@@ -31,7 +29,7 @@ const bannerContents = {
 
 const trustedContents = {
     title: 'Trusted by Over 300 Companies Since 2016 Including',
-    items: [SamSung, Disney, Airbus, Poynt, Nec, Startups]
+    items: [Disney, Airbus, Poynt, Nec, Startups]
 }
 
 const devContents = [
@@ -69,14 +67,11 @@ const devContents = [
         uid: 'alex',
         location: 'Euroupe',
         skill: ['AWS', 'Javascript', 'Node.Js']
-    },
-    {
-        avatar: Valeria,
-        name: 'Valeria',
-        uid: 'valeria',
-        location: 'Euroupe',
-        skill: ['Javascript', 'Node.Js', 'React.JS']
-    }]
+    }
+]
+
+
+
 const Home = () => {
     return (
         <Layout>
@@ -87,10 +82,11 @@ const Home = () => {
                 <div className="container">
                     <TrustedCompany title={trustedContents.title} items={trustedContents.items} />
                 </div>
-                <div className="d center gap">
-                    {devContents.map((i, k) => (
+                <div className="d container between pb-3">
+                    { }
+                    {/* {devContents.map((i, k) => (
                         <DevCard key={k} avatar={i.avatar} name={i.name} uid={i.uid} location={i.location} skill={i.skill} />
-                    ))}
+                    ))} */}
                 </div>
             </StyledHome>
         </Layout>
@@ -98,7 +94,6 @@ const Home = () => {
 }
 
 const StyledHome = styled.div`
-    
     
    
 `

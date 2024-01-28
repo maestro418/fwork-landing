@@ -33,8 +33,6 @@ const routers = Object.entries({
   'terms': < Suspense fallback={< Loading />}> <Terms /></Suspense >,
   ...Blogs
 })
-
-
 function App() {
   return (
     //<Provider>
