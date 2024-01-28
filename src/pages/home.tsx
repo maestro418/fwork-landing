@@ -55,11 +55,19 @@ const devContents = [
         location: 'Euroupe',
         skill: ['AWS', 'Javascript', 'Node.Js']
     }]
-
+const bannerContents = {
+    title: 'Hire Developers',
+    subTitle: 'Expert Developers from Europe and North America',
+    desc: 'DevTeam.Space is a vetted community of expert development teams supported by an AI-powered Agile process. Top companies and startups rely on us to help them to build great products. We can help you too, by enabling you to hire and effortlessly manage expert developers.',
+    btnContent: 'Hire Expert Developers'
+}
 const Home = () => {
     return (
         <Layout>
             <StyledHome>
+                <div>
+                    <IntroBanner title={bannerContents.title} subTitle={bannerContents.subTitle} desc={bannerContents.desc} btnContent={bannerContents.btnContent} />
+                </div>
                 <div className="d center gap">
                     {/* {devContents.map((i, k) => (
                         <DevCard key={k} avatar={i.avatar} name={i.name} uid={i.uid} location={i.location} skill={i.skill} />
@@ -72,7 +80,9 @@ const Home = () => {
 }
 
 const StyledHome = styled.div`
-    
+    background-image: linear-gradient(106deg, rgba(0, 41, 107, 0.94) 17.28%, rgba(0, 41, 107, 0.52) 94%);
+    padding: 4em 0em;
+    color: white;
    
 `
 
