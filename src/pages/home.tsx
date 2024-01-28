@@ -21,19 +21,6 @@ import Nec from '../assets/img/companies/NEC-logo.png';
 import Startups from '../assets/img/companies/startups.jpg'
 import DevCard from "../components/dev-card";
 
-
-const bannerContents = {
-    title: 'Hire Developers',
-    subTitle: 'Expert Developers from Europe and North America',
-    desc: 'DevTeam.Space is a vetted community of expert development teams supported by an AI-powered Agile process. Top companies and startups rely on us to help them to build great products. We can help you too, by enabling you to hire and effortlessly manage expert developers.',
-    btnContent: 'Hire Expert Developers'
-}
-
-const trustedContents = {
-    title: 'Trusted by Over 300 Companies Since 2016 Including',
-    items: [SamSung, Disney, Airbus, Poynt, Nec, Startups]
-}
-
 const devContents = [
     {
         avatar: Anna,
@@ -77,16 +64,11 @@ const devContents = [
         location: 'Euroupe',
         skill: ['Javascript', 'Node.Js', 'React.JS']
     }]
+
 const Home = () => {
     return (
         <Layout>
             <StyledHome>
-                <div>
-                    <IntroBanner title={bannerContents.title} subTitle={bannerContents.subTitle} desc={bannerContents.desc} btnContent={bannerContents.btnContent} />
-                </div>
-                <div className="container">
-                    <TrustedCompany title={trustedContents.title} items={trustedContents.items} />
-                </div>
                 <div className="d center gap">
                     {devContents.map((i, k) => (
                         <DevCard key={k} avatar={i.avatar} name={i.name} uid={i.uid} location={i.location} skill={i.skill} />

@@ -1,8 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 
-import Button from "./button";
-import BackImg from '../assets/img/bg.png'
+import { StyledButton } from "./button";
 
 interface IntroBannerProps {
     title: string,
@@ -26,9 +25,14 @@ const IntroBanner = ({ title, subTitle, desc, btnContent }: IntroBannerProps) =>
                         <div className="h4">
                             {desc}
                         </div>
-                        <Button content={btnContent} padding="1em 3em" />
+
                     </div>
+
                 </div>
+                <StyledButton className="d center gap middle mt-2">
+                    <div>Hire Developer</div>
+                    <img src="hire.svg" alt="" width={25} />
+                </StyledButton>
             </div>
         </StyledBanner>
     )
@@ -37,24 +41,19 @@ const IntroBanner = ({ title, subTitle, desc, btnContent }: IntroBannerProps) =>
 const StyledBanner = styled.div`
     width: 100%;
     padding: 3em 0em;
-    background-image: url(${BackImg});
-    background-repeat: no-repeat;
-    background-size: cover;
     .row {
         .main-content {
             display: flex;
             flex-direction: column;
             gap: 2em;
             .h1 {
-                font-size: 64px;
-                color: var(--rb-text);
+                font-size: 2.5em;
             }
             .h3 {
-                font-size: 36px;
-                color: var(--rb-text);
+                font-size: 1.1em;
             }
             .h4 {
-                color: var(--rb-text-secondary);
+                font-size: 1em;
                 line-height: 2;
             }
         }
