@@ -73,7 +73,7 @@ const Home = () => {
                     {/* {devContents.map((i, k) => (
                         <DevCard key={k} avatar={i.avatar} name={i.name} uid={i.uid} location={i.location} skill={i.skill} />
                     ))} */}
-                    
+
                 </div>
             </StyledHome>
         </Layout>
@@ -81,8 +81,6 @@ const Home = () => {
 }
 
 const StyledHome = styled.div`
-    
-    
    
 `
 
