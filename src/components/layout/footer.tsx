@@ -138,7 +138,7 @@ const footerItems = [
 const Footer = ({ logo }: footerProps) => {
     return (
         <StyledFooter>
-            |<div className="d column gap-3 container" style={{ gap: '3em' }}>
+            <div className="d column gap-3 container" style={{ gap: '3em' }}>
                 <div className="d column" style={{ gap: '1em' }}>
                     <Link to='/'>
                         <img src={logo} width={100} />

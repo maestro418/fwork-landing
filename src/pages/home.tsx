@@ -19,6 +19,7 @@ import Airbus from '../assets/img/companies/airbus.png';
 import Poynt from '../assets/img/companies/poynt.png';
 import Nec from '../assets/img/companies/NEC-logo.png';
 import Startups from '../assets/img/companies/startups.jpg'
+import DevCard from "../components/dev-card";
 
 
 const bannerContents = {
@@ -86,8 +87,10 @@ const Home = () => {
                 <div className="container">
                     <TrustedCompany title={trustedContents.title} items={trustedContents.items} />
                 </div>
-                <div>
-
+                <div className="d center gap">
+                    {devContents.map((i, k) => (
+                        <DevCard key={k} avatar={i.avatar} name={i.name} uid={i.uid} location={i.location} skill={i.skill} />
+                    ))}
                 </div>
             </StyledHome>
         </Layout>
