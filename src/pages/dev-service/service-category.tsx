@@ -7,7 +7,7 @@ import IntroBanner from "../../components/intro-banner";
 
 const bannerContents = {
     title: 'Looking to Hire Developers With Specific Skills?',
-    subTitle: 'Having problems finding software developers with specific skills? We can help.',
+    desc: 'Having problems finding software developers with specific skills? We can help.',
     btnContent: 'Hire Expert Developers'
 }
 
@@ -16,7 +16,7 @@ const ServiceCategory = () => {
         <Layout>
             <StyledServiceCategory>
                 <div>
-                    <IntroBanner title={bannerContents.title} subTitle={bannerContents.subTitle} btnContent={bannerContents.btnContent} />
+                    <IntroBanner title={bannerContents.title} desc={bannerContents.desc} btnContent={bannerContents.btnContent} />
                 </div>
             </StyledServiceCategory>
         </Layout>

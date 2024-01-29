@@ -82,7 +82,6 @@ const process = [
 
 const bannerContents = {
     title: 'Hire Developers',
-    subTitle: 'Expert Developers from Europe and North America',
     desc: 'DevTeam.Space is a vetted community of expert development teams supported by an AI-powered Agile process. Top companies and startups rely on us to help them to build great products. We can help you too, by enabling you to hire and effortlessly manage expert developers.',
     btnContent: 'Hire Expert Developers'
 }
@@ -91,7 +90,7 @@ const Home = () => {
         <Layout>
             <StyledHome>
                 <div>
-                    <IntroBanner title={bannerContents.title} subTitle={bannerContents.subTitle} desc={bannerContents.desc} btnContent={bannerContents.btnContent} />
+                    <IntroBanner title={bannerContents.title} desc={bannerContents.desc} btnContent={bannerContents.btnContent} />
                 </div>
                 <div className="d center gap">
                     {/* {devContents.map((i, k) => (

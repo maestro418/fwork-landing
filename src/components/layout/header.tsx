@@ -32,11 +32,11 @@ const Header = ({ logo, menuItems }: HeaderProps) => {
 const StyledHeader = styled.div`
     position: fixed;
     top: 1em;
-
     width: 100%;
     color: white;
     background-color: none;
     padding: 1em 0em;
+    z-index: 1;
     a {
         color: white;
     }

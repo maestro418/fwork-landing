@@ -5,12 +5,12 @@ import { StyledButton } from "./button";
 
 interface IntroBannerProps {
     title: string,
-    subTitle: string,
     desc?: string,
     btnContent: string
 }
 
-const IntroBanner = ({ title, subTitle, desc, btnContent }: IntroBannerProps) => {
+const IntroBanner = ({ title, desc, btnContent }: IntroBannerProps) => {
+
     return (
         <StyledBanner>
             <div className="container">
@@ -19,23 +19,21 @@ const IntroBanner = ({ title, subTitle, desc, btnContent }: IntroBannerProps) =>
                         <div className="h1 bold-550">
                             {title}
                         </div>
-                        <div className="h3">
-                            {subTitle}
-                        </div>
                         <div className="h4">
                             {desc}
                         </div>
-
+                        <StyledButton className="w-50">
+                            <div className="d center gap">
+                                <div>
+                                    Hire Developer
+                                </div>
+                                <img src="hire.svg" alt="" width={25} />
+                            </div>
+                        </StyledButton>
                     </div>
-                    <img src="banner.png" className="col-md-5" width={700} alt="" />
-
                 </div>
-
-                <StyledButton className="d center gap middle mt-2">
-                    <div>Hire Developer</div>
-                    <img src="hire.svg" alt="" width={25} />
-                </StyledButton>
             </div>
+            <img src="banner.png" className="fixed" width={700} alt="" />
         </StyledBanner>
     )
 }
@@ -45,6 +43,7 @@ const StyledBanner = styled.div`
     padding: 6em 0em;
     background-image: url("header.png");
     background-repeat: no-repeat;
+    
     .main-content {
         position: relative;
         &>:first-child {
@@ -60,14 +59,15 @@ const StyledBanner = styled.div`
             .h4 {
                 font-size: 1em;
                 line-height: 2;
-            }                                               
+            }                                           
         }
-        img {
-            position: absolute;
-            bottom: 0;
-            right: 0;
-        }
+       
     }
+    .fixed{
+        position: absolute;
+        top: 8em;
+        right: 0;
+    }    
     
 `
 
