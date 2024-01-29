@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 import IntroBanner from "../intro-banner";
 
 interface HeaderProps {
-    menuItems: { title: string, link?: string, items: { title: string, link: string }[] }[]
+    menuItems: { title: string, link?: string, items?: { title: string, link: string }[] }[]
 }
 
 
