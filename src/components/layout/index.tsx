@@ -3,13 +3,11 @@ import React from "react";
 import Header from "./header";
 import Footer from "./footer";
 
-import Logo from '../../logo.png'
 import styled from "styled-components";
 
 const Layout = ({ children }: { children: React.ReactNode }) => {
 
     const headerProps = {
-        logo: Logo,
         menuItems: [
             {
                 title: 'Why Us',
@@ -117,9 +115,9 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
     }
     return (
         <StyledLayout className="d column">
-            <Header logo={headerProps.logo} menuItems={headerProps.menuItems} />
+            <Header menuItems={headerProps.menuItems} />
             <main>{children}</main>
-            <Footer logo={headerProps.logo} />
+            <Footer />
         </StyledLayout>
     )
 }
