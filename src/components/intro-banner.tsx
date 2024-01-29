@@ -6,10 +6,9 @@ import { StyledButton } from "./button";
 interface IntroBannerProps {
     title: string,
     desc?: string,
-    btnContent: string
 }
 
-const IntroBanner = ({ title, desc, btnContent }: IntroBannerProps) => {
+const IntroBanner = ({ title, desc }: IntroBannerProps) => {
 
     return (
         <StyledBanner>
@@ -22,13 +21,11 @@ const IntroBanner = ({ title, desc, btnContent }: IntroBannerProps) => {
                         <div className="h4">
                             {desc}
                         </div>
-                        <StyledButton className="w-50">
-                            <div className="d center gap">
+                        <StyledButton className="w-50 d center middle gap">
                                 <div>
                                     Hire Developer
                                 </div>
                                 <img src="hire.svg" alt="" width={25} />
-                            </div>
                         </StyledButton>
                     </div>
                 </div>
@@ -40,10 +37,11 @@ const IntroBanner = ({ title, desc, btnContent }: IntroBannerProps) => {
 
 const StyledBanner = styled.div`
     width: 100%;
-    padding: 6em 0em;
+    padding: 6em 0 7em 0;
     background-image: url("header.png");
     background-repeat: no-repeat;
-    
+    color: var(--text-tertiary);
+
     .main-content {
         position: relative;
         &>:first-child {

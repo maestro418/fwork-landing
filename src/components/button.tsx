@@ -1,6 +1,5 @@
 import React from "react";
 import styled, { css } from 'styled-components'
-import { deflate } from "zlib";
 
 const buttonStyle = css`
     padding: 15px 30px;
