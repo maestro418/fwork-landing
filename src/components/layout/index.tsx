@@ -10,17 +10,6 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
     const headerProps = {
         menuItems: [
             {
-                title: 'Why Us',
-                items: [{
-                    title: 'Expert Dev Teams',
-                    link: '/vetted'
-                },
-                {
-                    title: 'AI-Powered Agile Process',
-                    link: '/process'
-                }]
-            },
-            {
                 title: 'Services',
                 items: [{
                     title: 'Al Development Services',
@@ -52,63 +41,12 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
                 }]
             },
             {
-                title: 'Mobile',
-                items: [{
-                    title: 'Mobile Developers iOS Developers',
-                    link: ''
-                },
-                {
-                    title: 'Swift Developers',
-                    link: ''
-                },
-                {
-                    title: 'Android Developers',
-                    link: ''
-                },
-                {
-                    title: 'React Native Developers',
-                    link: ''
-                },
-                {
-                    title: 'Kotlin Developers',
-                    link: ''
-                },
-                {
-                    title: 'Flutter Developers',
-                    link: ''
-                },
-                {
-                    title: 'See All',
-                    link: ''
-                },
-                ]
-            },
-            {
-                title: 'AI',
-                items: [{
-                    title: 'AI Developers',
-                    link: ''
-                },
-                {
-                    title: 'Machine Learning',
-                    link: ''
-                },
-                {
-                    title: 'Developers',
-                    link: ''
-                },
-                {
-                    title: 'ChatGPT Developers',
-                    link: ''
-                },
-                {
-                    title: 'Data Engineers',
-                    link: ''
-                },]
+                title: 'FAQ',
+                link: '/faq'
             },
             {
                 title: 'Case Studies',
-                link: '/case-study',
+                link: 'https://fwork.io/blogs',
                 items: []
             },
         ]
