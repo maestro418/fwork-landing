@@ -66,14 +66,13 @@ const Header = ({ menuItems }: HeaderProps) => {
             </div>
             {!!openSideBar && (
                 <div className="">
-                    <div className="sidebar ">
+                    <div className="menu">
                         {menuItems.map((i, k) => (
                             <Link to={`${!!i.link ? i.link : ""}`} key={k} onClick={() => setOpenSideBar(false)}><div>{i.title}</div></Link>
                         ))}
                     </div>
                 </div>
-            )
-            }
+            )}
         </StyledHeader >
     )
 }
@@ -84,6 +83,7 @@ const StyledHeader = styled.div<StyledHeaderProps>`
     width: 100%;
     color:${(props) => !!props.scrollEvent ? 'black' : 'white'};
     background-color: ${(props) => !!props.scrollEvent ? 'white' : 'none'};
+    box-shadow:${(props) => !!props.scrollEvent && '0px 2px 4px rgba(0, 0, 0, 0.2)'} ;
     padding: 1em 0em;
     z-index: 2;
     .hamburger {
@@ -96,7 +96,7 @@ const StyledHeader = styled.div<StyledHeaderProps>`
     a {
         color:${(props) => !!props.scrollEvent ? 'black' : 'white'};
     }
-    .sidebar {
+    .menu {
         display: flex;
         flex-direction: column;
         gap: 1em;
@@ -106,7 +106,7 @@ const StyledHeader = styled.div<StyledHeaderProps>`
         a {
             border: 0;
             color: black;
-            padding: 1em 2em;
+            padding: 0.5em 2em;
             &:hover {
                 background-position: right center;
                 background-color: #ebeaea;
