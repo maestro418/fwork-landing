@@ -24,6 +24,7 @@ const StyledFaqItem = styled.div`
     width: 100%;
     display: flex;
     gap: 2em;
+    color: #1967d2;
 
 `
 
