@@ -8,6 +8,7 @@ import HireProcess from "../components/hire-process";
 import { StyledButton } from "../components/button";
 import CaseCard from "../components/case-card";
 import BlogCard from "../components/blog-card";
+import ServiceCard from "../components/service-card";
 import AskQuestion from "../components/ask-question";
 
 const process = [
@@ -102,6 +103,49 @@ const blog = [
     }
 ]
 
+const service = [
+    {
+        icon: 'img/icon/hiring-icon-1.svg',
+        desc: 'Scale your MVP with a pro-level development team',
+        btnLink: 'https://fwork.io/about-us',
+        btnContent: 'Contact Us',
+        bgColor: '#0077ff'
+    },
+    {
+        icon: 'img/icon/hiring-icon-2.svg',
+        desc: 'Build a world-class MVP to hit the market',
+        btnLink: 'https://fwork.io/services',
+        btnContent: 'Get started',
+        bgColor: '#ebeaea'
+    },
+    {
+        icon: 'img/icon/hiring-icon-3.svg',
+        desc: 'Launch a product prototype to test the market and raise funds',
+        btnLink: 'https://fwork.io/about-us',
+        btnContent: 'Schedule a Call',
+        bgColor: '#0077ff'
+    },
+    {
+        icon: 'img/icon/hiring-icon-4.svg',
+        desc: ' Build and scale a custom process automation solution, and more',
+        btnLink: 'https://fwork.io/freelancers',
+        btnContent: 'Talk to Our Expert',
+        bgColor: '#ebeaea'
+    },
+    {
+        icon: 'img/icon/hiring-icon-5.svg',
+        desc: 'Outstaffing - expand your team with our senior developers and other experts',
+        btnLink: 'https://fwork.io/freelancers',
+        btnContent: 'Talk to Our Expert',
+        bgColor: '#0077ff'
+    },
+    {
+        icon: 'img/icon/hiring-icon-6.svg',
+        desc: 'Conduct a professional design phase with UX/UI and technical design',
+        btnLink: 'https://fwork.io/freelancers',
+        btnContent: 'Talk to Our Expert',
+        bgColor: '#ebeaea'
+    }]
 const faq = [
     {
         "_id": 1,
@@ -169,9 +213,7 @@ const Home = () => {
         const handleScreen = () => {
             setSmallScreen(window.innerWidth <= 768)
         }
-
         window.addEventListener("resize", handleScreen);
-
         return () => window.removeEventListener("resize", handleScreen);
     }, []);
 
@@ -261,6 +303,13 @@ const Home = () => {
 
                 <div id="services" className="container">
                     <label className="h1">Services for Enterprise, Startups, and Entrepreneurs</label>
+                    <div className="row m-0">
+                        {service.map((i, k) => (
+                            <div key={k} className=" col-md-4 p-0">
+                                <ServiceCard icon={i.icon} desc={i.desc} btnContent={i.btnContent} btnLink={i.btnLink} bgColor={i.bgColor} />
+                            </div>
+                        ))}
+                    </div>
                 </div>
 
                 <div className="container faq-content center">
@@ -288,7 +337,7 @@ const Home = () => {
                     <p className="m-0">Check out our mind-blowing product development tutorials and futuristic technology announcements cooked up by our brilliant software development wizards. Penned by humans, for humans (and maybe a few robots).</p>
                     <div className="row">
                         {blog.map((i, k) => (
-                            <div key={k} className="col-lg-3 col-sm-6">
+                            <div key={k} className="col-lg-3 col-sm-4">
                                 <BlogCard banner={i.banner} title={i.title} desc={i.desc} img={i.img} link={i.banner} />
                             </div>
                         ))}
@@ -404,6 +453,12 @@ const StyledHome = styled.div`
     .col-md-3 .col-lg-6 {
         padding-inline: 0 !important;
     }
+    #services {
+        display: flex;
+        flex-direction: column;
+        gap: 1em;
+        margin-bottom: 2em;
+    }    
 
     .faq-content {
         button {

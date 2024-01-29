@@ -60,7 +60,7 @@ const IntroBanner = ({ title, desc }: IntroBannerProps) => {
 
 const StyledBanner = styled.div<StyledBannerProps>`
     width: 100%;
-    padding: 6em 0 7em 0;
+    padding: 6em 0 5em 0;
     background-image: url("img/header.png");
     background-repeat: no-repeat;
     color: var(--text-tertiary);
