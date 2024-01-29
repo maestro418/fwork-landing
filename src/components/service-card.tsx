@@ -41,6 +41,7 @@ const StyledServiceCard = styled.div<StyledCardProps>`
     gap: 2em;
     padding: 1em 0.5em;
     background-color: ${(props) => props.bgColor};
+    justify-content: space-between;
     color:${(props) => props.bgColor == '#ebeaea' ? 'black' : 'white'};
     .btn {
         padding: 0.5em 1em;

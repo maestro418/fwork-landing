@@ -53,7 +53,7 @@ const Header = ({ menuItems }: HeaderProps) => {
                 </Link >
                 <div className="d gap-3">
                     {!mobile && menuItems.map((i, k) => (
-                        <Link to={`${!!i.link ? i.link : ""}`} key={k}><div>{i.title}</div></Link>
+                        <a href={i.link} key={k}><div>{i.title}</div></a>
                     ))}
                     {!!mobile && (
                         <div className="hamburger" onClick={() => setOpenSideBar(!openSideBar)}>

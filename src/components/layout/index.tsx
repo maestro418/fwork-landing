@@ -11,38 +11,11 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
         menuItems: [
             {
                 title: 'Services',
-                items: [{
-                    title: 'Al Development Services',
-                    link: ''
-                },
-                {
-                    title: 'Mobile App Development Services',
-                    link: ''
-                },
-                {
-                    title: 'Web Development Services',
-                    link: ''
-                },
-                {
-                    title: 'Blockchain Development Services',
-                    link: ''
-                },
-                {
-                    title: 'Software Development Services',
-                    link: ''
-                },
-                {
-                    title: 'PHP Development Services',
-                    link: ''
-                },
-                {
-                    title: 'See All',
-                    link: ''
-                }]
+                link: '#services'
             },
             {
                 title: 'FAQ',
-                link: '/faq'
+                link: '#faq'
             },
             {
                 title: 'Case Studies',

@@ -10,6 +10,7 @@ import CaseCard from "../components/case-card";
 import BlogCard from "../components/blog-card";
 import ServiceCard from "../components/service-card";
 import AskQuestion from "../components/ask-question";
+import { Link } from "react-router-dom";
 
 const process = [
     {
@@ -36,7 +37,7 @@ const process = [
 
 const bannerContents = {
     title: 'Hire Developers',
-    desc: 'DevTeam.Space is a vetted community of expert development teams supported by an AI-powered Agile process. Top companies and startups rely on us to help them to build great products. We can help you too, by enabling you to hire and effortlessly manage expert developers.',
+    desc: 'Fwork is a vetted community of expert development teams supported by an AI-powered Agile process. Top companies and startups rely on us to help them to build great products. We can help you too, by enabling you to hire and effortlessly manage expert developers.',
     btnContent: 'Hire Expert Developers'
 }
 
@@ -107,13 +108,13 @@ const service = [
     {
         icon: 'img/icon/hiring-icon-1.svg',
         desc: 'Scale your MVP with a pro-level development team',
-        btnLink: 'https://fwork.io/about-us',
+        btnLink: 'https://fwork.io/contact-us',
         btnContent: 'Contact Us',
         bgColor: '#0077ff'
     },
     {
         icon: 'img/icon/hiring-icon-2.svg',
-        desc: 'Build a world-class MVP to hit the market',
+        desc: 'Build a world-class MVP to hit the market <br/>',
         btnLink: 'https://fwork.io/services',
         btnContent: 'Get started',
         bgColor: '#ebeaea'
@@ -121,13 +122,13 @@ const service = [
     {
         icon: 'img/icon/hiring-icon-3.svg',
         desc: 'Launch a product prototype to test the market and raise funds',
-        btnLink: 'https://fwork.io/about-us',
+        btnLink: 'https://fwork.io/contact-us',
         btnContent: 'Schedule a Call',
         bgColor: '#0077ff'
     },
     {
         icon: 'img/icon/hiring-icon-4.svg',
-        desc: ' Build and scale a custom process automation solution, and more',
+        desc: ' Enterprise-Build and scale a custom process automation solution, and more ',
         btnLink: 'https://fwork.io/freelancers',
         btnContent: 'Talk to Our Expert',
         bgColor: '#ebeaea'
@@ -220,7 +221,7 @@ const Home = () => {
     return (
         <Layout>
             <StyledHome>
-                <div>
+                <div className="mb-2">
                     <IntroBanner title={bannerContents.title} desc={bannerContents.desc} />
                 </div>
                 <div className="container">
@@ -281,15 +282,17 @@ const Home = () => {
                             ))}
                         </div>
                         <div className="d center gap">
-                            <button>Hire Top-notch Developer</button>
-                            <button className="d middle">
-                                <div className="pr">See More Case Studies</div>
-                                <img src="img/icon/right-arrow.svg" width={16} alt="" />
-                            </button>
+                            <Link to='https://fwork.io/freelancers'><button>Hire Top-notch Developer
+                            </button></Link>
+                            <Link to="https://fwork.io/blogs">
+                                <button className="d middle" >
+                                    <div className="pr">See More Case Studies</div>
+                                    <img src="img/icon/right-arrow.svg" width={16} alt="" />
+                                </button>
+                            </Link>
                         </div>
                     </div>
                 </div>
-
                 <div id="hiring" className="container">
                     <label className="h1">Developer Hiring Process</label>
                     <div className="mt-1 process-content row mb-2">
@@ -312,9 +315,9 @@ const Home = () => {
                     </div>
                 </div>
 
-                <div className="container faq-content center">
-                    <div className="row">
-                        <div className="col-lg-4">
+                <div id="faq" className="container faq-content center">
+                    <div className="row m-0">
+                        <div className="col-lg-4 p-0">
                             <div className="h1">Frequently Asked Questions</div>
                             <p className="m-0 mb-1">Everything you need to know about DevTeam.Space. Can’t find the answer you’re looking for?</p>
                             <button>Discovery Call</button>
@@ -335,7 +338,7 @@ const Home = () => {
                 <div id="blog" className="container">
                     <div className="h1">Find Work Blog</div>
                     <p className="m-0">Check out our mind-blowing product development tutorials and futuristic technology announcements cooked up by our brilliant software development wizards. Penned by humans, for humans (and maybe a few robots).</p>
-                    <div className="row">
+                    <div className="row m-0 p-0">
                         {blog.map((i, k) => (
                             <div key={k} className="col-lg-3 col-sm-4">
                                 <BlogCard banner={i.banner} title={i.title} desc={i.desc} img={i.img} link={i.banner} />
