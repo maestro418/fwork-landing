@@ -6,20 +6,17 @@ import { Link } from "react-router-dom";
 import IntroBanner from "../intro-banner";
 
 interface HeaderProps {
-    logo: string
-    menuItems: { title: string, link?: string, items?: { title: string, link: string }[] }[]
+    menuItems: { title: string, link?: string, items: { title: string, link: string }[] }[]
 }
 
-const Header = ({ logo, menuItems }: HeaderProps) => {
 
-    useEffect(() => {
 
-    })
+const Header = ({ menuItems }: HeaderProps) => {
     return (
         <StyledHeader >
             <div className="d middle between container">
                 <Link to='/' >
-                    <img src={logo} alt="No image" width={100} />
+                    <img src="img/icon/logo.png" alt="No image" width={100} />
                 </Link >
                 <div className="d gap-3">
                     {menuItems.map((i, k) => (

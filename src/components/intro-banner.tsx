@@ -30,7 +30,7 @@ const IntroBanner = ({ title, desc }: IntroBannerProps) => {
                     </div>
                 </div>
             </div>
-            <img src="banner.png" className="fixed" width={700} alt="" />
+            <img src="img/banner.png" className="fixed" width={700} alt="" />
         </StyledBanner>
     )
 }
@@ -38,7 +38,7 @@ const IntroBanner = ({ title, desc }: IntroBannerProps) => {
 const StyledBanner = styled.div`
     width: 100%;
     padding: 6em 0 7em 0;
-    background-image: url("header.png");
+    background-image: url("img/header.png");
     background-repeat: no-repeat;
     color: var(--text-tertiary);
 

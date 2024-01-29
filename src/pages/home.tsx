@@ -4,58 +4,7 @@ import Layout from "../components/layout";
 import styled from "styled-components";
 
 import IntroBanner from "../components/intro-banner";
-import TrustedCompany from "../components/trusted-company";
-
-import Anna from '../assets/img/developers/Anna-Python.webp';
-import Danili from '../assets/img/developers/3-Daniil-B-219x222.webp';
-import Evgeny from '../assets/img/developers/7-Evgeny-219x222.webp';
-import Dan from '../assets/img/developers/4-Daniil-K-219x222.webp';
-import Alex from '../assets/img/developers/8-Alexander-219x222.webp'
-
-import Disney from '../assets/img/companies/disney.jpg';
-import Airbus from '../assets/img/companies/airbus.png';
-import Poynt from '../assets/img/companies/poynt.png';
-import Nec from '../assets/img/companies/NEC-logo.png';
-import Startups from '../assets/img/companies/startups.jpg'
-import DevCard from "../components/dev-card";
 import HireProcess from "../components/hire-process";
-
-const devContents = [
-    {
-        avatar: Anna,
-        name: 'Anna',
-        uid: 'anna',
-        location: 'Euroupe',
-        skill: ['AWS', 'Django', 'Evgency']
-    },
-    {
-        avatar: Danili,
-        name: 'Danili',
-        uid: 'danili',
-        location: 'Euroupe',
-        skill: ['AWS', 'Javascript', 'Node.Js']
-    },
-    {
-        avatar: Evgeny,
-        name: 'Evgeny',
-        uid: 'evgeny',
-        location: 'Euroupe',
-        skill: ['AWS', 'Javascript', 'Node.Js']
-    },
-    {
-        avatar: Dan,
-        name: 'Dan',
-        uid: 'dan',
-        location: 'Euroupe',
-        skill: ['AngularJs', 'AWS']
-    },
-    {
-        avatar: Alex,
-        name: 'Alex',
-        uid: 'alex',
-        location: 'Euroupe',
-        skill: ['AWS', 'Javascript', 'Node.Js']
-    }]
 
 const process = [
     {
@@ -99,6 +48,8 @@ const Home = () => {
 
                 </div>
                 <div className="container">
+                    <label>See What Our Expert Developers and Designers Can Do</label>
+
                     <label className="h1">Developer Hiring Process</label>
                     <div className="process-content">
                         {process.map((i) => (
@@ -120,6 +71,7 @@ const StyledHome = styled.div`
         color: var(--text);
         box-shadow: 0 0 20px 0 var(--shadow);
         margin: 2em 0;
+        border-radius: 20px;
     }   
     
 

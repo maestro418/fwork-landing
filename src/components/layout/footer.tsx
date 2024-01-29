@@ -4,10 +4,6 @@ import { Link } from "react-router-dom";
 import styled from "styled-components";
 import {StyledButton} from "../button";
 
-interface footerProps {
-    logo: string
-}
-
 const footerItems = [
     {
         title: 'Hire Developers',
@@ -135,13 +131,13 @@ const footerItems = [
     },
 ]
 
-const Footer = ({ logo }: footerProps) => {
+const Footer = () => {
     return (
         <StyledFooter>
             <div className="d column gap-3 container" style={{ gap: '3em' }}>
                 <div className="d column" style={{ gap: '1em' }}>
                     <Link to='/'>
-                        <img src={logo} width={100} />
+                        <img src="img/icon/logo.png" width={100} />
                     </Link>
                     <div className="h2">
                         Tell Us About Your Challenge & Get a Free Strategy Session
