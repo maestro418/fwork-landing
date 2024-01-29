@@ -13,7 +13,7 @@ const HireProcess = (props: processType) => {
 
 
     return (
-        <StyledHireProcess style={id === 1 ? { backgroundColor: 'rgb(47, 78, 131)', color: "white" } : { backgroundColor: '', color: "" }}>
+        <StyledHireProcess style={id === 1 ? { backgroundColor: 'rgb(47, 78, 131)', color: "white" } : { backgroundColor: '', color: "", height:"100%" }}>
             <div>
                 <img style={{background: id === 1? "linear-gradient(to bottom,transparent, rgb(62, 97, 156)" : "linear-gradient(to bottom,transparent, rgb(227, 241, 252))"}} src={`img/icon/${id}.svg`} alt="" />
             </div>
@@ -30,7 +30,6 @@ const StyledHireProcess = styled.div`
     padding: 2em 1em;
     border: 1px solid var(--shadow);
     box-shadow: 0 12px 25px 0 rgba(189, 189, 189, 0);   
-    width: 25%;
     &>:first-child {
         img {
             border-radius: 50%;
