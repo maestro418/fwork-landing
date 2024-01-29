@@ -13,7 +13,7 @@ const HireProcess = (props: processType) => {
 
 
     return (
-        <StyledHireProcess style={id === 1 ? { backgroundColor: 'rgb(47, 78, 131)', color: "white" } : { backgroundColor: '', color: "", height:"100%" }}>
+        <StyledHireProcess style={id === 1 ? { backgroundColor: 'rgb(47, 78, 131)', color: "white", height: "100%" } : { backgroundColor: '', color: "", height:"100%" }}>
             <div>
                 <img style={{background: id === 1? "linear-gradient(to bottom,transparent, rgb(62, 97, 156)" : "linear-gradient(to bottom,transparent, rgb(227, 241, 252))"}} src={`img/icon/${id}.svg`} alt="" />
             </div>

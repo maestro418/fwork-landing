@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 
-interface blogCardPropsType {
+interface BlogCardPropsType {
     banner: string
     title: string
     desc: string
@@ -10,14 +10,14 @@ interface blogCardPropsType {
     link: string
 }
 
-const blogCard = (props: blogCardPropsType) => {
+const BlogCard = (props: BlogCardPropsType) => {
     const {banner, title, desc, img, link} = props;
 
     return (
         <StyledBlogCard>
             <Link to={link}>
                 <div className="card-header">
-                    <img src={img} alt="" />
+                    <img src={`img/${img}`} className="w-100" alt="" />
                     <strong className="banner">{banner}</strong>
                     <div className="title">{title}</div>
                 </div>
@@ -31,9 +31,11 @@ const blogCard = (props: blogCardPropsType) => {
 }
 
 const StyledBlogCard = styled.div`
-    max-width: 457px;
     box-shadow: 0 0 10px 0 var(--shadow);
+    border-top-left-radius: 0.75em;
+    border-top-right-radius: 0.75em;
     border-radius: 0.75em;
+
     margin: 1em 0;
     opacity: .9;
     .card-header {
@@ -41,7 +43,8 @@ const StyledBlogCard = styled.div`
         color: var(--text-tertiary);
         
         img {
-            border-radius: 0.75em;
+            border-top-left-radius: 0.75em;
+            border-top-right-radius: 0.75em;
         }
 
         .banner {
@@ -54,7 +57,7 @@ const StyledBlogCard = styled.div`
             white-space: nowrap;
             text-overflow: ellipsis;
             font-size: .8em;
-            background-color: #ff8b3e;
+            background-image: linear-gradient(134deg, #FF8F00 39.06%, #FF5827 100%);
             border-radius: 0.4em;
         }
 
@@ -64,6 +67,7 @@ const StyledBlogCard = styled.div`
             bottom: 0.5em;
             padding: 1em;
             font-size: 1.3em;
+            width: 100%;
             background: linear-gradient(to bottom,transparent, black);
         }
     }
@@ -86,4 +90,4 @@ const StyledBlogCard = styled.div`
     }
 `;
 
-export default blogCard;
+export default BlogCard;

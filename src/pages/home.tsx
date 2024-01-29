@@ -7,6 +7,7 @@ import IntroBanner from "../components/intro-banner";
 import HireProcess from "../components/hire-process";
 import { StyledButton } from "../components/button";
 import CaseCard from "../components/case-card";
+import BlogCard from "../components/blog-card";
 
 const process = [
     {
@@ -73,6 +74,33 @@ const cases = [
     },
 ]
 
+const blog = [
+    {
+        "banner": "AI Software Development",
+        "title": "10 Best AI Apps Of 2024",
+        "desc": "Are you on the lookout for the best AI apps of this year? The AI app sector is...",
+        "img": "ai.jpg"
+    },
+    {
+        "banner": "Blockchain Development",
+        "title": "What is Master Data Management?",
+        "desc": "In this article, we will discuss Master Data Management in detail. Master...",
+        "img": "what-is-master-data-management.jpg"
+    },
+    {
+        "banner": "FinTech Software Development",
+        "title": "What are the Top Fintech Trends in 2024?",
+        "desc": "Before I take a look in more detail at ICO legal issues, it is worth noting that...",
+        "img": "fintech-trends.jpg"
+    },
+    {
+        "banner": "Healthcare Software Development",
+        "title": "How To Build A Healthcare SaaS Platform?",
+        "desc": "Interested in building a healthcare SaaS platform? This is a HUGE market that...",
+        "img": "healthcare-tech-trend.jpg"
+    }
+]
+
 const devbtns = ["AI", "BlockChain", "Mobile"];
 
 const Home = () => {
@@ -81,7 +109,7 @@ const Home = () => {
 
     React.useEffect(() => {
         const handleScreen = () => {
-            setSmallScreen( window.innerWidth <= 768)
+            setSmallScreen(window.innerWidth <= 768)
         }
 
         window.addEventListener("resize", handleScreen);
@@ -97,11 +125,11 @@ const Home = () => {
                 </div>
                 <div className="container">
                     <div className="world-card row">
-                        <div className="col-md-4 p-0"></div>
-                        <div className="col-md-4">
+                        <div className="col-md-4 col-sm-6 p-0"></div>
+                        <div className="col-md-4 col-sm-6 pr-1 pl-1">
                             <div className="">
                                 <div className="number">1,200</div>
-                                <div>Expert developers from Europe, Asia, North America .</div>
+                                <div className="h3">Expert developers from Europe, Asia, North America .</div>
                             </div>
                             <div className="d middle">
                                 <div className="number">62</div>
@@ -112,18 +140,18 @@ const Home = () => {
                                 </div>
                             </div>
                         </div>
-                        <div className="col-md-4">
+                        <div className="col-md-4 col-sm-6 pr-1 pl-1">
                             <div>
                                 <div className="number">$140M+</div>
-                                <p>Raised by early-stage startups who worked with us.</p>
+                                <p >Raised by early-stage startups who worked with us.</p>
                             </div>
-                            <div className="d gap">
+                            <div className={`${smallScreen ? "mb-1" : ""} d gap`}>
                                 {devbtns.map((i, k) => (
                                     <button key={k}>{i}</button>
                                 ))}
                             </div>
                         </div>
-                        <div className="col-md-4" >
+                        <div className="col-md-4 col-sm-6" >
                             <div className="b-content">
                                 <p>Hire Expert Developers,</p>
                                 <p>Freelancers Are</p>
@@ -131,42 +159,59 @@ const Home = () => {
                             </div>
                             <p>Building a great product in today’s world requires expert developers,<br />not freelancers. DevTeam.Space is a vetted community where you can hire expert developers for all your software development needs.</p>
                         </div>
-                        <div className="col-md-4" style={{ color: "white", backgroundImage: "linear-gradient(134deg, #667EEA 0%, #764BA2 100%)" }}>
+                        <div className="col-md-4 col-sm-6" style={{ color: "white", backgroundImage: "linear-gradient(134deg, #667EEA 0%, #764BA2 100%)" }}>
                             <div className="b-content"><p>Get a World-class</p><p>Looking and Working</p><p>Product</p></div>
                             <p>Our expert developers deliver supportable and maintainable code. So any new developers can onboard and continue working on the code immediately.</p>
                         </div>
-                        <div className="col-md-4">
+                        <div className="col-md-4 col-sm-6">
                             <div className="b-content"><p>Clear Communication,</p><p>Tasks and Payments</p><p>Management</p></div>
                             <p>Get complimentary support from a dedicated tech account manager and AI-powered agile process with all the tools, notifications, and performance tracking to ensure ongoing success.</p>
                         </div>
                     </div>
                 </div>
-                <div className="container">
-                    <label className="h1">See What Our Expert Developers and Designers Can Do</label>
-                </div>
-                <div className="mt-4 pt-2 pb-2 d center" style={{ backgroundImage: "url(img/header.png)" }}>
+                <div className="case-content mb-2">
+                    <div className="container">
+                        <label className="h1">Witness the magic of our expert developers and designers in action!</label>
 
-
-                    <div className="container row">
-                        {cases.map(i => (
-                            <div key={i._id} className="col-md-4 col-6" style={{display: (smallScreen && i._id === 3) ? "none" : ""}}>
-                                <CaseCard title={i.title} tech={i.tech} img={i.img} team={i.team} smallScreen={smallScreen} />
-                            </div>
-                        ))}
+                        <div className="row mt-1">
+                            {cases.map(i => (
+                                <div key={i._id} className="col-md-4" >
+                                    <CaseCard title={i.title} tech={i.tech} img={i.img} team={i.team} smallScreen={smallScreen} />
+                                </div>
+                            ))}
+                        </div>
+                        <div className="d center gap">
+                            <button>Hire Top-notch Developer</button>
+                            <button className="d middle">
+                                <div className="pr">See More Case Studies</div>
+                                <img src="img/icon/right-arrow.svg" width={16} alt="" />
+                            </button>
+                        </div>
                     </div>
                 </div>
 
                 <div className="container">
-
                     <label className="h1">Developer Hiring Process</label>
-                    <div className="process-content row">
+                    <div className="mt-1 process-content row mb-2">
                         {process.map((i) => (
-                            <div key={i.id} className="col-md-3 col-sm-6">
+                            <div key={i.id} className="col-lg-3 col-md-6">
                                 <HireProcess id={i.id} title={i.title} desc={i.desc} />
                             </div>
                         ))}
                     </div>
                     <label className="h1">Services for Enterprise, Startups, and Entrepreneurs</label>
+                </div>
+
+                <div className="container">
+                    <div className="h1">Find Work Blog</div>
+                    <p className="m-0">Check out our mind-blowing product development tutorials and futuristic technology announcements cooked up by our brilliant software development wizards. Penned by humans, for humans (and maybe a few robots).</p>
+                    <div className="row">
+                        {blog.map((i, k) => (
+                            <div key={k} className="col-lg-3 col-sm-6">
+                                <BlogCard banner={i.banner} title={i.title} desc={i.desc} img={i.img} link={i.banner}/>
+                            </div>
+                        ))}
+                    </div>
                 </div>
             </StyledHome>
         </Layout>
@@ -186,7 +231,7 @@ const StyledHome = styled.div`
     }   
     
     .world-card {
-        margin: 2em 0;
+        margin-bottom: 2em;
         border: 1px solid #FF5827;
         margin-inline: 0;
         &>:first-child {
@@ -238,6 +283,7 @@ const StyledHome = styled.div`
         font-size: 1rem;
         line-height: 20px;
         padding-left: 1.5em;
+        padding-top: 0.75em;
         &:before {
             content: "";
             width: 4px;
@@ -245,13 +291,37 @@ const StyledHome = styled.div`
             position: absolute;
             border-radius: 4px;
             left: 20px;
-            top: 10px;
+            top: 22px;
             background-image: linear-gradient(134deg, #FF8F00 39.06%, #FF5827 100%)
         }
         p {
             line-height: 0.7;
              
         }
+    }
+
+    .case-content {
+        padding: 2em 0;
+        display: flex;
+        justify-content: center;
+        background-image: linear-gradient(134deg, #0f258b 0%, #4b58a2 100%);
+        
+        label {
+            color: white;
+        }
+
+        button {
+            color: white;
+            border: 1px solid white;
+            border-radius: 0.3em;
+            background: inherit;
+            padding: 0.5em 0.7em;
+            font-size: 1em;
+            cursor: pointer;
+        }
+    }
+    .col-md-3 .col-lg-6 {
+        padding-inline: 0 !important;
     }
 `
 
