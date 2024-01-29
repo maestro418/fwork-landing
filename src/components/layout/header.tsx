@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import styled from 'styled-components'
 
 import { StyledButton } from "../button";
@@ -7,12 +7,14 @@ import IntroBanner from "../intro-banner";
 
 interface HeaderProps {
     logo: string
-    menuItems: { title: string, link?: string, items: { title: string, link: string }[] }[]
+    menuItems: { title: string, link?: string, items?: { title: string, link: string }[] }[]
 }
 
-
-
 const Header = ({ logo, menuItems }: HeaderProps) => {
+
+    useEffect(() => {
+
+    })
     return (
         <StyledHeader >
             <div className="d middle between container">
