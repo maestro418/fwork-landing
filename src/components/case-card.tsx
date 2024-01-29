@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 // import Button from "./button";
 import { Link } from "react-router-dom";
+import { StyledButton } from "./button";
 
 interface CaseCardProps {
     tech: string,
@@ -14,7 +15,7 @@ interface CaseCardProps {
 const CaseCard = ({ title, tech, img, team, smallScreen }: CaseCardProps) => {
     return (
         <StyledCaseCard>
-            <div className="r-30 mb-2">
+            <div className="r-30 mb">
                 <img className="r-30" src={`img/${img}`} width='100%' />
             </div>
             <div>
@@ -35,20 +36,15 @@ const CaseCard = ({ title, tech, img, team, smallScreen }: CaseCardProps) => {
                         </div>
                     ))}
                 </div>
-                
-                
             </div>
-            <button>here</button>
-                <button>here</button>
-            {/* <Link to={`developer/${uid}`}>
-                <Button content="View Profile" />
-            </Link> */}
+            <Link to={`developer/${title}`} className="d mb-2">
+                <div className="pr">Details</div><img src="img/icon/right-arrow.svg" width={16} alt="" />
+            </Link>
         </StyledCaseCard>
     )
 }
 
 const StyledCaseCard = styled.div`
-    translate: 0px -80px;
     &>:first-child {
         box-shadow: 0 0 10px 0 var(--shadow);
     }
@@ -69,7 +65,7 @@ const StyledCaseCard = styled.div`
         }
     }
     &>:nth-child(3) {
-        &>:first-child {
+        &>:nth-child(2) {
             color: var(--text-secondary);
         }   
 
@@ -84,6 +80,8 @@ const StyledCaseCard = styled.div`
         border: 0;
         opacity: 0.5;
     }
+
+    a {color: var(--text-secondary-hover);}
 `
 
 export default CaseCard
