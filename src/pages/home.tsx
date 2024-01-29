@@ -169,7 +169,7 @@ const Home = () => {
                         </div>
                     </div>
                 </div>
-                <div className="case-content mb-2">
+                <div id="case" className="case-content mb-2">
                     <div className="container">
                         <label className="h1">Witness the magic of our expert developers and designers in action!</label>
 
@@ -190,7 +190,7 @@ const Home = () => {
                     </div>
                 </div>
 
-                <div className="container">
+                <div id="hiring" className="container">
                     <label className="h1">Developer Hiring Process</label>
                     <div className="mt-1 process-content row mb-2">
                         {process.map((i) => (
@@ -199,16 +199,19 @@ const Home = () => {
                             </div>
                         ))}
                     </div>
+                </div>
+
+                <div id="services" className="container">
                     <label className="h1">Services for Enterprise, Startups, and Entrepreneurs</label>
                 </div>
 
-                <div className="container">
+                <div id="blog" className="container">
                     <div className="h1">Find Work Blog</div>
                     <p className="m-0">Check out our mind-blowing product development tutorials and futuristic technology announcements cooked up by our brilliant software development wizards. Penned by humans, for humans (and maybe a few robots).</p>
                     <div className="row">
                         {blog.map((i, k) => (
                             <div key={k} className="col-lg-3 col-sm-6">
-                                <BlogCard banner={i.banner} title={i.title} desc={i.desc} img={i.img} link={i.banner}/>
+                                <BlogCard banner={i.banner} title={i.title} desc={i.desc} img={i.img} link={i.banner} />
                             </div>
                         ))}
                     </div>
