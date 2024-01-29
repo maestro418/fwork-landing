@@ -90,7 +90,7 @@ const Home = () => {
         <Layout>
             <StyledHome>
                 <div>
-                    <IntroBanner title={bannerContents.title} desc={bannerContents.desc} btnContent={bannerContents.btnContent} />
+                    <IntroBanner title={bannerContents.title} desc={bannerContents.desc} />
                 </div>
                 <div className="d center gap">
                     {/* {devContents.map((i, k) => (
@@ -105,6 +105,7 @@ const Home = () => {
                             <HireProcess key={i.id} id={i.id} title={i.title} desc={i.desc} />
                         ))}
                     </div>
+                    <label className="h1">Services for Enterprise, Startups, and Entrepreneurs</label>
                 </div>
             </StyledHome>
         </Layout>
@@ -118,7 +119,7 @@ const StyledHome = styled.div`
         justify-content: center;
         color: var(--text);
         box-shadow: 0 0 20px 0 var(--shadow);
-        margin-bottom: 2em;
+        margin: 2em 0;
     }   
     
 

@@ -16,7 +16,7 @@ const ServiceCategory = () => {
         <Layout>
             <StyledServiceCategory>
                 <div>
-                    <IntroBanner title={bannerContents.title} desc={bannerContents.desc} btnContent={bannerContents.btnContent} />
+                    <IntroBanner title={bannerContents.title} desc={bannerContents.desc}/>
                 </div>
             </StyledServiceCategory>
         </Layout>
