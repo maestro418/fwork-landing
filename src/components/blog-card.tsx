@@ -11,7 +11,7 @@ interface BlogCardPropsType {
 }
 
 const BlogCard = (props: BlogCardPropsType) => {
-    const {banner, title, desc, img, link} = props;
+    const { banner, title, desc, img, link } = props;
 
     return (
         <StyledBlogCard>
@@ -21,10 +21,11 @@ const BlogCard = (props: BlogCardPropsType) => {
                     <strong className="banner">{banner}</strong>
                     <div className="title">{title}</div>
                 </div>
-                <div className="card-body pl">
+                <div className="card-body">
                     <div className="desc">{desc}</div>
                     <Link to={link} className="link">Read more</Link>
                 </div>
+
             </Link>
         </StyledBlogCard>
     )
@@ -35,9 +36,8 @@ const StyledBlogCard = styled.div`
     border-top-left-radius: 0.75em;
     border-top-right-radius: 0.75em;
     border-radius: 0.75em;
-
     margin: 1em 0;
-    opacity: .9;
+    opacity: 0.9;
     .card-header {
         position: relative;
         color: var(--text-tertiary);
@@ -73,10 +73,12 @@ const StyledBlogCard = styled.div`
     }
 
     .card-body {
-        padding-bottom: 1em;
+        display: flex;
+        flex-direction: column;
+        gap: 0.5em;
+        padding: 1em;
         .desc {
-            font-size: .9em;
-            padding-bottom: 0.5em;
+            font-size: 0.9em;
             color: var(--text);
         }
 
@@ -87,6 +89,11 @@ const StyledBlogCard = styled.div`
 
     &:hover {
         opacity: 1;
+    }
+    a {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
     }
 `;
 

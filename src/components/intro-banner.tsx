@@ -43,7 +43,7 @@ const IntroBanner = ({ title, desc }: IntroBannerProps) => {
                         <div className="h4">
                             {desc}
                         </div>
-                        <Link to="https://fwork.io/freelancers">
+                        <Link to="https://fwork.io/freelancers" className={`${!!mobile && "d center"}`}>
                             <StyledButton className={`btn-hire d center middle ${!!mobile ? 'btn-mobile' : 'w-50'}`}>
                                 <div className="h4">
                                     Hire Developer
@@ -51,7 +51,6 @@ const IntroBanner = ({ title, desc }: IntroBannerProps) => {
                                 <img src="img/hire.svg" alt="" width={25} />
                             </StyledButton>
                         </Link>
-
                     </div>
                 </div>
             </div>
