@@ -114,7 +114,7 @@ const service = [
     },
     {
         icon: 'img/icon/hiring-icon-2.svg',
-        desc: 'Build a world-class MVP to hit the market <br/>',
+        desc: 'Build a world-class MVP to hit the market',
         btnLink: 'https://fwork.io/services',
         btnContent: 'Get started',
         bgColor: '#ebeaea'
@@ -270,7 +270,7 @@ const Home = () => {
                         </div>
                     </div>
                 </div>
-                <div id="case" className="case-content mb-2">
+                <section id="case" className="case-content mb-2">
                     <div className="container">
                         <label className="h1">Witness the magic of our expert developers and designers in action!</label>
 
@@ -292,8 +292,8 @@ const Home = () => {
                             </Link>
                         </div>
                     </div>
-                </div>
-                <div id="hiring" className="container">
+                </section>
+                <section id="hiring" className="container">
                     <label className="h1">Developer Hiring Process</label>
                     <div className="mt-1 process-content row mb-2">
                         {process.map((i) => (
@@ -302,9 +302,9 @@ const Home = () => {
                             </div>
                         ))}
                     </div>
-                </div>
+                </section>
 
-                <div id="services" className="container">
+                <section id="services" className="container">
                     <label className="h1">Services for Enterprise, Startups, and Entrepreneurs</label>
                     <div className="row m-0">
                         {service.map((i, k) => (
@@ -313,9 +313,9 @@ const Home = () => {
                             </div>
                         ))}
                     </div>
-                </div>
+                </section>
 
-                <div id="faq" className="container faq-content center">
+                <section id="faq" className="container faq-content center">
                     <div className="row m-0">
                         <div className="col-lg-4 p-0">
                             <div className="h1">Frequently Asked Questions</div>
@@ -333,9 +333,9 @@ const Home = () => {
                             ))}
                         </div>
                     </div>
-                </div>
+                </section>
 
-                <div id="blog" className="container">
+                <section id="blog" className="container">
                     <div className="h1">Find Work Blog</div>
                     <p className="m-0">Check out our mind-blowing product development tutorials and futuristic technology announcements cooked up by our brilliant software development wizards. Penned by humans, for humans (and maybe a few robots).</p>
                     <div className="row m-0 p-0">
@@ -345,14 +345,16 @@ const Home = () => {
                             </div>
                         ))}
                     </div>
-                </div>
+                </section>
             </StyledHome>
         </Layout>
     )
 }
 
 const StyledHome = styled.div`
-    
+    display: flex;
+    flex-direction: column;
+    gap: 3em;
     .process-content {
         color: var(--text);
         box-shadow: 0 0 20px 0 var(--shadow);

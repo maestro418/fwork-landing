@@ -68,7 +68,7 @@ const Header = ({ menuItems }: HeaderProps) => {
                 <div className="">
                     <div className="menu">
                         {menuItems.map((i, k) => (
-                            <Link to={`${!!i.link ? i.link : ""}`} key={k} onClick={() => setOpenSideBar(false)}><div>{i.title}</div></Link>
+                            <a href={i.link} key={k} onClick={() => setOpenSideBar(false)}><div>{i.title}</div></a>
                         ))}
                     </div>
                 </div>

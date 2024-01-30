@@ -19,8 +19,12 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
             },
             {
                 title: 'Case Studies',
-                link: 'https://fwork.io/blogs',
+                link: '#case',
                 items: []
+            },
+            {
+                title: 'Blog',
+                link: '#blog'
             },
         ]
     }
