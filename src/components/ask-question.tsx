@@ -14,7 +14,7 @@ const AskQuestion = ({ title, desc, isOpen, onAccordian }: QuestionPropsType) =>
         <StyledAskQuestion>
             <div className="accordion-header" onClick={onAccordian}>
                 <div>{title}</div>
-                <img width={30} src={`${isOpen ? "img/icon/arrow-down.svg" : "img/icon/arrow-up.svg"}`} alt="" />
+                <img width={30} src={`${isOpen ? "/img/icon/arrow-down.svg" : "/img/icon/arrow-up.svg"}`} alt="" />
             </div>
             <div
                 ref={contentRef}
@@ -23,7 +23,7 @@ const AskQuestion = ({ title, desc, isOpen, onAccordian }: QuestionPropsType) =>
                     isOpen
                         ? { height: contentRef.current?.scrollHeight }
                         : { height: "0px" }
-                    }
+                }
             >
                 {desc}
             </div>
@@ -34,7 +34,7 @@ const AskQuestion = ({ title, desc, isOpen, onAccordian }: QuestionPropsType) =>
 
 const StyledAskQuestion = styled.div`
     padding: .5em 0;
-
+    cursor: pointer;
     .accordion-header {
         color: #0f258b;
         font-size: 1.1em;

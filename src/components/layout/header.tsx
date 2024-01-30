@@ -1,9 +1,6 @@
 import React, { useState } from "react";
 import styled from 'styled-components'
-
-import { StyledButton } from "../button";
 import { Link } from "react-router-dom";
-import IntroBanner from "../intro-banner";
 
 interface HeaderProps {
     menuItems: { title: string, link?: string, items?: { title: string, link: string }[] }[]
@@ -53,7 +50,15 @@ const Header = ({ menuItems }: HeaderProps) => {
                 </Link >
                 <div className="d gap-3">
                     {!mobile && menuItems.map((i, k) => (
-                        <a href={i.link} key={k}><div>{i.title}</div></a>
+                        <>
+                            {!!i.link && (
+                                <a href={i.link} key={k}><div>{i.title}</div></a>
+                            )}
+                            {!i.link && (
+                                <></>
+                            )}
+                        </>
+
                     ))}
                     {!!mobile && (
                         <div className="hamburger" onClick={() => setOpenSideBar(!openSideBar)}>

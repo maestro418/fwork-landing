@@ -10,17 +10,17 @@ type footerProps = {
 
 const footerItems = [
     {
-        icon: 'img/icon/address.png',
+        icon: '/img/icon/address.png',
         desc: 'Hong Kong',
         link: 'https://t.me/fwork_io',
     },
     {
-        icon: 'img/icon/Vector.png',
+        icon: '/img/icon/Vector.png',
         desc: 'info@fwork.com',
         link: 'https://t.me/fwork_io',
     },
     {
-        icon: 'img/icon/telegram.svg',
+        icon: '/img/icon/telegram.svg',
         link: 'https://t.me/fwork_io',
         desc: 'Join Telegram'
     }
@@ -86,7 +86,7 @@ const Footer = () => {
 const StyledFooter = styled.div<footerProps>`
     width: 100%;
     color: white;
-    background-image: url('img/header.png');
+    background-image: url('/img/header.png');
     padding: 3em 0em;
     a {
         color: white;
