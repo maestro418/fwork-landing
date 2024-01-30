@@ -3,17 +3,20 @@ import { Link } from "react-router-dom";
 import styled from "styled-components";
 
 interface DropDownProps {
+    title: string
     options: { title: string, link: string }[]
 }
 
-const DropDown = ({ options }: DropDownProps) => {
+const DropDown = ({ title, options }: DropDownProps) => {
     return (
         <StyledDropwDown>
+
             <div>
-                {options.map((i, k) => (
-                    <Link to={i.link} key={k}>{i.title}</Link>
-                ))}
+                <div>{title}</div>
             </div>
+            {options.map((i, k) => (
+                <Link to={i.link} key={k}>{i.title}</Link>
+            ))}
         </StyledDropwDown>
     )
 }
