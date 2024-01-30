@@ -63,6 +63,11 @@ const Header = ({ menuItems }: HeaderProps) => {
                         </div>
                     )}
                 </div>
+                <div>
+                    {!mobile && (
+                        <a href="https://fwork.io/login">Log in</a>
+                    )}
+                </div>
             </div>
             {!!openSideBar && (
                 <div className="">
@@ -70,6 +75,7 @@ const Header = ({ menuItems }: HeaderProps) => {
                         {menuItems.map((i, k) => (
                             <a href={i.link} key={k} onClick={() => setOpenSideBar(false)}><div>{i.title}</div></a>
                         ))}
+                        <a href="https://fwork.io/login">Log in</a>
                     </div>
                 </div>
             )}
@@ -99,14 +105,13 @@ const StyledHeader = styled.div<StyledHeaderProps>`
     .menu {
         display: flex;
         flex-direction: column;
-        gap: 1em;
         z-index: 1000;
         border: 0;
         background-color: white;
         a {
             border: 0;
             color: black;
-            padding: 0.5em 2em;
+            padding: 1em 2em;
             &:hover {
                 background-position: right center;
                 background-color: #ebeaea;

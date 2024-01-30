@@ -14,18 +14,19 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
                 link: '#services'
             },
             {
+                title: 'Blog',
+                link: '#blog'
+            },
+            {
                 title: 'FAQ',
                 link: '#faq'
             },
+
             {
                 title: 'Case Studies',
                 link: '#case',
                 items: []
-            },
-            {
-                title: 'Blog',
-                link: '#blog'
-            },
+            }
         ]
     }
     return (

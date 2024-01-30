@@ -146,7 +146,8 @@ const service = [
         btnLink: 'https://fwork.io/freelancers',
         btnContent: 'Talk to Our Expert',
         bgColor: '#ebeaea'
-    }]
+    }
+]
 const faq = [
     {
         "_id": 1,
@@ -221,13 +222,13 @@ const Home = () => {
     return (
         <Layout>
             <StyledHome>
-                <div className="mb-2">
+                <section>
                     <IntroBanner title={bannerContents.title} desc={bannerContents.desc} />
-                </div>
-                <div className="container">
+                </section>
+                <section className="container">
                     <div className="world-card row">
                         <div className="col-md-4 col-sm-6 p-0"></div>
-                        <div className="col-md-4 col-sm-6 pr-1 pl-1">
+                        <div className="col-md-4 col-sm-6 pr-2 pl-2">
                             <div className="">
                                 <div className="number">1,200</div>
                                 <div className="h3">Expert developers from Europe, Asia, North America .</div>
@@ -241,7 +242,7 @@ const Home = () => {
                                 </div>
                             </div>
                         </div>
-                        <div className="col-md-4 col-sm-6 pr-1 pl-1">
+                        <div className="col-md-4 col-sm-6 pr-2 pl-2">
                             <div>
                                 <div className="number">$140M+</div>
                                 <p >Raised by early-stage startups who worked with us.</p>
@@ -252,7 +253,7 @@ const Home = () => {
                                 ))}
                             </div>
                         </div>
-                        <div className="col-md-4 col-sm-6" >
+                        <div className="col-md-4 col-sm-6 pr-2 pl-2" >
                             <div className="b-content">
                                 <p>Hire Expert Developers,</p>
                                 <p>Freelancers Are</p>
@@ -260,21 +261,20 @@ const Home = () => {
                             </div>
                             <p>Building a great product in today’s world requires expert developers,<br />not freelancers. DevTeam.Space is a vetted community where you can hire expert developers for all your software development needs.</p>
                         </div>
-                        <div className="col-md-4 col-sm-6" style={{ color: "white", backgroundImage: "linear-gradient(134deg, #667EEA 0%, #764BA2 100%)" }}>
+                        <div className="col-md-4 col-sm-6 pr-2 pl-2" style={{ color: "white", backgroundImage: "linear-gradient(134deg, #667EEA 0%, #764BA2 100%)" }}>
                             <div className="b-content"><p>Get a World-class</p><p>Looking and Working</p><p>Product</p></div>
                             <p>Our expert developers deliver supportable and maintainable code. So any new developers can onboard and continue working on the code immediately.</p>
                         </div>
-                        <div className="col-md-4 col-sm-6">
+                        <div className="col-md-4 col-sm-6 pr-2 pl-2">
                             <div className="b-content"><p>Clear Communication,</p><p>Tasks and Payments</p><p>Management</p></div>
                             <p>Get complimentary support from a dedicated tech account manager and AI-powered agile process with all the tools, notifications, and performance tracking to ensure ongoing success.</p>
                         </div>
                     </div>
-                </div>
-                <section id="case" className="case-content mb-2">
+                </section>
+                <section id="case" className="case-content">
                     <div className="container">
                         <label className="h1">Witness the magic of our expert developers and designers in action!</label>
-
-                        <div className="row mt-1">
+                        <div className="row">
                             {cases.map(i => (
                                 <div key={i._id} className="col-md-4" >
                                     <CaseCard title={i.title} tech={i.tech} img={i.img} team={i.team} smallScreen={smallScreen} />
@@ -295,7 +295,7 @@ const Home = () => {
                 </section>
                 <section id="hiring" className="container">
                     <label className="h1">Developer Hiring Process</label>
-                    <div className="mt-1 process-content row mb-2">
+                    <div className=" process-content row">
                         {process.map((i) => (
                             <div key={i.id} className="col-lg-3 col-md-6">
                                 <HireProcess id={i.id} title={i.title} desc={i.desc} />
@@ -303,7 +303,6 @@ const Home = () => {
                         ))}
                     </div>
                 </section>
-
                 <section id="services" className="container">
                     <label className="h1">Services for Enterprise, Startups, and Entrepreneurs</label>
                     <div className="row m-0">
@@ -314,12 +313,11 @@ const Home = () => {
                         ))}
                     </div>
                 </section>
-
                 <section id="faq" className="container faq-content center">
                     <div className="row m-0">
                         <div className="col-lg-4 p-0">
                             <div className="h1">Frequently Asked Questions</div>
-                            <p className="m-0 mb-1">Everything you need to know about DevTeam.Space. Can’t find the answer you’re looking for?</p>
+                            <p className="m-0 mb-1 mt-1">Everything you need to know about DevTeam.Space. Can’t find the answer you’re looking for?</p>
                             <button>Discovery Call</button>
                         </div>
                         <div className="col-lg-8 pt-2">
@@ -334,10 +332,11 @@ const Home = () => {
                         </div>
                     </div>
                 </section>
-
-                <section id="blog" className="container">
-                    <div className="h1">Find Work Blog</div>
-                    <p className="m-0">Check out our mind-blowing product development tutorials and futuristic technology announcements cooked up by our brilliant software development wizards. Penned by humans, for humans (and maybe a few robots).</p>
+                <section id="blog" className="container mb-3">
+                    <div className="d column ">
+                        <div className="h1">Find Work Blog</div>
+                        <div>Check out our mind-blowing product development tutorials and futuristic technology announcements cooked up by our brilliant software development wizards. Penned by humans, for humans (and maybe a few robots).</div>
+                    </div>
                     <div className="row m-0 p-0">
                         {blog.map((i, k) => (
                             <div key={k} className="col-lg-3 col-sm-4">
@@ -359,7 +358,6 @@ const StyledHome = styled.div`
         color: var(--text);
         box-shadow: 0 0 20px 0 var(--shadow);
         margin: 0;
-
         &>div {
            padding : 0;
         }
@@ -440,7 +438,11 @@ const StyledHome = styled.div`
         display: flex;
         justify-content: center;
         background-image: linear-gradient(134deg, #0f258b 0%, #4b58a2 100%);
-        
+        .container {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5em;
+        }        
         label {
             color: white;
         }
@@ -457,13 +459,7 @@ const StyledHome = styled.div`
     }
     .col-md-3 .col-lg-6 {
         padding-inline: 0 !important;
-    }
-    #services {
-        display: flex;
-        flex-direction: column;
-        gap: 1em;
-        margin-bottom: 2em;
-    }    
+    }   
 
     .faq-content {
         button {
@@ -476,6 +472,10 @@ const StyledHome = styled.div`
             cursor: pointer;
         }
     }
+    #blog {
+        .d {
+            gap: 1em;
+        }
 
     .h1 {
         background: linear-gradient(134deg, #0f258b 0%, #4b58a2 100%);
@@ -484,6 +484,7 @@ const StyledHome = styled.div`
         font-weight: bolder;
         font-size: 2em;
     }
+}
 `
 
 

@@ -8,22 +8,22 @@ interface CaseCardProps {
     tech: string,
     title: string,
     img: string,
-    team: Array<{gender: string, member: string}>
+    team: Array<{ gender: string, member: string }>
     smallScreen: boolean
 }
 
 const CaseCard = ({ title, tech, img, team, smallScreen }: CaseCardProps) => {
     return (
         <StyledCaseCard>
-            <div className="r-30 mb">
+            <div className="r-30">
                 <img className="r-30" src={`img/${img}`} width='100%' />
             </div>
             <div>
                 <div>{tech}</div>
-                <div style={{fontSize: smallScreen ? "1.2em" : ""}}>{title}</div>
+                <div style={{ fontSize: smallScreen ? "1.2em" : "" }}>{title}</div>
 
             </div>
-            <div style={{display: smallScreen ? "none" : ""}}>
+            <div style={{ display: smallScreen ? "none" : "" }}>
                 <hr />
                 <div className="mb">Development Team</div>
                 <div>
@@ -45,6 +45,9 @@ const CaseCard = ({ title, tech, img, team, smallScreen }: CaseCardProps) => {
 }
 
 const StyledCaseCard = styled.div`
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
     &>:first-child {
         box-shadow: 0 0 10px 0 var(--shadow);
     }
