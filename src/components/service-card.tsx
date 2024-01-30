@@ -39,7 +39,7 @@ const StyledServiceCard = styled.div<StyledCardProps>`
     display: flex;
     flex-direction: column;
     gap: 2em;
-    padding: 1em 0.5em;
+    padding: 2em 2em;
     background-color: ${(props) => props.bgColor};
     justify-content: space-between;
     color:${(props) => props.bgColor == '#ebeaea' ? 'black' : 'white'};
