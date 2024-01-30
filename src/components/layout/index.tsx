@@ -14,33 +14,35 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
                 items: [
                     {
                         title: 'AI Development Services',
-                        link: 'ai'
+                        link: ''
                     },
                     {
                         title: 'Mobile Development Services',
-                        link: 'mobile'
+                        link: ''
                     },
                     {
                         title: 'Web Development Services',
-                        link: 'web'
+                        link: ''
                     },
                     {
                         title: 'Blockchain Development Services',
-                        link: 'blockchain'
+                        link: ''
                     },
                     {
                         title: 'Software Development Services',
-                        link: 'software'
+                        link: ''
                     }
                 ]
             },
             {
                 title: 'Blog',
-                link: '#blog'
+                link: '#blog',
+                items: []
             },
             {
                 title: 'FAQ',
-                link: '#faq'
+                link: '#faq',
+                items: []
             },
 
             {
