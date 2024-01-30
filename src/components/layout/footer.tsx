@@ -94,7 +94,7 @@ const Footer = () => {
                 <hr style={{ 'color': 'white' }} className="mt-1 mb-1" />
                 <div className="d center gap-2">
                     {footerIcons.map((i, k) => (
-                        <Link to={i.link}><img src={i.icon} width={25} key={k} /></Link>
+                        <Link to={i.link}><img src={i.icon} width={30} key={k} /></Link>
                     ))}
                 </div>
             </div>

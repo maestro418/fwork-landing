@@ -5,7 +5,7 @@ import { StyledButton } from "./button";
 import { Link } from "react-router-dom";
 
 interface IntroBannerProps {
-    title: string,
+    title: string | undefined,
     desc?: string,
 }
 
@@ -63,9 +63,11 @@ const IntroBanner = ({ title, desc }: IntroBannerProps) => {
 
 const StyledBanner = styled.div<StyledBannerProps>`
     width: 100%;
+    
     padding: 6em 0 5em 0;
     background-image: url("/img/header.png");
     background-repeat: no-repeat;
+    background-size: cover;
     color: var(--text-tertiary);
     .main-content {
         position: relative;
@@ -109,7 +111,7 @@ const StyledBanner = styled.div<StyledBannerProps>`
     .fixed{
         position: absolute;
         right: 0;
-        top: 18%;
+        top:calc(18%);
         width: 35%;
         display: ${(props) => !!props.isMobile && 'none'};
         img {

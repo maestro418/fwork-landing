@@ -8,7 +8,7 @@ import HireProcess from "../components/hire-process";
 import CaseCard from "../components/case-card";
 import Markdown from "../components/markdown";
 
-import data from "./service/service.json";
+import data from "./context/service.json";
 import AskQuestion from "../components/ask-question";
 import BlogCard from "../components/blog-card";
 import OutSourcing from "../components/outsourcing";
@@ -110,15 +110,15 @@ const Service = () => {
                         </div>
                     </div>
                     <div className="d center gap mt-1 mb-2">
-                            <Link to='https://fwork.io/freelancers'><button>Hire Top-notch Developer
-                            </button></Link>
-                            <Link to="https://fwork.io/blogs">
-                                <button className="d middle" >
-                                    <div className="pr">See More Case Studies</div>
-                                    <img src="/img/icon/right-arrow.svg" width={16} alt="" />
-                                </button>
-                            </Link>
-                        </div>
+                        <Link to='https://fwork.io/freelancers'><button>Hire Top-notch Developer
+                        </button></Link>
+                        <Link to="https://fwork.io/blogs">
+                            <button className="d middle" >
+                                <div className="pr">See More Case Studies</div>
+                                <img src="/img/icon/right-arrow.svg" width={16} alt="" />
+                            </button>
+                        </Link>
+                    </div>
                 </section>
 
                 <section className="container">
