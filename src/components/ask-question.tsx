@@ -13,8 +13,8 @@ const AskQuestion = ({ title, desc, isOpen, onAccordian }: QuestionPropsType) =>
     return (
         <StyledAskQuestion>
             <div className="accordion-header" onClick={onAccordian}>
-                <img width={!isOpen ? 25 : 20} src={`${!isOpen ? "img/icon/hamburger.svg" : "img/icon/dismiss.svg"}`} alt="" />
                 <div>{title}</div>
+                <img width={30} src={`${isOpen ? "img/icon/arrow-down.svg" : "img/icon/arrow-up.svg"}`} alt="" />
             </div>
             <div
                 ref={contentRef}
@@ -36,9 +36,10 @@ const StyledAskQuestion = styled.div`
     padding: .5em 0;
 
     .accordion-header {
+        color: #0f258b;
         font-size: 1.1em;
         display: flex;
-        gap: 1em;
+        justify-content: space-between;
     }
 
     .accordion-body {
