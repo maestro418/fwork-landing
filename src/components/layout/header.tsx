@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 import DropDown from "../dropdown";
 
 interface HeaderProps {
-    menuItems: { title: string, link?: string, items?: { title: string, link: string }[] }[]
+    menuItems: { title: string, link?: string, items: { title: string, link: string }[] }[]
 }
 
 type StyledHeaderProps = {
@@ -16,7 +16,7 @@ const Header = ({ menuItems }: HeaderProps) => {
     const [openSideBar, setOpenSideBar] = useState(false)
     const [mobile, setMobile] = useState(false);
     const [scrollEvent, setScrollEvent] = useState(false)
-    const [openDropDown, setDropDown] = useState(false)
+    const [openDropDown, setOpenDropDown] = useState(false)
 
     const getScrollY = () => window.scrollY;
 
@@ -59,7 +59,7 @@ const Header = ({ menuItems }: HeaderProps) => {
                                 <a href={i.link} key={k}><div>{i.title}</div></a>
                             )}
                             {!i.link && (
-                                <></>
+                                <DropDown title={i.title} options={i.items} openDropDown={openDropDown} setOpenDropDown={setOpenDropDown} scrollEvent={scrollEvent} isMobile={mobile} />
                             )}
                         </>
 
@@ -74,7 +74,7 @@ const Header = ({ menuItems }: HeaderProps) => {
                 </div>
                 <div>
                     {!mobile && (
-                        <a href="https://fwork.io/login">Log in</a>
+                        <a href="https://fwork.io/">Get started</a>
                     )}
                 </div>
             </div>
@@ -82,7 +82,14 @@ const Header = ({ menuItems }: HeaderProps) => {
                 <div className="">
                     <div className="menu">
                         {menuItems.map((i, k) => (
-                            <a href={i.link} key={k} onClick={() => setOpenSideBar(false)}><div>{i.title}</div></a>
+                            <>
+                                {!!i.link && (
+                                    <a href={i.link} key={k}><div>{i.title}</div></a>
+                                )}
+                                {!i.link && (
+                                    <DropDown title={i.title} options={i.items} openDropDown={openDropDown} setOpenDropDown={setOpenDropDown} scrollEvent={scrollEvent} isMobile={mobile} />
+                                )}
+                            </>
                         ))}
                         <a href="https://fwork.io/login">Log in</a>
                     </div>
