@@ -17,7 +17,7 @@ const BlogCard = (props: BlogCardPropsType) => {
         <StyledBlogCard>
             <Link to={link}>
                 <div className="card-header">
-                    <img src={`img/${img}`} className="w-100" alt="" />
+                    <img src={`/img/${img}`} className="w-100" alt="" />
                     <strong className="banner">{banner}</strong>
                     <div className="title">{title}</div>
                 </div>
