@@ -10,19 +10,23 @@
 				"item": [
 					{
 						"title": "Blockchain Outsourcing",
-						"desc": "Get a dedicated tech account manager with blockchain expertise managing a dedicated team of blockchain developers following our practice-proven Agile process."
+						"desc": "Get a dedicated tech account manager with blockchain expertise managing a dedicated team of blockchain developers following our practice-proven Agile process.",
+						"img": "3.svg"
 					},
 					{
 						"title": "Blockchain Outstaffing",
-						"desc": "If you are a tech-experienced product manager and prefer to manage developers yourself, get our top blockchain developers assigned to your project."
+						"desc": "If you are a tech-experienced product manager and prefer to manage developers yourself, get our top blockchain developers assigned to your project.",
+						"img": "hiring-icon-3.svg"
 					},
 					{
 						"title": "Supporting Specialist",
-						"desc": "We can support you with DevOps engineers, front-end developers, QA engineers, designers, and any other experts needed to bring your project to success."
+						"desc": "We can support you with DevOps engineers, front-end developers, QA engineers, designers, and any other experts needed to bring your project to success.",
+						"img": "hiring-icon-5.svg"
 					},
 					{
 						"title": "From Prototype to Enterprise",
-						"desc": "With DevTeam.Space blockchain development services, you can develop custom blockchain solutions of any complexity, from prototyping to enterprise solutions."
+						"desc": "With DevTeam.Space blockchain development services, you can develop custom blockchain solutions of any complexity, from prototyping to enterprise solutions.",
+						"img": "hiring-icon-6.svg"
 					}
 				]
 			},
@@ -98,7 +102,7 @@
 				]
 			},
 			"blog": {
-				"title": "",
+				"title": "Featured Articles for Blockchain Development",
 				"desc": "Explore our in-depth product development tutorials and new technology announcements created\nby our software development experts. Our content created by humans for humans.",
 				"item": [
 					{
@@ -137,19 +141,23 @@
 				"item": [
 					{
 						"title": "PHP Outsourcing",
-						"desc": "Get a dedicated tech account manager with PHP expertise managing a\n dedicated team of PHP developers following our practice proven agile\n process."
+						"desc": "Get a dedicated tech account manager with PHP expertise managing a\n dedicated team of PHP developers following our practice proven agile\n process.",
+						"img": "3.svg"
 					},
 					{
 						"title": "PHP Outstaffing",
-						"desc": "If you are a tech experienced product manager and prefer to manage\n developers yourself, simply get our best PHP developers assigned to your\n project."
+						"desc": "If you are a tech experienced product manager and prefer to manage\n developers yourself, simply get our best PHP developers assigned to your\n project.",
+						"img": "hiring-icon-3.svg"
 					},
 					{
 						"title": "Supporting Specialist",
-						"desc": "We can support you with devops engineers, front-end developers, QA\n engineers, designers, and other experts needed to bring your project to\n success."
+						"desc": "We can support you with devops engineers, front-end developers, QA\n engineers, designers, and other experts needed to bring your project to\n success.",
+						"img": "hiring-icon-5.svg"
 					},
 					{
 						"title": "From Prototype to Enterprise",
-						"desc": "With DevTeam.Space PHP development services, you can build a PHP-powered\n back-end of any complexity, from prototyping to enterprise solutions."
+						"desc": "With DevTeam.Space PHP development services, you can build a PHP-powered\n back-end of any complexity, from prototyping to enterprise solutions.",
+						"img": "hiring-icon-6.svg"
 					}
 				]
 			},
@@ -225,7 +233,7 @@
 				]
 			},
 			"blog": {
-				"title": "",
+				"title": "Featured Articles for Software Development",
 				"desc": "Explore our in-depth product development tutorials and new technology announcements\n                                created\n                                by our software development experts. Our content created by humans for humans.",
 				"item": [
 					{
@@ -257,19 +265,23 @@
 				"item": [
 					{
 						"title": "Software Outsourcing",
-						"desc": "Get a dedicated tech account manager with software development expertise\n managing a dedicated team of software developers following our\n practice-proven Agile process."
+						"desc": "Get a dedicated tech account manager with software development expertise\n managing a dedicated team of software developers following our\n practice-proven Agile process.",
+						"img": "3.svg"
 					},
 					{
 						"title": "Software Outstaffing",
-						"desc": "If you are a tech-experienced product manager and prefer to manage\n developers yourself, get our top software developers assigned to your\n project."
+						"desc": "If you are a tech-experienced product manager and prefer to manage\n developers yourself, get our top software developers assigned to your\n project.",
+						"img": "hiring-icon-3.svg"
 					},
 					{
 						"title": "Supporting Specialist",
-						"desc": "We can support you with DevOps engineers, front-end developers, QA\n engineers, designers, and other experts needed to bring your project to\n success."
+						"desc": "We can support you with DevOps engineers, front-end developers, QA\n engineers, designers, and other experts needed to bring your project to\n success.",
+						"img": "hiring-icon-5.svg"
 					},
 					{
 						"title": "From Prototype to Enterprise",
-						"desc": "With DevTeam.Space software development services, you can build a\n software application of any complexity, from prototyping to enterprise\n solutions."
+						"desc": "With DevTeam.Space software development services, you can build a\n software application of any complexity, from prototyping to enterprise\n solutions.",
+						"img": "hiring-icon-6.svg"
 					}
 				]
 			},
@@ -345,7 +357,7 @@
 				]
 			},
 			"blog": {
-				"title": "",
+				"title": "Featured Articles for Software Development",
 				"desc": "Explore our in-depth product development tutorials and new technology announcements\n                                created\n                                by our software development experts. Our content created by humans for humans.",
 				"item": [
 					{
@@ -384,19 +396,23 @@
 				"item": [
 					{
 						"title": "Web Outsourcing",
-						"desc": "Get a dedicated tech account manager with web expertise managing a\n dedicated team of web developers following our practice-proven Agile\n process."
+						"desc": "Get a dedicated tech account manager with web expertise managing a\n dedicated team of web developers following our practice-proven Agile\n process.",
+						"img": "3.svg"
 					},
 					{
 						"title": "Web Outstaffing",
-						"desc": "If you are a tech-experienced product manager and prefer to manage\n developers yourself, get our top web developers assigned to your\n project."
+						"desc": "If you are a tech-experienced product manager and prefer to manage\n developers yourself, get our top web developers assigned to your\n project.",
+						"img": "hiring-icon-3.svg"
 					},
 					{
 						"title": "Supporting Specialist",
-						"desc": "We can support you with DevOps engineers, front-end developers, QA\n engineers, designers, and other experts needed to bring your project to\n success."
+						"desc": "We can support you with DevOps engineers, front-end developers, QA\n engineers, designers, and other experts needed to bring your project to\n success.",
+						"img": "hiring-icon-5.svg"
 					},
 					{
 						"title": "From Prototype to Enterprise",
-						"desc": "With DevTeam.Space web development services, you can build a web\n application of any complexity, from prototyping to enterprise solutions."
+						"desc": "With DevTeam.Space web development services, you can build a web\n application of any complexity, from prototyping to enterprise solutions.",
+						"img": "hiring-icon-6.svg"
 					}
 				]
 			},
@@ -468,7 +484,7 @@
 				]
 			},
 			"blog": {
-				"title": "",
+				"title": "Featured Articles for Web Development",
 				"desc": "Explore our in-depth product development tutorials and new technology announcements\n                                created\n                                by our software development experts. Our content created by humans for humans.",
 				"item": [
 					{
