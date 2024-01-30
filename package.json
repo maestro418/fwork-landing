@@ -11,10 +11,17 @@
     "@types/node": "^16.18.75",
     "@types/react": "^18.2.48",
     "@types/react-dom": "^18.2.18",
+    "@uiw/react-markdown-preview": "^5.0.7",
+    "katex": "^0.16.9",
+    "markdown-it": "^14.0.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-markdown": "^9.0.1",
     "react-router-dom": "^6.21.3",
     "react-scripts": "5.0.1",
+    "rehype-rewrite": "^4.0.2",
+    "rehype-sanitize": "^6.0.0",
+    "sanitize-html": "^2.11.0",
     "sass": "^1.70.0",
     "styled-components": "^6.1.8",
     "typescript": "^4.9.5",
@@ -39,6 +46,9 @@
     ]
   },
   "devDependencies": {
+    "@types/katex": "^0.16.7",
+    "@types/markdown-it": "^13.0.7",
+    "@types/sanitize-html": "^2.9.5",
     "scss": "^0.2.4"
   }
 }

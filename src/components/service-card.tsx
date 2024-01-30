@@ -5,29 +5,36 @@ import { StyledButton } from "./button";
 import { Link } from "react-router-dom";
 
 interface ServiceCardProps {
-    icon: string,
+    icon?: string,
     desc: string,
-    btnLink: string,
-    btnContent: string,
-    bgColor: string
-
+    btnLink?: string,
+    btnContent?: string,
+    bgColor?: string
+    title?: string
 }
 type StyledCardProps = {
-    bgColor: string
+    bgColor?: string
 }
 
-const ServiceCard = ({ icon, desc, bgColor, btnContent, btnLink }: ServiceCardProps) => {
+const ServiceCard = ({ title, icon, desc, bgColor, btnContent, btnLink }: ServiceCardProps) => {
     return (
         <StyledServiceCard bgColor={bgColor}>
             <div className="" >
                 <img src={icon} width={50} />
             </div>
             <div>
+                {title}
+            </div>
+            <div>
                 {desc}
             </div>
-            <Link to={btnLink} >
-                <button className="btn">{btnContent}</button>
-            </Link >
+            {btnLink && (
+                <Link to={btnLink} >
+                    <button className="btn">{btnContent}</button>
+                </Link >
+            )
+
+            }
 
         </StyledServiceCard >
     )

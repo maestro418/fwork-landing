@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 
 interface processType {
-    id: number
+    id?: number
     title: string
     desc: string
 }
@@ -18,7 +18,7 @@ const HireProcess = (props: processType) => {
                 <img style={{ background: id === 1 ? "linear-gradient(to bottom,transparent, rgb(62, 97, 156)" : "linear-gradient(to bottom,transparent, rgb(227, 241, 252))" }} src={`/img/icon/${id}.svg`} alt="" />
             </div>
             <div className="d middle">
-                <span >{id}</span>
+                <span style={{paddingRight: !id ? "0" : "" }}>{id}</span>
                 <div>{title}</div>
             </div>
             <div>{desc}</div>
