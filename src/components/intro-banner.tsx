@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import styled from "styled-components";
 
 import { StyledButton } from "./button";
+import { Link } from "react-router-dom";
 
 interface IntroBannerProps {
     title: string,
@@ -42,12 +43,15 @@ const IntroBanner = ({ title, desc }: IntroBannerProps) => {
                         <div className="h4">
                             {desc}
                         </div>
-                        <StyledButton className={`btn-hire d center middle ${!!mobile ? 'btn-mobile' : 'w-50'}`}>
-                            <div className="h4">
-                                Hire Developer
-                            </div>
-                            <img src="img/hire.svg" alt="" width={25} />
-                        </StyledButton>
+                        <Link to="https://fwork.io/freelancers">
+                            <StyledButton className={`btn-hire d center middle ${!!mobile ? 'btn-mobile' : 'w-50'}`}>
+                                <div className="h4">
+                                    Hire Developer
+                                </div>
+                                <img src="img/hire.svg" alt="" width={25} />
+                            </StyledButton>
+                        </Link>
+
                     </div>
                 </div>
             </div>
