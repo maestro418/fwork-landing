@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 
-import Icon from '../assets/img/icon.jpg'
+import Icon from '../assets//img/icon.jpg'
 
 interface FaqItemProps {
 

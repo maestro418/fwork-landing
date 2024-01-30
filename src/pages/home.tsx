@@ -106,42 +106,42 @@ const blog = [
 
 const service = [
     {
-        icon: 'img/icon/hiring-icon-1.svg',
+        icon: '/img/icon/hiring-icon-1.svg',
         desc: 'Scale your MVP with a pro-level development team',
         btnLink: 'https://fwork.io/contact-us',
         btnContent: 'Contact Us',
         bgColor: '#0077ff'
     },
     {
-        icon: 'img/icon/hiring-icon-2.svg',
+        icon: '/img/icon/hiring-icon-2.svg',
         desc: 'Build a world-class MVP to hit the market',
         btnLink: 'https://fwork.io/services',
         btnContent: 'Get started',
         bgColor: '#ebeaea'
     },
     {
-        icon: 'img/icon/hiring-icon-3.svg',
+        icon: '/img/icon/hiring-icon-3.svg',
         desc: 'Launch a product prototype to test the market and raise funds',
         btnLink: 'https://fwork.io/contact-us',
         btnContent: 'Schedule a Call',
         bgColor: '#0077ff'
     },
     {
-        icon: 'img/icon/hiring-icon-4.svg',
+        icon: '/img/icon/hiring-icon-4.svg',
         desc: ' Enterprise-Build and scale a custom process automation solution, and more ',
         btnLink: 'https://fwork.io/freelancers',
         btnContent: 'Talk to Our Expert',
         bgColor: '#ebeaea'
     },
     {
-        icon: 'img/icon/hiring-icon-5.svg',
+        icon: '/img/icon/hiring-icon-5.svg',
         desc: 'Outstaffing - expand your team with our senior developers and other experts',
         btnLink: 'https://fwork.io/freelancers',
         btnContent: 'Talk to Our Expert',
         bgColor: '#0077ff'
     },
     {
-        icon: 'img/icon/hiring-icon-6.svg',
+        icon: '/img/icon/hiring-icon-6.svg',
         desc: 'Conduct a professional design phase with UX/UI and technical design',
         btnLink: 'https://fwork.io/freelancers',
         btnContent: 'Talk to Our Expert',
@@ -287,7 +287,7 @@ const Home = () => {
                             <Link to="https://fwork.io/blogs">
                                 <button className="d middle" >
                                     <div className="pr">See More Case Studies</div>
-                                    <img src="img/icon/right-arrow.svg" width={16} alt="" />
+                                    <img src="/img/icon/right-arrow.svg" width={16} alt="" />
                                 </button>
                             </Link>
                         </div>
@@ -368,7 +368,7 @@ const StyledHome = styled.div`
         border: 1px solid #FF5827;
         margin-inline: 0;
         &>:first-child {
-            background-image: url(img/world.jpg);
+            background-image: url(/img/world.jpg);
             height: 300px;
             background-repeat: no-repeat;
             background-size: cover;

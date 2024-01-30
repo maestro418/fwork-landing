@@ -48,14 +48,14 @@ const IntroBanner = ({ title, desc }: IntroBannerProps) => {
                                 <div className="h4">
                                     Hire Developer
                                 </div>
-                                <img src="img/hire.svg" alt="" width={25} />
+                                <img src="/img/hire.svg" alt="" width={25} />
                             </StyledButton>
                         </Link>
                     </div>
                 </div>
             </div>
             <div className="fixed">
-                <img src="img/banner.png" alt="" />
+                <img src="/img/banner.png" alt="" />
             </div>
         </StyledBanner>
     )

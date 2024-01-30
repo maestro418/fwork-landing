@@ -16,7 +16,7 @@ const CaseCard = ({ title, tech, img, team, smallScreen }: CaseCardProps) => {
     return (
         <StyledCaseCard>
             <div className="r-30">
-                <img className="r-30" src={`img/${img}`} width='100%' />
+                <img className="r-30" src={`/img/${img}`} width='100%' />
             </div>
             <div>
                 <div>{tech}</div>
@@ -30,7 +30,7 @@ const CaseCard = ({ title, tech, img, team, smallScreen }: CaseCardProps) => {
                     {team.map((i, k) => (
                         <div key={k} className="d">
                             <div>
-                                <img src={`img/icon/${i.gender}.svg`} width={24} alt="" />
+                                <img src={`/img/icon/${i.gender}.svg`} width={24} alt="" />
                             </div>
                             <div>{i.member}</div>
                         </div>
@@ -38,7 +38,7 @@ const CaseCard = ({ title, tech, img, team, smallScreen }: CaseCardProps) => {
                 </div>
             </div>
             <Link to={`developer/${title}`} className="d mb-2">
-                <div className="pr">Details</div><img src="img/icon/right-arrow.svg" width={16} alt="" />
+                <div className="pr">Details</div><img src="/img/icon/right-arrow.svg" width={16} alt="" />
             </Link>
         </StyledCaseCard>
     )

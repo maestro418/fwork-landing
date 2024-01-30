@@ -1,9 +1,8 @@
 import React, { useState } from "react";
 import styled from 'styled-components'
-
-import { StyledButton } from "../button";
 import { Link } from "react-router-dom";
-import IntroBanner from "../intro-banner";
+
+import DropDown from "../dropdown";
 
 interface HeaderProps {
     menuItems: { title: string, link?: string, items?: { title: string, link: string }[] }[]
@@ -17,6 +16,8 @@ const Header = ({ menuItems }: HeaderProps) => {
     const [openSideBar, setOpenSideBar] = useState(false)
     const [mobile, setMobile] = useState(false);
     const [scrollEvent, setScrollEvent] = useState(false)
+    const [openDropDown, setDropDown] = useState(false)
+
     const getScrollY = () => window.scrollY;
 
     const getWidth = () => {
@@ -53,7 +54,15 @@ const Header = ({ menuItems }: HeaderProps) => {
                 </Link >
                 <div className="d gap-3">
                     {!mobile && menuItems.map((i, k) => (
-                        <a href={i.link} key={k}><div>{i.title}</div></a>
+                        <>
+                            {!!i.link && (
+                                <a href={i.link} key={k}><div>{i.title}</div></a>
+                            )}
+                            {!i.link && (
+                                <></>
+                            )}
+                        </>
+
                     ))}
                     {!!mobile && (
                         <div className="hamburger" onClick={() => setOpenSideBar(!openSideBar)}>
