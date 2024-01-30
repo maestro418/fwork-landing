@@ -476,6 +476,14 @@ const StyledHome = styled.div`
             cursor: pointer;
         }
     }
+
+    .h1 {
+        background: linear-gradient(134deg, #0f258b 0%, #4b58a2 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        font-weight: bolder;
+        font-size: 2em;
+    }
 `
 
 
