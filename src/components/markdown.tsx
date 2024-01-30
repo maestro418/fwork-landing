@@ -47,9 +47,6 @@ export const Markdown = ({ text }: { text: string }) => {
 			{/* <MarkdownPreview
 				source={text}
 				rehypePlugins={rehypePlugins}
-				wrapperElement={{
-					"data-color-mode": darkTheme ? 'dark' : 'light'
-				}}
 
 				components={{
 					code: ({ children = [], className, ...props }: any) => {
@@ -97,26 +94,34 @@ const StyledView = styled.div`
 		line-height: 1.5;
 	}
 	h1 {
-		font-size: 24px;
+		font-size: 36px;
 	}
 	h2 {
-		font-size: 20px;
+		font-size: 30px;
 	}
 	h3 {
-		font-size: 18px;
+		font-size: 26px;
 	}
 	h4 {
-		font-size: 16px;
+		font-size: 20px;
 	}
 	p {
 		margin-top: 0;
 		margin-bottom: 0;
+		line-height: 2.3em;
+		font-size: .9em;
+		color: #4b5763;
 	}
 	pre {
 		overflow: auto;
 		/* max-height: 600px; */
 		background-color: var(--rb-back-secondary);
 		margin: 1em 0;
+	}
+	li {
+		color: #535d66;
+		line-height: 2em;
+		font-size: .88em;
 	}
 	code {
 		line-height: 1;

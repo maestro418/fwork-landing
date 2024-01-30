@@ -14,33 +14,34 @@ interface CaseCardProps {
 
 const CaseCard = ({ title, tech, img, team, smallScreen }: CaseCardProps) => {
     return (
-        <StyledCaseCard>
-            <div className="r-30">
-                <img className="r-30" src={`/img/${img}`} width='100%' />
-            </div>
-            <div>
-                <div>{tech}</div>
-                <div style={{ fontSize: smallScreen ? "1.2em" : "" }}>{title}</div>
+        <Link to={""}>
+            <StyledCaseCard>
 
-            </div>
-            <div style={{ display: smallScreen ? "none" : "" }}>
-                <hr />
-                <div className="mb">Development Team</div>
-                <div>
-                    {team.map((i, k) => (
-                        <div key={k} className="d">
-                            <div>
-                                <img src={`/img/icon/${i.gender}.svg`} width={24} alt="" />
-                            </div>
-                            <div>{i.member}</div>
-                        </div>
-                    ))}
+                <div className="r-30">
+                    <img className="r-30" src={`/img/${img}`} width='100%' />
                 </div>
-            </div>
-            <Link to={`developer/${title}`} className="d mb-2">
-                <div className="pr">Details</div><img src="/img/icon/right-arrow.svg" width={16} alt="" />
-            </Link>
-        </StyledCaseCard>
+                <div>
+                    <div>{tech}</div>
+                    <div style={{ fontSize: smallScreen ? "1.2em" : "" }}>{title}</div>
+
+                </div>
+                <div style={{ display: smallScreen ? "none" : "" }}>
+                    <hr />
+                    <div className="mb">Development Team</div>
+                    <div>
+                        {team.map((i, k) => (
+                            <div key={k} className="d">
+                                <div>
+                                    <img src={`/img/icon/${i.gender}.svg`} width={24} alt="" />
+                                </div>
+                                <div>{i.member}</div>
+                            </div>
+                        ))}
+                    </div>
+                </div>
+            </StyledCaseCard>
+        </Link>
+
     )
 }
 
@@ -48,6 +49,7 @@ const StyledCaseCard = styled.div`
     display: flex;
     flex-direction: column;
     gap: 1em;
+    cursor: pointer;
     &>:first-child {
         box-shadow: 0 0 10px 0 var(--shadow);
     }
@@ -59,17 +61,17 @@ const StyledCaseCard = styled.div`
         }
 
         &>:first-child {
-            color: var(--text-secondary);
+            color: #97a5b1;
         }   
 
         &>:last-child {
-            font-size: 1.5em;
-            color: white;
+            font-size: 1.3em;
+            color: #c9dff3
         }
     }
     &>:nth-child(3) {
         &>:nth-child(2) {
-            color: var(--text-secondary);
+            color: #97a5b1;
         }   
 
         &>:last-child {
