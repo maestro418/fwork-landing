@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import styled from 'styled-components'
 import { Link } from "react-router-dom";
 
+import DropDown from "../dropdown";
+
 interface HeaderProps {
     menuItems: { title: string, link?: string, items?: { title: string, link: string }[] }[]
 }
@@ -14,6 +16,8 @@ const Header = ({ menuItems }: HeaderProps) => {
     const [openSideBar, setOpenSideBar] = useState(false)
     const [mobile, setMobile] = useState(false);
     const [scrollEvent, setScrollEvent] = useState(false)
+    const [openDropDown, setDropDown] = useState(false)
+
     const getScrollY = () => window.scrollY;
 
     const getWidth = () => {
