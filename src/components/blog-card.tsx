@@ -17,7 +17,7 @@ const BlogCard = (props: BlogCardPropsType) => {
         <StyledBlogCard>
             <Link to={link}>
                 <div className="card-header">
-                    <img src={`/img/${img}`} className="w-100" alt="" />
+                    <img src={`/img/${img}`} className="w-100" style={{height: "335.7px"}}  alt="" />
                     <strong className="banner">{banner}</strong>
                     <div className="title">{title}</div>
                 </div>
@@ -38,6 +38,8 @@ const StyledBlogCard = styled.div`
     border-radius: 0.75em;
     margin: 1em 0;
     opacity: 0.9;
+    transition: all .3s;
+    
     .card-header {
         position: relative;
         color: var(--text-tertiary);
@@ -78,8 +80,9 @@ const StyledBlogCard = styled.div`
         gap: 0.5em;
         padding: 1em;
         .desc {
-            font-size: 0.9em;
-            color: var(--text);
+            color: #6c757d;
+            line-height: 2em;
+            font-size: .9em;
         }
 
         .link {
@@ -89,6 +92,8 @@ const StyledBlogCard = styled.div`
 
     &:hover {
         opacity: 1;
+        translate: 0px -20px;
+
     }
     a {
         display: flex;
