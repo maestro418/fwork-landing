@@ -8,8 +8,7 @@ import HireProcess from "../components/hire-process";
 import CaseCard from "../components/case-card";
 import Markdown from "../components/markdown";
 
-import data from "./service/service.json";
-import FaqItem from "../components/faq-item";
+import data from "./context/service.json";
 import AskQuestion from "../components/ask-question";
 import BlogCard from "../components/blog-card";
 

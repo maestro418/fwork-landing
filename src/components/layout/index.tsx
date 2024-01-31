@@ -13,30 +13,35 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
                 title: 'Services',
                 items: [
                     {
-                        title: 'AI Development Services',
-                        link: ''
-                    },
-                    {
-                        title: 'Mobile Development Services',
-                        link: ''
-                    },
-                    {
                         title: 'Web Development Services',
-                        link: ''
+                        link: '/service/web-development'
                     },
                     {
                         title: 'Blockchain Development Services',
-                        link: ''
+                        link: '/service/blockchain-development'
                     },
                     {
                         title: 'Software Development Services',
-                        link: ''
+                        link: '/service/software-development'
+                    },
+                    {
+                        title: 'PHP Development Services',
+                        link: '/service/php-development'
+                    },
+                    {
+                        title: 'See All',
+                        link: '/hire-dev'
                     }
                 ]
             },
             {
                 title: 'Blog',
                 link: '#blog',
+                items: []
+            },
+            {
+                title: 'Hire',
+                link: 'hire-dev',
                 items: []
             },
             {
