@@ -324,7 +324,7 @@ const Home = () => {
                             <div className="h1">Frequently Asked Questions</div>
                             <p className="m-0 mb-1 mt-1">Everything you need to know about Fwork. Can’t find the answer you’re looking for?</p>
                         </div>
-                        <div className="col-lg-8 pt-2">
+                        <div className="col-lg-8 pt-3">
                             {faq.map((i, k) => (
                                 <AskQuestion
                                     title={i.title}

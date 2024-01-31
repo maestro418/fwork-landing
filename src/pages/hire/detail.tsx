@@ -200,6 +200,14 @@ const StyledHireDetail = styled.div`
             cursor: pointer;
         }
     }
+
+    .text-header {
+        &>:last-child {
+            color: #6c757d;
+            line-height: 2em;
+            font-size: .9em;
+        }
+    }
 `
 
 export default HireDetail
