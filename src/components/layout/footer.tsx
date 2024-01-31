@@ -126,18 +126,6 @@ const StyledFooter = styled.div<footerProps>`
             }
         }
     }
-    .container {
-        padding: 0em 10em;
-        @media screen and (max-width:1368px){
-            padding: 0em 7em;
-        }
-         @media screen and (max-width:992px){
-            padding: 0em 3em;
-        }
-        @media screen and (max-width:992px){
-            padding: 0em 1em;
-        }
-    }
 
     .h3 {
          font-size: 1em;
