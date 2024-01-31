@@ -215,6 +215,7 @@ const Home = () => {
     const onAccordian = (idx: number) => {
         setActiveIndex((prevIndex) => (prevIndex === idx ? null : idx));
     };
+
     React.useEffect(() => {
         const handleScreen = () => {
             setSmallScreen(window.innerWidth <= 768)
@@ -227,7 +228,7 @@ const Home = () => {
         <Layout>
             <StyledHome>
                 <section>
-                    <IntroBanner title={bannerContents.title} desc={bannerContents.desc} />
+                    <IntroBanner title={bannerContents.title} desc={bannerContents.desc} bgImg="/img/bg/banner.png" />
                 </section>
                 <section className="container">
                     <div className="world-card row">
@@ -330,6 +331,7 @@ const Home = () => {
                                     desc={i.desc}
                                     isOpen={activeIndex === k}
                                     onAccordian={() => onAccordian(k)}
+                                    key={k}
                                 />
                             ))}
                         </div>

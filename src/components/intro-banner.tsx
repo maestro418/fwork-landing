@@ -7,13 +7,15 @@ import { Link } from "react-router-dom";
 interface IntroBannerProps {
     title: string | undefined,
     desc?: string,
+    bgImg: string
 }
 
 type StyledBannerProps = {
-    isMobile: Boolean
+    $bgImg: string
+    $isMobile: Boolean
 }
 
-const IntroBanner = ({ title, desc }: IntroBannerProps) => {
+const IntroBanner = ({ title, desc, bgImg }: IntroBannerProps) => {
     const [mobile, setMobile] = useState(false);
     const getWidth = () => {
         return window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
@@ -33,7 +35,7 @@ const IntroBanner = ({ title, desc }: IntroBannerProps) => {
         };
     }, [])
     return (
-        <StyledBanner isMobile={mobile}>
+        <StyledBanner $isMobile={mobile} $bgImg={bgImg}>
             <div className="container">
                 <div className="row main-content">
                     <div className="">
@@ -54,9 +56,6 @@ const IntroBanner = ({ title, desc }: IntroBannerProps) => {
                     </div>
                 </div>
             </div>
-            <div className="fixed">
-                <img src="/img/banner.png" alt="" />
-            </div>
         </StyledBanner>
     )
 }
@@ -65,15 +64,15 @@ const StyledBanner = styled.div<StyledBannerProps>`
     width: 100%;
     
     padding: 6em 0 5em 0;
-    background-image: url("/img/header.png");
+    background-image: url(${(props) => `${!!props.$isMobile ? `/img/header.png` : `${props.$bgImg}`}`});
     background-repeat: no-repeat;
     background-size: cover;
     color: var(--text-tertiary);
     .main-content {
         position: relative;
         z-index: 1;
-        width: ${(props) => !!props.isMobile ? '100%' : '60%'};
-        text-align: ${(props) => !!props.isMobile && 'center'};
+        width: ${(props) => !!props.$isMobile ? '100%' : '60%'};
+        text-align: ${(props) => !!props.$isMobile && 'center'};
         &>:first-child {
             display: flex;
             flex-direction: column;
@@ -114,7 +113,7 @@ const StyledBanner = styled.div<StyledBannerProps>`
         right: 0;
         top:calc(18%);
         width: 35%;
-        display: ${(props) => !!props.isMobile && 'none'};
+        display: ${(props) => !!props.$isMobile && 'none'};
         img {
             width:100%;
         }

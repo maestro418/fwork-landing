@@ -106,7 +106,7 @@ const HireDetail = ({ slug, category }: HireDetailProps) => {
         <Layout>
             <StyledHireDetail>
                 <section>
-                    <IntroBanner title={status?.name} desc={overview} />
+                    <IntroBanner title={status?.name} desc={overview} bgImg="/img/bg/banner.png" />
                 </section>
                 <section id="hiring" className="container">
                     <label className="h1">Developer Hiring Process</label>
