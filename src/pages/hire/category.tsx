@@ -158,7 +158,7 @@ const HireCategory = () => {
                     <div className=" process-content row">
                         {process.map((i) => (
                             <div key={i.id} className="col-lg-3 col-md-6">
-                                <HireProcess id={i.id} title={i.title} desc={i.desc} />
+                                <HireProcess id={i.id} title={i.title} desc={i.desc} img={""} />
                             </div>
                         ))}
                     </div>
