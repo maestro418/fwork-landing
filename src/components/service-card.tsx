@@ -30,7 +30,7 @@ const ServiceCard = ({ title, icon, desc, bgColor, btnContent, btnLink }: Servic
             </div>
             {btnLink && (
                 <Link to={btnLink} >
-                    <button className="btn">{btnContent}</button>
+                    <StyledButton className="btn">{btnContent}</StyledButton>
                 </Link >
             )
 
