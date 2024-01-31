@@ -71,11 +71,11 @@ const Header = ({ menuItems }: HeaderProps) => {
                         </div>
                     )}
                 </div>
-                <div>
+                {/* <div>
                     {!mobile && (
                         <a href="https://fwork.io/">Get started</a>
                     )}
-                </div>
+                </div> */}
             </div>
             {!!openSideBar && (
                 <div className="">
@@ -90,7 +90,7 @@ const Header = ({ menuItems }: HeaderProps) => {
                                 )}
                             </>
                         ))}
-                        <a href="https://fwork.io/login">Log in</a>
+                        {/* <a href="https://fwork.io/login">Get started</a> */}
                     </div>
                 </div>
             )}

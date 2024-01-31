@@ -42,7 +42,6 @@ const DropDown = ({ title, options, openDropDown, setOpenDropDown, scrollEvent, 
                         </>
                     )}
                 </>
-
             )}
 
         </StyledDropwDown>

@@ -84,7 +84,7 @@ const HireDetail = ({ slug, category }: HireDetailProps) => {
         setStatus(data)
         setCases(data?.item.project.item)
         return;
-    }, []);
+    }, [slug]);
 
     React.useEffect(() => {
         const handleScreen = () => {
@@ -105,13 +105,12 @@ const HireDetail = ({ slug, category }: HireDetailProps) => {
                     <div className=" process-content row">
                         {process.map((i) => (
                             <div key={i.id} className="col-lg-3 col-md-6">
-                                <HireProcess id={i.id} title={i.title} desc={i.desc} />
+                                <HireProcess id={i.id} title={i.title} desc={i.desc} img={""} />
                             </div>
                         ))}
                     </div>
                 </section>
                 {!!cases && cases.length >= 1 && (
-
                     <section id="case" className="case-content">
                         <div className="container">
                             <label className="h1">{status?.item.project.title}</label>

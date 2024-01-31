@@ -35,24 +35,27 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
                 ]
             },
             {
-                title: 'Blog',
-                link: '#blog',
-                items: []
-            },
-            {
                 title: 'Hire',
-                link: 'hire-dev',
+                link: '/hire-dev',
                 items: []
             },
             {
-                title: 'FAQ',
-                link: '#faq',
-                items: []
-            },
 
+                title: 'About us',
+                link: 'https://fwork.io/about-us',
+                items: []
+
+            },
             {
-                title: 'Case Studies',
-                link: '#case',
+
+                title: 'Contact us',
+                link: 'https://fwork.io/contact-us',
+                items: []
+            },
+            {
+
+                title: 'Get started',
+                link: 'https://fwork.io/login',
                 items: []
             }
         ]
