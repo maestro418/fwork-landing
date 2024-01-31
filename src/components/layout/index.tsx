@@ -25,8 +25,12 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
                         link: '/service/software-development'
                     },
                     {
-                        title: 'PHP Development Services',
-                        link: '/service/php-development'
+                        title: 'Mobile App Development Services',
+                        link: '/service/mobile-app-development'
+                    },
+                    {
+                        title: 'AI Development Services',
+                        link: '/service/ai-development'
                     },
                     {
                         title: 'See All',

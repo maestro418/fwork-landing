@@ -13,7 +13,23 @@ interface DropDownProps {
     isMobile: boolean
 }
 
+
 const DropDown = ({ title, options, openDropDown, setOpenDropDown, scrollEvent, isMobile }: DropDownProps) => {
+
+    const dropdownRef = React.useRef<HTMLDivElement | null>(null);
+
+    React.useEffect(() => {
+        const handleClickOutSide = (e: MouseEvent) => {
+            if (dropdownRef.current && !dropdownRef.current.contains(e.target as Node)) {
+                setOpenDropDown(false);
+            }
+        };
+
+        document.addEventListener("mousedown", handleClickOutSide);
+
+        return () => document.removeEventListener("mousedown", handleClickOutSide)
+    }, [setOpenDropDown])
+
     return (
         <StyledDropwDown>
             {!isMobile && (
@@ -24,7 +40,7 @@ const DropDown = ({ title, options, openDropDown, setOpenDropDown, scrollEvent, 
                             <Icon icon={`${!!openDropDown ? "UpArrow" : "DownArrow"}`} />
                         </div>
                     </div>
-                    <div className="dropdown">
+                    <div className="dropdown"  ref={dropdownRef}>
                         {!!openDropDown && options.map((i, k) => (
                             <Link to={i.link} key={k} onClick={() => setOpenDropDown(false)}>{i.title}</Link>
                         ))}
@@ -61,12 +77,13 @@ const StyledDropwDown = styled.div`
         width: 300px;
         top: 2em;
         display: flex;
-        box-shadow:'0px 2px 9px rgba(0, 0, 0, 0.9)' ;
+        border-radius: .4em;
+        box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
         flex-direction: column;
         a {
             color: #636b6f;
             padding: 0.7em;
-            font-size: 1em;
+            font-size: .88em;
             &:hover {
                 background-color: var(--white-hover);
             }
