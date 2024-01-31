@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import styled from "styled-components";
 
-import { StyledButton } from "./button";
+import { HireBtn } from "./button";
 import { Link } from "react-router-dom";
 
 interface IntroBannerProps {
@@ -43,14 +43,14 @@ const IntroBanner = ({ title, desc }: IntroBannerProps) => {
                         <div className="h4">
                             {desc}
                         </div>
-                        <StyledButton className={`${!!mobile ? 'btn-mobile' : 'w-50'}`}>
+                        <HireBtn className={`${!!mobile ? 'btn-mobile' : 'w-50'}`}>
                             <Link to="https://fwork.io/freelancers" className={`btn-hire d center middle `}>
                                 <div className="h4">
                                     Hire Developers
                                 </div>
                                 <img src="/img/hire.svg" alt="" width={25} />
                             </Link>
-                        </StyledButton>
+                        </HireBtn>
                     </div>
                 </div>
             </div>
@@ -154,6 +154,7 @@ const StyledBanner = styled.div<StyledBannerProps>`
             line-height: 2;
         }
     }   
+    
 `
 
 export default IntroBanner

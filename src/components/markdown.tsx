@@ -141,6 +141,8 @@ const StyledView = styled.div`
 			padding-right: 1em;
 		}
 	}
+
+	img {width: 100%;}
 `;
 
 export default Markdown;

@@ -12,6 +12,7 @@ import data from "./context/service.json";
 import AskQuestion from "../components/ask-question";
 import BlogCard from "../components/blog-card";
 import OutSourcing from "../components/outsourcing";
+import { StyledButton } from "../components/button";
 
 interface dataType {
     title: string
@@ -110,13 +111,13 @@ const Service = () => {
                         </div>
                     </div>
                     <div className="d center gap mt-1 mb-2">
-                        <Link to='https://fwork.io/freelancers'><button>Hire Top-notch Developer
-                        </button></Link>
+                        <Link to='https://fwork.io/freelancers'><StyledButton>Hire Top-notch Developer
+                        </StyledButton></Link>
                         <Link to="https://fwork.io/blogs">
-                            <button className="d middle" >
+                            <StyledButton className="d middle" >
                                 <div className="pr">See More Case Studies</div>
                                 <img src="/img/icon/right-arrow.svg" width={16} alt="" />
-                            </button>
+                            </StyledButton>
                         </Link>
                     </div>
                 </section>
