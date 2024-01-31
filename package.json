@@ -19,6 +19,7 @@
     "react-markdown": "^9.0.1",
     "react-router-dom": "^6.21.3",
     "react-scripts": "5.0.1",
+    "react-simplemde-editor": "^5.2.0",
     "rehype-rewrite": "^4.0.2",
     "rehype-sanitize": "^6.0.0",
     "sanitize-html": "^2.11.0",

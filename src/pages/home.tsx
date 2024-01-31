@@ -16,22 +16,26 @@ const process = [
     {
         id: 1,
         title: "Tell Us About Your Project or Hiring Needs",
-        desc: "Submit a request. Your dedicated tech account manager will then contact you to assess your needs in detail and answer any questions."
+        desc: "Submit a request. Your dedicated tech account manager will then contact you to assess your needs in detail and answer any questions.",
+        img: "1.svg"
     },
     {
         id: 2,
         title: "Hire Top Developers with Relevant Expertise",
-        desc: "Top developers with relevant expertise will be assigned to your project. Once approved by you, we will set up the process and get started."
+        desc: "Top developers with relevant expertise will be assigned to your project. Once approved by you, we will set up the process and get started.",
+        img: "2.svg"
     },
     {
         id: 3,
         title: "Experience World-class Development Process",
-        desc: "Get supportable and maintainable code, easily communicate, track developers’ performance and payments, and receive regular updates."
+        desc: "Get supportable and maintainable code, easily communicate, track developers’ performance and payments, and receive regular updates.",
+        img: "3.svg"
     },
     {
         id: 4,
         title: "Start Small - Scale with Ease",
-        desc: "Once satisfied with our exceptional quality and dedication, you can easily hire more expert engineers to scale your team."
+        desc: "Once satisfied with our exceptional quality and dedication, you can easily hire more expert engineers to scale your team.",
+        img: "4.svg"
     }
 ]
 
@@ -272,7 +276,7 @@ const Home = () => {
                     </div>
                 </section>
                 <section id="case" className="case-content">
-                    <div className="container">
+                    <div className="container mt-1">
                         <label className="h1">Witness the magic of our expert developers and designers in action!</label>
                         <div className="row">
                             {cases.map(i => (
@@ -281,7 +285,7 @@ const Home = () => {
                                 </div>
                             ))}
                         </div>
-                        <div className="d center gap">
+                        <div className="d center gap mt-1 mb-2">
                             <Link to='https://fwork.io/freelancers'><button>Hire Top-notch Developer
                             </button></Link>
                             <Link to="https://fwork.io/blogs">
@@ -298,7 +302,7 @@ const Home = () => {
                     <div className=" process-content row">
                         {process.map((i) => (
                             <div key={i.id} className="col-lg-3 col-md-6">
-                                <HireProcess id={i.id} title={i.title} desc={i.desc} />
+                                <HireProcess id={i.id} title={i.title} desc={i.desc} img={i.img} />
                             </div>
                         ))}
                     </div>
@@ -315,10 +319,9 @@ const Home = () => {
                 </section>
                 <section id="faq" className="container faq-content center">
                     <div className="row m-0">
-                        <div className="col-lg-4 p-0">
+                        <div className="col-lg-4 p-0 text-header">
                             <div className="h1">Frequently Asked Questions</div>
                             <p className="m-0 mb-1 mt-1">Everything you need to know about DevTeam.Space. Can’t find the answer you’re looking for?</p>
-                            <button>Discovery Call</button>
                         </div>
                         <div className="col-lg-8 pt-2">
                             {faq.map((i, k) => (
@@ -356,10 +359,9 @@ const StyledHome = styled.div`
     gap: 3em;
     .process-content {
         color: var(--text);
-        box-shadow: 0 0 20px 0 var(--shadow);
         margin: 0;
         &>div {
-           padding : 0;
+           padding-inline : .4em;
         }
     }   
     
@@ -476,7 +478,15 @@ const StyledHome = styled.div`
         .d {
             gap: 1em;
         }
-}
+    }
+
+    .text-header {
+        &>:last-child {
+            color: #6c757d;
+            line-height: 2em;
+            font-size: .9em;
+        }
+    }
 `
 
 

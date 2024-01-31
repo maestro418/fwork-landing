@@ -37,18 +37,20 @@ const StyledAskQuestion = styled.div`
     cursor: pointer;
     .accordion-header {
         color: #0f258b;
-        font-size: 1.1em;
+        font-size: 1em;
         display: flex;
         justify-content: space-between;
+        align-items: start;
     }
 
     .accordion-body {
         margin-top: .3em;
         overflow: hidden;
         transition: height 0.3s ease;
-        color: var(--text);
-        opacity: .9;
         padding-inline: 1em;
+        color: #3c4349;
+            line-height: 2.3em;
+            font-size: .9em;
     }
 `;
 

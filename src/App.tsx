@@ -9,8 +9,7 @@ function App() {
     //<Provider>
     <BrowserRouter>
       <Routes>
-        <Route path='/' element={<Home />}>
-        </Route>
+        <Route path='/' element={<Home />} />
         <Route path='/service/:id' element={<Service />} />
         <Route path='/hire-dev/:category?/:slug?' element={<HireDev />} />
       </Routes>

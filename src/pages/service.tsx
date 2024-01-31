@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 
 import Layout from "../components/layout";
 import IntroBanner from "../components/intro-banner";
@@ -11,6 +11,7 @@ import Markdown from "../components/markdown";
 import data from "./context/service.json";
 import AskQuestion from "../components/ask-question";
 import BlogCard from "../components/blog-card";
+import OutSourcing from "../components/outsourcing";
 
 interface dataType {
     title: string
@@ -21,6 +22,7 @@ interface dataType {
         item: Array<{
             title: string
             desc: string
+            img: string
         }>
     }
     project: {
@@ -82,16 +84,18 @@ const Service = () => {
             <StyledService>
                 <IntroBanner title={status.title} desc={status.desc} />
                 <section>
-                    <div>
-                        <h1>{status.service?.title}</h1>
-                        <div className="m-0 p-0">{status.service?.desc}</div>
-                    </div>
-                    <div className="row">
-                        {status.service?.item.map((i, k) => (
-                            <div className="col-md-6 mt mb">
-                                <HireProcess key={k} title={i.title} desc={i.desc} />
-                            </div>
-                        ))}
+                    <div className="container">
+                        <div className="text-header">
+                            <h1>{status.service?.title}</h1>
+                            <div className="m-0 p-0">{status.service?.desc}</div>
+                        </div>
+                        <div className="row">
+                            {status.service?.item.map((i, k) => (
+                                <div className="col-md-6 mt mb">
+                                    <OutSourcing key={k} img={i.img} title={i.title} desc={i.desc} />
+                                </div>
+                            ))}
+                        </div>
                     </div>
                 </section>
                 <section className="case-content">
@@ -105,11 +109,21 @@ const Service = () => {
                             ))}
                         </div>
                     </div>
+                    <div className="d center gap mt-1 mb-2">
+                        <Link to='https://fwork.io/freelancers'><button>Hire Top-notch Developer
+                        </button></Link>
+                        <Link to="https://fwork.io/blogs">
+                            <button className="d middle" >
+                                <div className="pr">See More Case Studies</div>
+                                <img src="/img/icon/right-arrow.svg" width={16} alt="" />
+                            </button>
+                        </Link>
+                    </div>
                 </section>
 
                 <section className="container">
                     <div className="row">
-                        <div className="col-md-4">
+                        <div className="col-md-4 text-header">
                             <label className="h1">{status.faq?.title}</label>
                             <div>Everything you need to know about DevTeam.Space. Can’t find the answer you’re looking for?</div>
                         </div>
@@ -127,7 +141,7 @@ const Service = () => {
                 </section>
                 <section>
                     <div className="container">
-                        <div>
+                        <div className="text-header">
                             <label className="h1">{status.blog?.title}</label>
                             <div>{status.blog?.desc}</div>
                         </div>
@@ -140,7 +154,7 @@ const Service = () => {
                         </div>
                     </div>
                 </section>
-                <section>
+                <section className="mb-5">
                     <div className="container">
                         {status.article && <Markdown text={status.article} />}
                     </div>
@@ -152,8 +166,12 @@ const Service = () => {
 }
 
 const StyledService = styled.div`
+    display: flex;
+    flex-direction: column;
+    gap: 4em;
+
     .case-content {
-        padding: 2em 0;
+        padding: 4em 0 2em 0;
         display: flex;
         justify-content: center;
         background-image: linear-gradient(134deg, #0f258b 0%, #4b58a2 100%);
@@ -174,6 +192,14 @@ const StyledService = styled.div`
             padding: 0.5em 0.7em;
             font-size: 1em;
             cursor: pointer;
+        }
+    }
+
+    .text-header {
+        &>:last-child {
+            color: #6c757d;
+            line-height: 2em;
+            font-size: .9em;
         }
     }
 `
