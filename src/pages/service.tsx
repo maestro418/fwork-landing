@@ -70,7 +70,7 @@ const Service = () => {
             setStatus(_data)
             console.log(_data)
         }
-    }, [])
+    }, [id])
     React.useEffect(() => {
         const handleScreen = () => {
             setSmallScreen(window.innerWidth <= 768)
