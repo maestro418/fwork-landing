@@ -1,31 +1,163 @@
 [
 	{
-		"title": "blockchain-development",
+		"title": "ai-development",
 		"item": {
-			"title": "Blockchain Development Services",
-			"desc": "Fwork LLC is a vetted community of expert blockchain development teams\nsupported by an AI-powered Agile process. Top companies and startups rely on us\nto build and scale world-class blockchain applications.",
+			"title": "AI Development Services",
+			"desc": "Fwork LLC is a vetted community of expert AI development teams\n supported by an AI-powered Agile process. Top companies and startups rely on us\n to build and scale world-class AI applications. We can help you too.",
 			"service": {
-				"title": "Blockchain Outsourcing, Outstaffing, and More",
-				"desc": "You can use Fwork LLC Blockchain development services to either outsource\nyour entire project or hire individual developers and manage them yourself.",
+				"title": "AI Outsourcing, Outstaffing, and More",
+				"desc": "You can use Fwork LLC AI development services to either outsource\n your entire project or hire individual developers and manage them yourself.",
 				"item": [
 					{
-						"title": "Blockchain Outsourcing",
-						"desc": "Get a dedicated tech account manager with blockchain expertise managing a dedicated team of blockchain developers following our practice-proven Agile process.",
+						"title": "AI Outsourcing",
+						"desc": "Get a dedicated tech account manager with AI expertise managing a\n dedicated team of AI senior developers following our practice-proven\n Agile process.",
 						"img": "hiring-icon-2.svg"
+						
 					},
 					{
-						"title": "Blockchain Outstaffing",
-						"desc": "If you are a tech-experienced product manager and prefer to manage developers yourself, get our top blockchain developers assigned to your project.",
+						"title": "AI Outstaffing",
+						"desc": "If you are a tech-experienced product manager and prefer to manage\n developers yourself, get our top AI developers assigned to your project.",
 						"img": "hiring-icon-3.svg"
 					},
 					{
 						"title": "Supporting Specialist",
-						"desc": "We can support you with DevOps engineers, front-end developers, QA engineers, designers, and any other experts needed to bring your project to success.",
+						"desc": "We can support you with DevOps engineers, front-end developers, QA\n engineers, designers, and other experts to help bring your project to\n success.",
 						"img": "hiring-icon-5.svg"
 					},
 					{
 						"title": "From Prototype to Enterprise",
-						"desc": "With Fwork LLC blockchain development services, you can develop custom blockchain solutions of any complexity, from prototyping to enterprise solutions.",
+						"desc": "With Fwork LLC AI development services, you can build an AI-powered\n application of any complexity, from prototyping to enterprise solutions.",
+						"img": "hiring-icon-6.svg"
+					}
+				]
+			},
+			"project": {
+				"title": "Some of Our AI Projects",
+				"item": [
+					{
+						"img": "frame-1000001404.jpg",
+						"title": "NEC - Face, Sex, Age, Video Emotion Recognition\n                                                System",
+						"tech": "AI, Backend, Image Recognition, ML,\n                                                Python, TensorFlowDevelopment Team",
+						"slug": "",
+						"team": [
+							{
+								"gender": "male",
+								"member": "4 Developers"
+							},
+							{
+								"gender": "female",
+								"member": "1 Project Manager, 1 Account Manager"
+							}
+						]
+					},
+					{
+						"img": "frame-1000001405.jpg",
+						"title": "High-Speed Vehicle Identification System",
+						"tech": "AI, Backend, Image Recognition, ML,\n                                                Python, TensorFlowDevelopment Team",
+						"slug": "",
+						"team": [
+							{
+								"gender": "male",
+								"member": "3 Developers"
+							},
+							{
+								"gender": "female",
+								"member": "1 Project Manager, 1 Account Manager"
+							}
+						]
+					},
+					{
+						"img": "frame-1000001359-401x263.jpg",
+						"title": "Algo Trading Solution",
+						"tech": "Backend, Blockchain, DevOps, Fintech,\n                                                Frontend, Javascript, Management Dashboard, Python, Trading, WebDevelopment Team",
+						"slug": "",
+						"team": [
+							{
+								"gender": "male",
+								"member": "1 Designer, 3 Developers"
+							},
+							{
+								"gender": "female",
+								"member": "1 Project Manager, 1 Account Manager"
+							}
+						]
+					}
+				]
+			},
+			"article": "Types of AI Development Services\n--------------------------------\n\nFwork LLC offers a wide range of AI development services that will allow you to undertake any kind of AI or ML project. Examples include chatbot development, product recommendation systems, AI-based mobile applications, machine learning model development, etc.\n\nIn our community of over 1200 developers, we have skilled AI engineers who cover all the major AI development technologies, programming languages, libraries, frameworks, and tools. We have helped clients develop AI applications in every industry segment including education, healthcare, finance, commerce, and others.\n\nYou can find some examples of the technologies that our developers love to use below or alternatively, head to our case studies page to check out some of our recent AI projects.\n\nThe specific technology stack you choose for your AI application project will depend on your project requirements.\n\nIf you need help finding the right AI developers then submit your [project request here](https://dashboard.Fwork LLC/get-started/) and get a complimentary discovery call with one of our tech account managers.\n\n### Top 10 AI Development Technologies\n\n1.  Python\n2.  AWS SageMaker\n3.  Azure AI\n4.  IBM Watson\n5.  TensorFlow\n6.  Keras\n7.  Google AutoML\n8.  Theano\n9.  Caffe\n10.  Deeplearning4j\n\nHere are a few technologies that our AI engineers use on a daily basis with a brief explanation of why they love to use them.\n\n#### Python\n\nPython is one of the most popular languages for AI and ML development as well as a huge range of other software development projects that include web and mobile applications.\n\nDespite being started as a hobby project, today, Python is one of the most popular programming languages around the globe.\n\nA few fun facts our developers love are that, in Python, underscores have memory power, Python is able to define infinite numbers, and when you type “import antigravity” into Python, it gives you an easter egg!\n\nHowever, it is the following advantages that are the reason why our developers love to use Python to build powerful projects:\n\n1.  Python has a huge number of supporting libraries that aid machine learning development. Examples include PyTorch, Keras, and NLTK, all of which help simplify machine learning model development and produce performant and reliable applications.\n2.  Python is a portable language, meaning it can be used on a range of different platforms and operating systems including Linux, macOS, mobile OS, etc.\n3.  Python offers a strong level of flexibility thanks to it allowing developers to choose between different programming styles, i.e. procedural, functional, and object-oriented programming.\n\n#### AWS SageMaker\n\nAWS SageMaker is another highly popular AI development tool that our developers use all the time. It is a fully managed artificial intelligence development service offered by Amazon Web Services (AWS), the world’s leading cloud services provider.\n\nThe key advantages of using AWS SageMaker for AI development are as follows:\n\n1.  Sheer size. AWS is the world’s leading cloud provider. As part of this offering, it has a huge number of tools and an almost infinite amount of processing and data storage capacity, both of which are essential for AI.\n2.  AWS SageMaker offers its AutoML jobs tool that helps automatically train advanced AI models in SageMaker pipelines. This saves an enormous amount of time and money.\n3.  Thanks to a huge development pool, AI developers have access to a large range of pre-built machine learning algorithms or models. Examples include regression, classification, dimensionality reduction, etc. AWS SageMaker also offers a UI-based model training tool called SageMaker JumpStart, which our developers find very handy indeed.\n\n#### Azure AI\n\nMicrosoft Azure AI is a comprehensive AI development platform that is currently regarded as one of the world’s best places to develop AI and ML software solutions.\n\nHere are some of the key features of Azure’s AI offering:\n\n1.  Like AWS, developers can build, test, deploy, and maintain AI applications using Azure, all under one roof.\n2.  Azure AI offers several low-code tools such as automated machine learning and a drag-and-drop interface. These cut down on development time and allow developers to concentrate on building and training the AI models.\n3.  Azure now offers access to a wide range of powerful AI technologies that can be painlessly integrated into your application. Examples that our developers recently used include Azure Machine Learning, Azure AI Custom Vision, Azure Databricks, and Azure AI Bot Service.\n\nIn the battle to become the go-to AI cloud development platform, AWS and Azure are doing their very best to outdo each other. This is great news for developers. Both have their strengths and weaknesses, however, it might be fairer to put it like this. Which one you ultimately decide to use depends on your specific project requirements.\n\nChoosing a specific framework or platform for your AI software project will depend on your unique application requirements.\n\nIf you have any questions or need help with your AI project, you only need to submit a project request via the button below and one of our account managers will get in touch to arrange a complimentary discovery call.",
+			"faq": {
+				"title": "Frequently Asked Questions",
+				"item": [
+					{
+						"title": "1. What are AI development services?",
+						"desc": "The term AI development services refers to a range of activities relating\n to designing, implementing, and maintaining AI applications. Examples of\n AI development services include chatbot development, recommendation\n engine development, API development, robotic process automation, data\n analysis tasks, and more. AI developers also perform AI model testing,\n application quality assurance, deployment routines, and maintenance. To\n undertake these tasks, AI developers utilize a range of technologies\n including programming languages like Python language, frameworks like\n TensorFlow, supporting libraries like Sci-kitLearn, cloud services like\n IBM Watson and Amazon Web Services, etc. AI software development\n companies like Fwork LLC offer expert developers with years of\n experience in AI and machine learning development to help businesses\n undertake complex AI development projects and build scalable,\n high-performance, and robust AI software solutions that meet their\n business objectives."
+					},
+					{
+						"title": "2. What AI development services does Fwork LLC offer?",
+						"desc": "With Fwork LLC, companies can either outsource their entire\n artificial intelligence software development project to our AI\n development teams, or hire a number of developers or development teams\n to manage on their own. Our AI developers have expertise in all the main\n AI development technologies, including the Python programming language,\n frameworks like TensorFlow and PyTorch, cloud services like AWS\n SageMaker and Azure AI, etc. Whether you need to build a new AI\n application or update and maintain an existing one, our dedicated AI\n developers can help you with your AI development project."
+					},
+					{
+						"title": "3. Does DeTeam.Space provide expert AI developers?",
+						"desc": "Fwork LLC is a leading AI development company that offers\n high-quality artificial intelligence developers with experience building\n a wide range of AI applications. Our AI developers are experts in AI\n software design, development, testing, and deployment using popular\n programming languages (Python and R), frameworks (TensorFlow and\n PyTorch), libraries (Keras and Theano), and all other major tools. Our\n AI developers also have experience in machine learning model\n development, fine-tuning, and evaluation. They have assisted clients\n with AI applications’ quality assurance, performance optimization,\n security audits, and monitoring. AI software development teams at\n Fwork LLC have helped companies build innovative, secure AI\n solutions that have repeatedly outperformed in terms of our client’s\n expectations. We can help you too."
+					}
+				]
+			},
+			"blog": {
+				"title": "",
+				"desc": "Explore our in-depth product development tutorials and new technology announcements\n                                created\n                                by our software development experts. Our content created by humans for humans.",
+				"item": [
+					{
+						"banner": "AI Software Development",
+						"title": "How to Use AI for an Identity\n                                                Solution",
+						"desc": "The following blog discusses in detail how you can use AI for an\n                                                identity solution. Let's explore.\n                                                How Can AI Help...",
+						"img": "ai-solutions-to-digital-identity-457x370.jpg",
+						"slug": ""
+					},
+					{
+						"banner": "Software Development",
+						"title": "How to Create an AI Solution?",
+						"desc": "Wondering how to create an AI solution?\n                                                AI is set to become one of the leading software development growth...",
+						"img": "grid-ai-e1689608547810-457x370.jpg",
+						"slug": ""
+					},
+					{
+						"banner": "AI Software Development",
+						"title": "How to Leverage AI in\n                                                Healthcare",
+						"desc": "This blog discusses some major use cases of AI in healthcare.\n                                                Using AI in Healthcare Sector:\n                                                Some of the present...",
+						"img": "how-to-leverage-ai-in-healthcare-457x370.jpg",
+						"slug": ""
+					}
+				]
+			}
+		}
+	},
+	{
+		"title": "blockchain-development",
+		"item": {
+			"title": "Blockchain Development Services",
+			"desc": "Fwork LLC is a vetted community of expert blockchain development teams\n supported by an AI-powered Agile process. Top companies and startups rely on us\n to build and scale world-class blockchain applications.",
+			"service": {
+				"title": "Blockchain Outsourcing, Outstaffing, and More",
+				"desc": "You can use Fwork LLC Blockchain development services to either outsource\n your entire project or hire individual developers and manage them yourself.",
+				"item": [
+					{
+						"title": "Blockchain Outsourcing",
+						"desc": "Get a dedicated tech account manager with blockchain expertise managing\n a dedicated team of blockchain developers following our practice-proven\n Agile process.",
+						"img": "hiring-icon-2.svg"
+					},
+					{
+						"title": "Blockchain Outstaffing",
+						"desc": "If you are a tech-experienced product manager and prefer to manage\n developers yourself, get our top blockchain developers assigned to your\n project.",
+						"img": "hiring-icon-3.svg"
+					},
+					{
+						"title": "Supporting Specialist",
+						"desc": "We can support you with DevOps engineers, front-end developers, QA\n engineers, designers, and any other experts needed to bring your project\n to success.",
+						"img": "hiring-icon-5.svg"
+					},
+					{
+						"title": "From Prototype to Enterprise",
+						"desc": "With Fwork LLC blockchain development services, you can develop\n custom blockchain solutions of any complexity, from prototyping to\n enterprise solutions.",
 						"img": "hiring-icon-6.svg"
 					}
 				]
@@ -36,7 +168,7 @@
 					{
 						"img": "frame-1000001363.jpg",
 						"title": "DDKoin",
-						"tech": "Blockchain, Ethereum, Fintech, Node.js, Smart Contracts, Solidity, Trading, TruffleDevelopment Team",
+						"tech": "Blockchain, Ethereum, Fintech,\n                                                Node.js, Smart Contracts, Solidity, Trading, TruffleDevelopment Team",
 						"slug": "",
 						"team": [
 							{
@@ -52,7 +184,7 @@
 					{
 						"img": "frame-1000001352-401x263.jpg",
 						"title": "Cloud Mining ICO",
-						"tech": "Backend, Blockchain, Ethereum, Frontend, Javascript, React, Smart Contracts, Solidity, TruffleDevelopment Team",
+						"tech": "Backend, Blockchain, Ethereum,\n                                                Frontend, Javascript, React, Smart Contracts, Solidity, TruffleDevelopment Team",
 						"slug": "",
 						"team": [
 							{
@@ -68,7 +200,7 @@
 					{
 						"img": "frame-1000001359-401x263.jpg",
 						"title": "Algo Trading Solution",
-						"tech": "Backend, Blockchain, DevOps, Fintech, Frontend, Javascript, Management Dashboard, Python, Trading, WebDevelopment Team",
+						"tech": "Backend, Blockchain, DevOps, Fintech,\n                                                Frontend, Javascript, Management Dashboard, Python, Trading, WebDevelopment Team",
 						"slug": "",
 						"team": [
 							{
@@ -89,40 +221,40 @@
 				"item": [
 					{
 						"title": "1. What are Blockchain Development Services?",
-						"desc": "Blockchain development services is a term that refers to the design, creation, development, and maintenance of blockchain-based solutions. Blockchain software development services encompass blockchain consulting (business model development), blockchain network design (public, consortium, or private blockchain networks), smart contracts development, DApp development, etc. Blockchain developers are also involved in token development, selection of blockchain consensus mechanisms, integration with other existing systems, etc. Blockchain development also includes undertaking security audits to identify vulnerabilities in blockchain networks and deployment/hosting of blockchain networks. Businesses leverage blockchain app development services from development companies such as Fwork LLC to help them build secure and robust decentralized applications that meet their business goals and ensure their users are satisfied."
+						"desc": "Blockchain development services is a term that refers to the design,\n creation, development, and maintenance of blockchain-based solutions.\n Blockchain software development services encompass blockchain consulting\n (business model development), blockchain network design (public,\n consortium, or private blockchain networks), smart contracts\n development, DApp development, etc. Blockchain developers are also\n involved in token development, selection of blockchain consensus\n mechanisms, integration with other existing systems, etc. Blockchain\n development also includes undertaking security audits to identify\n vulnerabilities in blockchain networks and deployment/hosting of\n blockchain networks. Businesses leverage blockchain app development\n services from development companies such as Fwork LLC to help them\n build secure and robust decentralized applications that meet their\n business goals and ensure their users are satisfied."
 					},
 					{
 						"title": "2. What blockchain development services does Fwork LLC offer?",
-						"desc": "Fwork LLC, a leading blockchain app development company, allows companies to either outsource their entire project development or outstaff expert developers and development teams so that companies can build their custom blockchain applications in-house. Our blockchain developers can undertake custom blockchain development projects of any complexity using any blockchain development platform, including Ethereum, Hyperledger Fabric, Corda, Steller, etc. So, whether you want to build a new custom blockchain solution or update and maintain an existing one, our developers have extensive experience undertaking successful blockchain projects."
+						"desc": "Fwork LLC, a leading blockchain app development company, allows\n companies to either outsource their entire project development or\n outstaff expert developers and development teams so that companies can\n build their custom blockchain applications in-house. Our blockchain\n developers can undertake custom blockchain development projects of any\n complexity using any blockchain development platform, including\n Ethereum, Hyperledger Fabric, Corda, Steller, etc. So, whether you want\n to build a new custom blockchain solution or update and maintain an\n existing one, our developers have extensive experience undertaking\n successful blockchain projects."
 					},
 					{
 						"title": "3. What is blockchain application development?",
-						"desc": "The blockchain development process includes designing and implementing decentralized applications using blockchain technology. Blockchain app development involves the need to undertake effective blockchain platform selection (Ethereum, Hyperledger Fabric, Binance, Smart Chain, etc.) based on factors such as security, consensus mechanisms, and scalability requirements. Examples of some of the steps involved in blockchain application development include smart contract development, frontend and backend application development, integration with third-party services (existing systems, databases, etc.), quality assurance (unit, security, and integration testing), and deployment of a blockchain solution. Post-deployment, blockchain developers must perform ongoing maintenance and bug fixes and ensure blockchain application keeps up with the latest advancements in blockchain technologies. Many companies have chosen to utilize the blockchain-based decentralized application development services of expert blockchain development companies such as Fwork LLC to ensure their final product is reliable, performant, and better than the competition."
+						"desc": "The blockchain development process includes designing and implementing\n decentralized applications using blockchain technology. Blockchain app\n development involves the need to undertake effective blockchain platform\n selection (Ethereum, Hyperledger Fabric, Binance, Smart Chain, etc.)\n based on factors such as security, consensus mechanisms, and scalability\n requirements. Examples of some of the steps involved in blockchain\n application development include smart contract development, frontend and\n backend application development, integration with third-party services\n (existing systems, databases, etc.), quality assurance (unit, security,\n and integration testing), and deployment of a blockchain solution.\n Post-deployment, blockchain developers must perform ongoing maintenance\n and bug fixes and ensure blockchain application keeps up with the latest\n advancements in blockchain technologies. Many companies have chosen to\n utilize the blockchain-based decentralized application development\n services of expert blockchain development companies such as\n Fwork LLC to ensure their final product is reliable, performant, and\n better than the competition."
 					}
 				]
 			},
 			"blog": {
-				"title": "Featured Articles for Blockchain Development",
-				"desc": "Explore our in-depth product development tutorials and new technology announcements created\nby our software development experts. Our content created by humans for humans.",
+				"title": "",
+				"desc": "Explore our in-depth product development tutorials and new technology announcements\n                                created\n                                by our software development experts. Our content created by humans for humans.",
 				"item": [
 					{
 						"banner": "Blockchain Development",
-						"title": "How to Build a Blockchain Social Media Platform for Bloggers?",
-						"desc": "Interested in building a blockchain social media platform for bloggers?\nThis is a very interesting topic that we...",
+						"title": "How to Build a Blockchain\n                                                Social Media Platform for Bloggers?",
+						"desc": "Interested in building a blockchain social media platform for bloggers?\n                                                This is a very interesting topic that we...",
 						"img": "build-a-blockchain-social-media-platform-for-bloggers-457x370.jpeg",
 						"slug": ""
 					},
 					{
 						"banner": "Blockchain Development",
-						"title": "Where to Hire Blockchain Developers in 2024",
-						"desc": "Are you looking for the top websites to hire blockchain developers in 2024?\nYou've come to the right...",
+						"title": "Where to Hire Blockchain\n                                                Developers in 2024",
+						"desc": "Are you looking for the top websites to hire blockchain developers in\n                                                2024?\n                                                You've come to the right...",
 						"img": "hire-blockchain-developers-457x335.png",
 						"slug": ""
 					},
 					{
 						"banner": "Blockchain Development",
-						"title": "Undertaking Ethereum Development for Blockchain",
-						"desc": "Need a great Ethereum tutorial for blockchain software development? \nIf you are, then you have come to the right...",
+						"title": "Undertaking Ethereum\n                                                Development for Blockchain",
+						"desc": "Need a great Ethereum tutorial for blockchain software\n                                                development? \n                                                If you are, then you have come to the right...",
 						"img": "blockchain-software-development-using-the-ethereum-networ-457x370.jpg",
 						"slug": ""
 					}
@@ -131,43 +263,43 @@
 		}
 	},
 	{
-		"title": "php-development",
+		"title": "mobile-app-development",
 		"item": {
-			"title": "PHP Development Services",
-			"desc": "Fwork LLC is a vetted community of expert PHP dev teams supported by an\n AI-powered agile process. You can use Fwork LLC PHP development services to\n build and scale world-class websites and desktop apps.",
+			"title": "Mobile App Development Services",
+			"desc": "Fwork LLC is a vetted community of expert mobile app development teams supported\n by an AI-powered Agile process. Top companies and startups rely on us to build and\n scale world-class mobile applications. We can help you too.",
 			"service": {
-				"title": "PHP Outsourcing, Outstaffing, and More",
-				"desc": "You can use Fwork LLC PHP development services to either outsource\n your entire project or hire individual developers and manage them yourself.",
+				"title": "Mobile App Outsourcing, Outstaffing, and More",
+				"desc": "You can use Fwork LLC Mobile App development services to either outsource\n your entire project or hire individual developers and manage them yourself.",
 				"item": [
 					{
-						"title": "PHP Outsourcing",
-						"desc": "Get a dedicated tech account manager with PHP expertise managing a\n dedicated team of PHP developers following our practice proven agile\n process.",
+						"title": "Mobile App Development Outsourcing",
+						"desc": "Get a dedicated tech account manager with mobile app development\n expertise managing a dedicated team of mobile app developers following\n our practice-proven Agile process.",
 						"img": "hiring-icon-2.svg"
 					},
 					{
-						"title": "PHP Outstaffing",
-						"desc": "If you are a tech experienced product manager and prefer to manage\n developers yourself, simply get our best PHP developers assigned to your\n project.",
+						"title": "Mobile App Development Outstaffing",
+						"desc": "If you are a tech-experienced product manager and prefer to manage\n developers yourself, get our top mobile app developers assigned to your\n project.",
 						"img": "hiring-icon-3.svg"
 					},
 					{
 						"title": "Supporting Specialist",
-						"desc": "We can support you with devops engineers, front-end developers, QA\n engineers, designers, and other experts needed to bring your project to\n success.",
+						"desc": "We can support you with DevOps engineers, backend developers, QA\n engineers, designers, and other experts needed to successfully develop\n your project.",
 						"img": "hiring-icon-5.svg"
 					},
 					{
 						"title": "From Prototype to Enterprise",
-						"desc": "With Fwork LLC PHP development services, you can build a PHP-powered\n back-end of any complexity, from prototyping to enterprise solutions.",
+						"desc": "With Fwork LLC's mobile development services, you can build a mobile\n app of any complexity, from prototyping to enterprise solutions.",
 						"img": "hiring-icon-6.svg"
 					}
 				]
 			},
 			"project": {
-				"title": "Some of Our PHP Projects",
+				"title": "Some of Our Mobile App Projects",
 				"item": [
 					{
-						"img": "frame-1000001365.jpg",
-						"title": "Alibra",
-						"tech": "AngularJS, AWS, Backend, Education,\n                                                Frontend, Mobile, PHP, Streaming, Swift, WebDevelopment Team",
+						"img": "frame-1000001383.jpg",
+						"title": "Visibook",
+						"tech": "B2B, Calendar, Communication,\n                                                Frontend, Integration, Management Dashboard, Mobile, Node.js, React\n                                                Native, Scheduling, WebDevelopment Team",
 						"slug": "",
 						"team": [
 							{
@@ -181,14 +313,14 @@
 						]
 					},
 					{
-						"img": "frame-1000001368.jpg",
-						"title": "Fracta",
-						"tech": "AI, Analytics, Backend, Frontend,\n                                                Javascript, Marketing, PHP, Real Estate, Web, WordPressDevelopment Team",
+						"img": "frame-1000001406.jpg",
+						"title": "Photofy",
+						"tech": "Backend, Design, iOS, Marketing,\n                                                Mobile, Social, SwiftDevelopment Team",
 						"slug": "",
 						"team": [
 							{
 								"gender": "male",
-								"member": "1 Designer, 1 WordPress Developer"
+								"member": "1 Designer, 3 Developers"
 							},
 							{
 								"gender": "female",
@@ -197,57 +329,64 @@
 						]
 					},
 					{
-						"img": "frame-1000001385.jpg",
-						"title": "All The Rooms",
-						"tech": "AWS, Backend, Database Optimization,\n                                                Design, Frontend, Geolocation, Javascript, Marketplace, Node.js, QA,\n                                                React, Real Estate, WebDevelopment Team",
+						"img": "frame-1000001409.jpg",
+						"title": "Rever",
+						"tech": "Android SDK, Backend, Entertainment,\n                                                Geolocation, Mobile, Ruby on Rails, Social, Swift, TravelDevelopment Team",
 						"slug": "",
 						"team": [
 							{
 								"gender": "male",
-								"member": "2 Developers"
+								"member": "3 Developers"
 							},
 							{
 								"gender": "female",
-								"member": "1 Project Manager"
+								"member": "1 Project Manager, 1 Account Manager"
 							}
 						]
 					}
 				]
 			},
-			"article": "Types of PHP Development Services\n---------------------------------\n\nFwork LLC offers a comprehensive range of PHP development services, including the most popular frameworks and platforms (see below). The specific technologies that you choose for your PHP software project will depend on your unique development requirements.\n\nIf you need help, get a complimentary discovery call with one of our tech account managers by submitting your project request here.\n\n### Top 10 PHP development frameworks and platforms\n\n1.  Laravel\n2.  Symfony\n3.  Yii\n4.  CakePHP\n5.  CodeIgniter\n6.  FuelPHP\n7.  Kajona\n8.  Sansa Framework\n9.  WordPress\n10.  Drupal\n\nYou can read about the benefits of some of the top PHP development frameworks below.\n\n#### Laravel PHP Development\n\nLaravel is one of the most popular frameworks for custom PHP solutions. Laravel’s top three features are:\n\n1.  Laravel offers straightforward, effective syntax, something that makes it easy for our developers to write efficient and maintainable code. Naturally, such a clean syntax also helps to reduce coding errors.\n2.  Laravel has a great set of tools and libraries. Examples include authentication, routing, and caching, to name but a few. Again, this helps speed up development and simplifies common tasks.\n3.  Laravel contains powerful security features like protection against SQL injection, Cross-Site Request Forgery (CSRF), and cross-site scripting (XSS). This helps developers create secure applications and reduces the time required for code reviews, testing, etc.\n\n#### Symphony PHP Development\n\nSymphony is another popular framework our clients ask our developers to use for their web application development.\n\nSymfony is a powerful PHP web application framework that is used to build performant, scalable web applications. It comes with a wide range of reusable components and tools that simplify the development process to ensure you end up with the best possible final web application.\n\nKey features and components of Symfony include:\n\n1.  The first really great feature is that Symfony is built on a collection of standalone and decoupled components that can be used independently in any PHP project. This modularity allows developers to use only the components they need, saving both time and development costs while minimizing the risk of errors.\n2.  Symfony offers flexibility in the sense of being able to choose only the desired components, libraries, and tools required for different web development requirements. Examples include routing, templating, form handling, etc.\n3.  Symfony follows the Model-View-Controller (MVC) architectural pattern. This makes it easier to separate business logic, presentation, user interface concerns, etc.\n\n#### Yii\n\nYii is an open-source PHP web application framework used to develop web applications and APIs. Yii stands for “Yes, It Is!” and is known for its speed, extensibility, and developer-friendly features. Like Symphony, it also follows the Model-View-Controller (MVC) architectural pattern. It is another developer favorite due to its many advantages.\n\nYi’s main advantages include:\n\n1.  Yii is designed to optimize application performance. This is why our developers frequently use it when building high-traffic and resource-intensive web applications.\n2.  This powerful tool includes security features like input validation, output filtering, and protection against common security vulnerabilities like SQL injection and Cross-Site Scripting (XSS). Using Yii means your application is less vulnerable to these kinds of security vulnerabilities.\n3.  Yii offers a wide range of extensions and modules that can be easily and quickly integrated into projects. These allow our developers to integrate functionality such as authentication, caching, etc., in a reliable and expedited manner.\n\nChoosing a specific framework or platform for your PHP software project will depend on your unique development requirements. If you need help, get a complimentary discovery call with one of our PHP-experienced account managers by submitting your project request via the button below.",
+			"article": "Types of Mobile App Development Services\n----------------------------------------\n\nFwork LLC offers a complete range of mobile app development services. Our developers have helped clients develop all kinds of modern native and hybrid mobile apps using all the major languages, frameworks, platforms, and other technologies.\n\nYou can either outsource your complete mobile app development project to our developers or hire a number of developers from Fwork LLC and manage them yourself.\n\nThe tech stack you choose for your mobile app development project depends on your specific project requirements.\n\nIf you need help or wish to learn more about the services we offer, get in touch for a complimentary discovery call with one of our tech account managers by submitting your [project request here](https://dashboard.Fwork LLC/get-started/).\n\n### Top Mobile App Development Languages, Frameworks, and Platforms\n\n1.  SwiftUI\n2.  Android SDK\n3.  React Native\n4.  Flutter\n5.  Java\n6.  JavaScript\n7.  Python\n8.  Ruby\n9.  AWS\n10.  Azure\n11.  AI / ML\n12.  Blockchain\n\nThe following are a few examples of the top mobile app development technologies that our developers use on a daily basis. Below, you can read about their benefits while finding out some interesting facts about them.\n\n#### SwiftUI iOS App Development\n\nSwiftUI was created by Apple to act as a powerful declarative framework to enable developers to build native user interfaces for Apple iOS. Our developers use it daily because it is the premiere programming language that is used to create Apple apps.\n\nSome of the key features of SwiftUI include:\n\n1.  Thanks to Swift’s declarative syntax, developers are now able to define the UI look and function without having to provide a sequence of procedures.\n2.  SwiftUI reliably produces a valid UI layout and is commended by our developers as being “fun to use”. This is developer speak for a big thumbs up.\n3.  It offers good support for SwiftData, which is a framework that handles data persistence, including data modeling and querying.\n\nIf you are planning to build any kind of native Apple application then you will almost certainly need to include a Swift developer in your development team.\n\n#### Android Software Development Kit (SDK) Development\n\nDeveloped by Google, Android SDK consists of a huge number of libraries and development tools that can be used to build Android applications. Again, our developers use it on a daily basis.\n\nSome great features of Android SDK include:\n\n1.  Android SDK is supported by Google, which, for any of you who has been living on another planet, also created and maintains the Android OS.\n2.  The Android SDK platform provides a multitude of great build and debugging tools. There are too many to mention but examples include Android Debug Bridge, Systrace, and Android Studio, an IDE for Android application development.\n3.  Google offers lots of API services that include Google Maps SDK, Sign-In, Pay, Fit, etc. These dramatically speed up development and help to reduce security errors and bugs.\n4.  Android SDK offers an Android Emulator. This tool allows mobile app developers to create virtual Android devices in order to comprehensively test applications for different device configurations without having to use any actual physical Android device.\n\nOur developers love Android SDK. Any chance to get help debugging code is welcomed by each and every developer on the planet. Bugs are time-consuming and often very frustrating to fix. One of our developers reminded us of a well-known developer joke, “We find the bug, we fix the bug, now we have two bugs, now we have three bugs…”\n\nDue to its huge development community that has resulted in a wide range of tools and APIs, you will need a developer very knowledgeable in Android SDK if you wish to build either a native or a hybrid Android app.\n\n#### Flutter Mobile App Development\n\nFlutter is another Google framework that enables developers to build mobile, web, desktop, and embedded apps. Thanks to its growing number of advantages as it develops, more and more of our clients are starting to use Flutter for their application development.\n\nSome of the key advantages of Flutter include:\n\n1.  Flutter supports cross-platform application development from a single codebase. This means our developers can reuse these code components to build applications on multiple operating systems. This saves both time and money.\n2.  Flutter offers near-native app performance on most operating systems. This is because it piles directly to the machine code, including ARM or Intel machine code and JavaScript. The ability to generate an application that works on more than one OS, without much loss in performance, is one of the reasons that Flutter is becoming so popular.\n3.  Flutter offers an extensive widget library to create complex user interfaces. Developers can customize these widgets to meet unique design needs. Some examples include Cupertino-iOS and Material Design libraries to build UI components for iOS and Android apps.\n\n_Note: We cannot emphasize enough the importance of getting good developers who write clean code when undertaking hybrid application development, and any other development for that matter. Poorly coded hybrid apps are nothing less than a nightmare._\n\nIf you are planning to develop an application for more than one OS, then Flutter is most certainly worth considering.\n\nOur developers recommend that you get professional guidance on this because, depending on the complexity of your project, undertaking hybrid application development vs. native app development may or may not be suitable for your needs.\n\nSend us your project requirements via the button below and one of our account managers will get in touch to answer any questions that you might have.\n\n#### React Native Mobile App Development\n\nReact Native is another hybrid application development framework. It was created by Meta to help developers build mobile applications for various platforms, including iOS and Android. Some of the key React Native features include the following:\n\n1.  Like Flutter, React Native offers near-native app performance compared to other hybrid app development technologies.\n2.  React Native provides a core of platform-agnostic native components direct to the platform’s native building blocks. This saves time and increases reliability.\n3.  React Native allows developers to leverage a vast collection of pre-built UI components that developers can readily customize to meet specific UI specifications. Developers can also utilize other JavaScript libraries and tools while developing apps with React Native. This makes React Native more developer-friendly.\n\nChoosing a specific framework or platform for your mobile app project will depend on your choice of either a native or hybrid app, as well as feature specifications and other unique requirements.\n\nIf you have any questions, you can arrange a discovery call with one of our tech account managers by submitting your project request via the button below.",
 			"faq": {
 				"title": "Frequently Asked Questions",
 				"item": [
 					{
-						"title": "1. What are PHP Development Services?",
-						"desc": "PHP Development Services refers to a broad range of activities involving\n using the PHP programming language to build and maintain web\n applications and websites. PHP is regarded by developers as a highly\n versatile server-side scripting language and so is now widely used in\n web development. Indeed, it was used to build WordPress, the most widely\n used CMS in the world. It is used for everything from web-based software\n development, custom web application development, content management\n system (CMS) development (e.g., WordPress, Drupal), and e-commerce\n solutions (e.g., WooCommerce, Magento). Specific PHP development\n services that our developers are involved in range from database\n integration and user authentication to server-side logic, etc.\n Businesses leverage PHP Development services from reputable companies\n like Fwork LLC to create dynamic, interactive, and scalable web\n solutions that have the power to succeed in the marketplace."
+						"title": "1. What are mobile app development services?",
+						"desc": "Mobile app development services include a range of activities related to\n mobile application design, development, testing, and deployment for\n various platforms, including iOS, Android, Windows, etc. Mobile app\n developers undertake a range of development services like UI/UX design,\n feature development (using popular mobile app development languages like\n Kotlin, Swift, and JavaScript), backend development (handling app\n hosting, data storage, and API integrations), functional and\n non-functional (security, scalability, performance, etc.) testing,\n deployment, and maintenance. Businesses leverage app development\n services from mobile app development companies like Fwork LLC to\n create feature-rich, engaging, and scalable mobile app solutions."
 					},
 					{
-						"title": "2. What PHP development services does Fwork LLC offer?",
-						"desc": "Fwork LLC allows companies to either outsource their entire project\n development or outstaff expert developers and development teams. Our PHP\n developers can develop custom PHP solutions of any complexity using\n major PHP frameworks, including Lavarel, Codeigniter, Symfony, Yii,\n CakePHP, etc. So, whether you want to build a new website or update and\n maintain an existing one, our developers have extensive experience\n undertaking successful PHP development projects."
+						"title": "2. What mobile app development services does Fwork LLC offer?",
+						"desc": "You can either outsource your complete mobile app development project to\n Fwork LLC, a leading mobile app development company, or outstaff\n mobile app developers or development teams from us to manage on your\n own. Our mobile app developers can undertake custom mobile or web app\n development of any complexity. So, whether you want to build a new\n native or hybrid mobile app or update and maintain an existing one, our\n developers have extensive experience undertaking successful mobile app\n development projects."
 					},
 					{
-						"title": "3. What is PHP application development?",
-						"desc": "PHP application development is a term that refers to the use of the PHP\n programming language to build web-based applications, specifically\n websites and web apps. PHP is a much-loved language due to its powerful\n backend capabilities. It is used to handle data processing, user\n authentication, database management, and other important tasks. PHP\n applications range from simple web forms to complex content management\n systems (CMS), e-commerce platforms, and other web-based software. Due\n to its popularity, PHP has a large developer pool who use it to build\n powerful, performant, custom web applications."
+						"title": "3. What is mobile application development?",
+						"desc": "Mobile app development involves creating native mobile apps for specific\n operating systems, such as iOS and Android, and cross-platform apps that\n target multiple mobile devices using a single codebase. The key roles of\n mobile app developers include both frontend and backend development\n using the required frameworks (like SwiftUI, Native Android Kit, and\n Flutter) and tools (like Xcode, Android Studio, and VS Code). Mobile app\n developers test and publish mobile apps on app stores like Google Play\n and Apple App Store. Mobile app development includes building mobile\n solutions ranging from social media and gaming to enterprise,\n healthcare, and more. Mobile app development services focus on\n delivering a performant, secure, and engaging mobile app for users."
 					}
 				]
 			},
 			"blog": {
-				"title": "Featured Articles for Software Development",
+				"title": "",
 				"desc": "Explore our in-depth product development tutorials and new technology announcements\n                                created\n                                by our software development experts. Our content created by humans for humans.",
 				"item": [
 					{
-						"banner": "Software Development",
-						"title": "How to Build an MVC Web App?",
-						"desc": "Are you planning to create a simple and lightweight MVC web app for\n                                                personal use? Or a large corporate application...",
-						"img": "build-mvc-app-1-457x370.jpg",
+						"banner": "Mobile App Development",
+						"title": "How to Build an App for a\n                                                Folding Phone?",
+						"desc": "Are you interested in developing an app for a folding phone?\n                                                The size of the foldable display market by...",
+						"img": "app-for-a-folding-phone-457x370.jpg",
 						"slug": ""
 					},
 					{
-						"banner": "Software Development",
-						"title": "How to Build Scalable Web\n                                                Applications?",
-						"desc": "Interested in building scalable web applications? \n                                                This is a very important question for all application...",
-						"img": "how-to-build-a-scalable-web-application-457x370.jpg",
+						"banner": "Mobile App Development",
+						"title": "What are the Mobile App\n                                                Development Trends for 2024?",
+						"desc": "Wondering about the mobile app development trends for 2024? \n                                                This is a great question which we will answer in this...",
+						"img": "flurry-analytics-infographic-457x370.png",
+						"slug": ""
+					},
+					{
+						"banner": "Mobile App Development",
+						"title": "How to Perform Successful\n                                                Mobile Application Development Outsourcing?",
+						"desc": "Interested in 7 steps for successful mobile application development\n                                                outsourcing? \n                                                This is a great question with so...",
+						"img": "launch-1-457x370.jpg",
 						"slug": ""
 					}
 				]
@@ -357,7 +496,7 @@
 				]
 			},
 			"blog": {
-				"title": "Featured Articles for Software Development",
+				"title": "",
 				"desc": "Explore our in-depth product development tutorials and new technology announcements\n                                created\n                                by our software development experts. Our content created by humans for humans.",
 				"item": [
 					{
@@ -484,7 +623,7 @@
 				]
 			},
 			"blog": {
-				"title": "Featured Articles for Web Development",
+				"title": "",
 				"desc": "Explore our in-depth product development tutorials and new technology announcements\n                                created\n                                by our software development experts. Our content created by humans for humans.",
 				"item": [
 					{
