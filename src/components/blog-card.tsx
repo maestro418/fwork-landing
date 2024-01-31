@@ -32,7 +32,7 @@ const BlogCard = (props: BlogCardPropsType) => {
 }
 
 const StyledBlogCard = styled.div`
-    box-shadow: 0 0 10px 0 var(--shadow);
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     border-top-left-radius: 0.75em;
     border-top-right-radius: 0.75em;
     border-radius: 0.75em;
@@ -43,7 +43,6 @@ const StyledBlogCard = styled.div`
     .card-header {
         position: relative;
         color: var(--text-tertiary);
-        
         img {
             border-top-left-radius: 0.75em;
             border-top-right-radius: 0.75em;
@@ -79,6 +78,7 @@ const StyledBlogCard = styled.div`
         flex-direction: column;
         gap: 0.5em;
         padding: 1em;
+        height: 170px;
         .desc {
             color: #6c757d;
             line-height: 2em;

@@ -31,8 +31,8 @@ const StyledOutSourcing = styled.div`
     gap: 2em;
     align-items: center;
     padding: 1em 1em 1.7em 1em;
-    border: 1px solid var(--shadow);
-    box-shadow: 0 12px 25px 0 rgba(189, 189, 189, 0);   
+    border: 1px solid var(--border);
+    box-shadow: rgba(0, 0, 0, 0.09) 0px 3px 12px;
     border-radius: 0.5em;
     transition: all .35s;
     &>:nth-child(2) {
