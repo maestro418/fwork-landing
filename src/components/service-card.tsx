@@ -13,12 +13,12 @@ interface ServiceCardProps {
     title?: string
 }
 type StyledCardProps = {
-    bgColor?: string
+    $bgColor?: string
 }
 
 const ServiceCard = ({ title, icon, desc, bgColor, btnContent, btnLink }: ServiceCardProps) => {
     return (
-        <StyledServiceCard bgColor={bgColor}>
+        <StyledServiceCard $bgColor={bgColor}>
             <div className="" >
                 <img src={icon} width={50} />
             </div>
@@ -47,15 +47,15 @@ const StyledServiceCard = styled.div<StyledCardProps>`
     flex-direction: column;
     gap: 2em;
     padding: 2em 2em;
-    background-color: ${(props) => props.bgColor};
+    background-color: ${(props) => props.$bgColor};
     justify-content: space-between;
-    color:${(props) => props.bgColor == '#ebeaea' ? 'black' : 'white'};
+    color:${(props) => props.$bgColor == '#ebeaea' ? 'black' : 'white'};
     .btn {
         padding: 0.5em 1em;
         border-radius: 0.5em;
-        border: 1px solid ${(props) => props.bgColor == '#ebeaea' ? '#0077ff' : 'white'};
+        border: 1px solid ${(props) => props.$bgColor == '#ebeaea' ? '#0077ff' : 'white'};
         background-color: transparent;
-        color:${(props) => props.bgColor == '#ebeaea' ? '#0077ff' : 'white'};
+        color:${(props) => props.$bgColor == '#ebeaea' ? '#0077ff' : 'white'};
     }
 `
 

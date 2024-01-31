@@ -1,28 +1,10 @@
-import React, { useState } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 
 type footerProps = {
-    mobile: Boolean
+    $mobile: Boolean
 }
-
-const footerItems = [
-    {
-
-        desc: 'About us',
-        link: 'https://fwork.io/about-us',
-    },
-    {
-
-        desc: 'Contact us',
-        link: 'https://fwork.io/contact-us',
-    }
-]
-
-const overView = `Fwork is a premier provider of expert developer support services, connecting clients with highly skilled developers to offer top-notch technical guidance and solutions. We are dedicated to delivering exceptional service, solving complex technical challenges, and empowering clients with the expertise they need to succeed`
-
-const address = `603 Capitol Avenue, Suite 413, 4200
-Cheyenne, Wyoming 82001, USA`
 
 const footerIcons = [
     {
@@ -48,7 +30,7 @@ const footerIcons = [
 ]
 
 const Footer = () => {
-    const [mobile, setMobile] = useState(false);
+    const [mobile, setMobile] = React.useState(false);
     const getWidth = () => {
         return window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
     }
@@ -59,6 +41,7 @@ const Footer = () => {
             setMobile(false);
         }
     }
+
     React.useEffect(() => {
         setResponsive();
         window.addEventListener('resize', setResponsive);
@@ -68,7 +51,7 @@ const Footer = () => {
     }, [])
 
     return (
-        <StyledFooter mobile={mobile}>
+        <StyledFooter $mobile={mobile}>
             <div className="container">
                 <div className={`d  ${!!mobile ? " center" : "middle between"}`}>
                     <Link to='/'>
@@ -77,7 +60,7 @@ const Footer = () => {
                     {!mobile && (
                         <div className="d center gap">
                             {footerIcons.map((i, k) => (
-                                <Link to={i.link}><img src={i.icon} width={25} key={k} /></Link>
+                                <Link to={i.link} key={k} ><img src={i.icon} width={25} /></Link>
                             ))}
                         </div>
                     )}

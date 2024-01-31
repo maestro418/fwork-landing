@@ -40,7 +40,7 @@ const DropDown = ({ title, options, openDropDown, setOpenDropDown, scrollEvent, 
                             <Icon icon={`${!!openDropDown ? "UpArrow" : "DownArrow"}`} />
                         </div>
                     </div>
-                    <div className="dropdown"  ref={dropdownRef}>
+                    <div className="dropdown" ref={dropdownRef}>
                         {!!openDropDown && options.map((i, k) => (
                             <Link to={i.link} key={k} onClick={() => setOpenDropDown(false)}>{i.title}</Link>
                         ))}
@@ -85,6 +85,7 @@ const StyledDropwDown = styled.div`
             padding: 0.7em;
             font-size: .88em;
             &:hover {
+                box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
                 background-color: var(--white-hover);
             }
         }

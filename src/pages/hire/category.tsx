@@ -114,7 +114,7 @@ const HireCategory = () => {
         <Layout>
             <StyledHireCategory>
                 <section>
-                    <IntroBanner title={bannerContents.title} desc={bannerContents.desc} />
+                    <IntroBanner title={bannerContents.title} desc={bannerContents.desc} bgImg="/img/bg/banner.png" />
                 </section>
                 <section className="container">
                     <div className="row">

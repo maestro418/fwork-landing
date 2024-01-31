@@ -58,19 +58,20 @@ const Service = () => {
     const [status, setStatus] = React.useState({} as dataType);
     const [smallScreen, setSmallScreen] = React.useState(false);
     const [activeIndex, setActiveIndex] = React.useState<number | null>(null);
-
+    const [imgPath, setImgPath] = React.useState<string | "">()
     const onAccordian = (idx: number) => {
         setActiveIndex((prevIndex) => (prevIndex === idx ? null : idx));
     };
-    console.log(status)
+
     React.useEffect(() => {
         const d = data.find((i) => (i.title === id))
+        setImgPath(d?.title)
         const _data = d?.item;
         if (!!_data) {
             setStatus(_data)
-            console.log(_data)
         }
     }, [id])
+
     React.useEffect(() => {
         const handleScreen = () => {
             setSmallScreen(window.innerWidth <= 768)
@@ -82,7 +83,7 @@ const Service = () => {
     return (
         <Layout>
             <StyledService>
-                <IntroBanner title={status.title} desc={status.desc} />
+                <IntroBanner title={status.title} desc={status.desc} bgImg={`/img/bg/${imgPath}.png`} />
                 <section>
                     <div className="container">
                         <div className="text-header">
@@ -91,8 +92,8 @@ const Service = () => {
                         </div>
                         <div className="row">
                             {status.service?.item.map((i, k) => (
-                                <div className="col-md-6 mt mb">
-                                    <OutSourcing key={k} img={i.img} title={i.title} desc={i.desc} />
+                                <div className="col-md-6 mt mb" key={k}>
+                                    <OutSourcing img={i.img} title={i.title} desc={i.desc} />
                                 </div>
                             ))}
                         </div>
@@ -103,7 +104,7 @@ const Service = () => {
                         <label className="h1">{status.project?.title}</label>
                         <div className="row">
                             {status.project?.item.map((i, k) => (
-                                <div className="col-md-4">
+                                <div className="col-md-4" key={k}>
                                     <CaseCard img={`service/${i.img}`} title={i.title} tech={i.tech} team={i.team} smallScreen={smallScreen} />
                                 </div>
                             ))}
@@ -133,6 +134,7 @@ const Service = () => {
                                     desc={i.desc}
                                     isOpen={activeIndex === k}
                                     onAccordian={() => onAccordian(k)}
+                                    key={k}
                                 />
                             ))}
                         </div>
