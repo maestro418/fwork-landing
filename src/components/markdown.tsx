@@ -111,8 +111,10 @@ const StyledView = styled.div`
 	pre {
 		overflow: auto;
 		/* max-height: 600px; */
-		background-color: var(--rb-back-secondary);
+		background-color: var(--back-secondary);
 		margin: 1em 0;
+		border-radius: 0.3em;
+		padding: 1em;
 	}
 	li {
 		color: #535d66;
