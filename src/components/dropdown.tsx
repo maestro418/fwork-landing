@@ -28,7 +28,7 @@ const DropDown = ({ title, options, openDropDown, setOpenDropDown, scrollEvent, 
         document.addEventListener("mousedown", handleClickOutSide);
 
         return () => document.removeEventListener("mousedown", handleClickOutSide)
-    }, [setOpenDropDown])
+    }, [])
 
     return (
         <StyledDropwDown>
@@ -40,7 +40,7 @@ const DropDown = ({ title, options, openDropDown, setOpenDropDown, scrollEvent, 
                             <Icon icon={`${!!openDropDown ? "UpArrow" : "DownArrow"}`} />
                         </div>
                     </div>
-                    <div className="dropdown" ref={dropdownRef}>
+                    <div className="dropdown">
                         {!!openDropDown && options.map((i, k) => (
                             <Link to={i.link} key={k} onClick={() => setOpenDropDown(false)}>{i.title}</Link>
                         ))}

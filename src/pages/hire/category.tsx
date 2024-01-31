@@ -28,7 +28,7 @@ const HireCategory = () => {
     const [status, setStatus] = useState<Array<CategoryType>>();
     const [smallScreen, setSmallScreen] = React.useState(false);
     const bannerContents = {
-        title: 'Looking to Hire Developers With Specific Skills?',
+        title: 'Developers With Specific Skills',
         desc: 'Fwork is a vetted community of expert development teams supported by an AI-powered Agile process. Top companies and startups rely on us to help them to build great products. We can help you too, by enabling you to hire and effortlessly manage expert developers.',
     }
     const process = [
