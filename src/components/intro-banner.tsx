@@ -43,14 +43,14 @@ const IntroBanner = ({ title, desc }: IntroBannerProps) => {
                         <div className="h4">
                             {desc}
                         </div>
-                        <Link to="https://fwork.io/freelancers" className={`${!!mobile && "d center"}`}>
-                            <StyledButton className={`btn-hire d center middle ${!!mobile ? 'btn-mobile' : 'w-50'}`}>
+                        <StyledButton className={`${!!mobile ? 'btn-mobile' : 'w-50'}`}>
+                            <Link to="https://fwork.io/freelancers" className={`btn-hire d center middle `}>
                                 <div className="h4">
-                                    Hire Developer
+                                    Hire Developers
                                 </div>
                                 <img src="/img/hire.svg" alt="" width={25} />
-                            </StyledButton>
-                        </Link>
+                            </Link>
+                        </StyledButton>
                     </div>
                 </div>
             </div>
@@ -102,6 +102,7 @@ const StyledBanner = styled.div<StyledBannerProps>`
             }
         }
         .btn-hire{
+            color: white;
             gap:0.5em;
             @media screen and (max-width:360px) {
                 gap: 0.1em;

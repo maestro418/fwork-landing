@@ -21,7 +21,7 @@ const DropDown = ({ title, options, openDropDown, setOpenDropDown, scrollEvent, 
                     <div className="d middle cursor-pointer" onClick={() => setOpenDropDown(!openDropDown)}>
                         <div>{title}</div>
                         <div style={{ 'color': `${!!scrollEvent ? "black" : "white"}` }} >
-                            <Icon icon="DownArrow" />
+                            <Icon icon={`${!!openDropDown ? "UpArrow" : "DownArrow"}`} />
                         </div>
                     </div>
                     <div className="dropdown">
@@ -61,10 +61,12 @@ const StyledDropwDown = styled.div`
         width: 300px;
         top: 2em;
         display: flex;
+        box-shadow:'0px 2px 9px rgba(0, 0, 0, 0.9)' ;
         flex-direction: column;
         a {
             color: #636b6f;
-            padding: 0.5em 1em;
+            padding: 0.7em;
+            font-size: 1em;
             &:hover {
                 background-color: var(--white-hover);
             }

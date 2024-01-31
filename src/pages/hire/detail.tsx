@@ -9,6 +9,7 @@ import CaseCard from "../../components/case-card";
 
 import HireProcess from "../../components/hire-process";
 import Markdown from "../../components/markdown";
+import AskQuestion from "../../components/ask-question";
 
 interface HireDetailProps {
     category: string,
@@ -55,6 +56,12 @@ const HireDetail = ({ slug, category }: HireDetailProps) => {
     const [status, setStatus] = useState<DataListType>();
     const [smallScreen, setSmallScreen] = React.useState(false);
     const [cases, setCases] = React.useState<Array<ProjectItemType>>()
+    const [activeIndex, setActiveIndex] = React.useState<number | null>(null);
+
+    const onAccordian = (idx: number) => {
+        setActiveIndex((prevIndex) => (prevIndex === idx ? null : idx));
+    };
+
     const process = [
         {
             id: 1,
@@ -134,6 +141,24 @@ const HireDetail = ({ slug, category }: HireDetailProps) => {
                         </div>
                     </section>
                 )}
+                <section className="container">
+                    <div className="row">
+                        <div className="col-md-4 text-header">
+                            <label className="h1">{status?.item.faq.title}</label>
+                            <div>Everything you need to know about DevTeam.Space. Can’t find the answer you’re looking for?</div>
+                        </div>
+                        <div className="col-md-8 pt-2">
+                            {status?.item.faq.item.map((i, k) => (
+                                <AskQuestion
+                                    title={i.title}
+                                    desc={i.desc}
+                                    isOpen={activeIndex === k}
+                                    onAccordian={() => onAccordian(k)}
+                                />
+                            ))}
+                        </div>
+                    </div>
+                </section>
                 <section className="mb-3">
                     <div className="container">
                         {status?.item.article && <Markdown text={status.item.article} />}

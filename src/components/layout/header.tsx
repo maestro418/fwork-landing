@@ -104,7 +104,7 @@ const StyledHeader = styled.div<StyledHeaderProps>`
     width: 100%;
     color:${(props) => !!props.scrollEvent ? 'black' : 'white'};
     background-color: ${(props) => !!props.scrollEvent ? 'white' : 'none'};
-    box-shadow:${(props) => !!props.scrollEvent && '0px 2px 4px rgba(0, 0, 0, 0.2)'} ;
+    box-shadow:${(props) => !!props.scrollEvent && '0px 3px 4px rgba(0, 0, 0, 0.2)'} ;
     padding: 1em 0em;
     z-index: 2;
     .hamburger {

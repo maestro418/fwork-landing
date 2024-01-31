@@ -568,6 +568,13 @@ const icons = {
 			<path d="M233.4 406.6c12.5 12.5 32.8 12.5 45.3 0l192-192c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L256 338.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l192 192z"></path>
 		</svg>
 	),
+	UpArrow: (
+		<svg fill="currentColor" viewBox="0 0 512 512" height="100%" width="100%">
+			<path d="M278.6 105.4c-12.5-12.5-32.8-12.5-45.3 0l-192 192c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L256 173.3l169.4 169.3c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3l-192-192z"></path>
+		</svg>
+
+	),
+
 
 	ThreeDots: (
 		<svg stroke="currentColor" fill="currentColor" strokeWidth="0" viewBox="0 0 24 24" height="100%" width="100%">
