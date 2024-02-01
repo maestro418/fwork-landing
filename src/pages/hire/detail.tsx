@@ -155,7 +155,7 @@ const HireDetail = ({ slug, category }: HireDetailProps) => {
                             <div>Everything you need to know about DevTeam.Space. Can’t find the answer you’re looking for?</div>
                         </div>
                         <div className="col-md-8 pt-2">
-                            {status.item.faq?.item.map((i, k) => (
+                            {status.item.faq.item.map((i, k) => (
                                 <AskQuestion
                                     title={i.title}
                                     desc={i.desc}
