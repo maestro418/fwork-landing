@@ -1,6 +1,5 @@
 import React, { Suspense } from "react";
 import { useParams } from "react-router";
-import styled from "styled-components";
 
 import HireCategory from "./category";
 import HireDetal from "./detail";

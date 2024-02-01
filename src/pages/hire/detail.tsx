@@ -11,6 +11,7 @@ import HireProcess from "../../components/hire-process";
 import Markdown from "../../components/markdown";
 import AskQuestion from "../../components/ask-question";
 import { StyledButton } from "../../components/button";
+import ParticlesContainer from "../../components/particle-content";
 
 interface HireDetailProps {
     category: string,
@@ -54,7 +55,7 @@ interface DataListType {
 const overview = 'Fwork is a vetted community of expert development teams supported by an AI-powered Agile process. Top companies and startups rely on us to help them to build great products. We can help you too, by enabling you to hire and effortlessly manage expert developers.'
 
 const HireDetail = ({ slug, category }: HireDetailProps) => {
-    const [status, setStatus] = useState<DataListType>();
+    const [status, setStatus] = useState({} as DataListType);
     const [smallScreen, setSmallScreen] = React.useState(false);
     const [cases, setCases] = React.useState<Array<ProjectItemType>>()
     const [activeIndex, setActiveIndex] = React.useState<number | null>(null);
@@ -88,9 +89,14 @@ const HireDetail = ({ slug, category }: HireDetailProps) => {
 
     React.useEffect(() => {
         const dataSlug = HireData.find((i) => i.slug === category)
-        const data = dataSlug?.list.find((i) => i.slug === slug);
-        setStatus(data)
-        setCases(data?.item.project.item)
+        if (!!dataSlug) {
+            const data = dataSlug?.list.find((i) => i.slug === slug);
+            if (data) {
+                setStatus(data)
+                setCases(data.item.project.item)
+            }
+            console.log("stress", dataSlug)
+        }
         return;
     }, [slug]);
 
@@ -106,7 +112,7 @@ const HireDetail = ({ slug, category }: HireDetailProps) => {
         <Layout>
             <StyledHireDetail>
                 <section>
-                    <IntroBanner title={status?.name} desc={overview} bgImg="/img/bg/banner.png" />
+                    <ParticlesContainer title={status.name} desc={overview} bgImg="/img/bg/banner.png" />
                 </section>
                 <section id="hiring" className="container">
                     <label className="h1">Developer Hiring Process</label>
@@ -149,7 +155,7 @@ const HireDetail = ({ slug, category }: HireDetailProps) => {
                             <div>Everything you need to know about DevTeam.Space. Can’t find the answer you’re looking for?</div>
                         </div>
                         <div className="col-md-8 pt-2">
-                            {status?.item.faq.item.map((i, k) => (
+                            {status.item.faq.item.map((i, k) => (
                                 <AskQuestion
                                     title={i.title}
                                     desc={i.desc}
@@ -174,7 +180,7 @@ const HireDetail = ({ slug, category }: HireDetailProps) => {
 const StyledHireDetail = styled.div`
     display: flex;
     flex-direction: column;
-    gap: 3em;
+    gap: 9em;
 
     .case-content {
         padding: 2em 0;

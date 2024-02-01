@@ -8,6 +8,7 @@ import { Link } from "react-router-dom";
 import CaseCard from "../../components/case-card";
 import HireProcess from "../../components/hire-process";
 import { StyledButton } from "../../components/button";
+import ParticlesContainer from "../../components/particle-content";
 
 
 
@@ -115,7 +116,7 @@ const HireCategory = () => {
         <Layout>
             <StyledHireCategory>
                 <section>
-                    <IntroBanner title={bannerContents.title} desc={bannerContents.desc} bgImg="/img/bg/banner.png" />
+                    <ParticlesContainer title={bannerContents.title} desc={bannerContents.desc} bgImg="/img/bg/banner.png"/>
                 </section>
                 <section className="container">
                     <div className="row">
