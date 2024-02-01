@@ -11,6 +11,7 @@ import BlogCard from "../components/blog-card";
 import ServiceCard from "../components/service-card";
 import AskQuestion from "../components/ask-question";
 import { Link } from "react-router-dom";
+import ParticlesContainer from "../components/particle-content";
 
 const process = [
     {
@@ -228,7 +229,7 @@ const Home = () => {
         <Layout>
             <StyledHome>
                 <section>
-                    <IntroBanner title={bannerContents.title} desc={bannerContents.desc} bgImg="/img/bg/banner.png" />
+                    <ParticlesContainer title={bannerContents.title} desc={bannerContents.desc} bgImg="/img/bg/banner.png"/>
                 </section>
                 <section className="container">
                     <div className="world-card row">
@@ -358,7 +359,7 @@ const Home = () => {
 const StyledHome = styled.div`
     display: flex;
     flex-direction: column;
-    gap: 3em;
+    gap: 9em;
     .process-content {
         color: var(--text);
         margin: 0;
@@ -438,7 +439,7 @@ const StyledHome = styled.div`
     }
 
     .case-content {
-        padding: 2em 0;
+        padding: 5em 0;
         display: flex;
         justify-content: center;
         background-image: linear-gradient(134deg, #0f258b 0%, #4b58a2 100%);
@@ -456,7 +457,7 @@ const StyledHome = styled.div`
             border: 1px solid white;
             border-radius: 0.3em;
             background: inherit;
-            padding: 0.5em 0.7em;
+            padding-top: 0.5em 0.7em;
             font-size: 1em;
             cursor: pointer;
         }

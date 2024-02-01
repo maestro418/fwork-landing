@@ -12,6 +12,7 @@ import Markdown from "../../components/markdown";
 import AskQuestion from "../../components/ask-question";
 import { StyledButton } from "../../components/button";
 import E404 from "../e404";
+import ParticlesContainer from "../../components/particle-content";
 
 interface HireDetailProps {
     category: string,
@@ -55,7 +56,7 @@ interface DataListType {
 const overview = 'Fwork is a vetted community of expert development teams supported by an AI-powered Agile process. Top companies and startups rely on us to help them to build great products. We can help you too, by enabling you to hire and effortlessly manage expert developers.'
 
 const HireDetail = ({ slug, category }: HireDetailProps) => {
-    const [status, setStatus] = useState<DataListType>();
+    const [status, setStatus] = useState({} as DataListType);
     const [smallScreen, setSmallScreen] = React.useState(false);
     const [cases, setCases] = React.useState<Array<ProjectItemType>>()
     const [activeIndex, setActiveIndex] = React.useState<number | null>(null);
@@ -188,7 +189,7 @@ const HireDetail = ({ slug, category }: HireDetailProps) => {
 const StyledHireDetail = styled.div`
     display: flex;
     flex-direction: column;
-    gap: 3em;
+    gap: 9em;
 
     .case-content {
         padding: 2em 0;

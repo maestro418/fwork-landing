@@ -14,6 +14,7 @@ import BlogCard from "../components/blog-card";
 import OutSourcing from "../components/outsourcing";
 import { StyledButton } from "../components/button";
 import E404 from "./e404";
+import ParticlesContainer from "../components/particle-content";
 
 interface dataType {
     title: string
@@ -182,7 +183,7 @@ const Service = () => {
 const StyledService = styled.div`
     display: flex;
     flex-direction: column;
-    gap: 4em;
+    gap: 9em;
 
     .case-content {
         padding: 4em 0 2em 0;
