@@ -1,8 +1,13 @@
 import React, { useState } from "react";
 import styled from "styled-components";
+import { Link } from "react-router-dom";
+// import ParticlesContainer from "react-particles";
+import type { Engine } from "@tsparticles/engine";
+import { loadFull } from "tsparticles";
+
 
 import { HireBtn } from "./button";
-import { Link } from "react-router-dom";
+import ParticlesContainer from "./particle-content";
 
 interface IntroBannerProps {
     title: string | undefined,
@@ -34,6 +39,7 @@ const IntroBanner = ({ title, desc, bgImg }: IntroBannerProps) => {
             window.removeEventListener('resize', setResponsive);
         };
     }, [])
+
     return (
         <StyledBanner $isMobile={mobile} $bgImg={bgImg}>
             <div className="container">
@@ -56,6 +62,7 @@ const IntroBanner = ({ title, desc, bgImg }: IntroBannerProps) => {
                     </div>
                 </div>
             </div>
+           
         </StyledBanner>
     )
 }

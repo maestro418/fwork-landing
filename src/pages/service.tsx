@@ -13,6 +13,7 @@ import AskQuestion from "../components/ask-question";
 import BlogCard from "../components/blog-card";
 import OutSourcing from "../components/outsourcing";
 import { StyledButton } from "../components/button";
+import ParticlesContainer from "../components/particle-content";
 
 interface dataType {
     title: string
@@ -84,7 +85,7 @@ const Service = () => {
     return (
         <Layout>
             <StyledService>
-                <IntroBanner title={status.title} desc={status.desc} bgImg={`/img/bg/${imgPath}.png`} />
+                <ParticlesContainer title={status.title} desc={status.desc} bgImg={`/img/bg/${imgPath}.png`}/>
                 <section>
                     <div className="container">
                         <div className="text-header">
@@ -170,7 +171,7 @@ const Service = () => {
 const StyledService = styled.div`
     display: flex;
     flex-direction: column;
-    gap: 4em;
+    gap: 9em;
 
     .case-content {
         padding: 4em 0 2em 0;
