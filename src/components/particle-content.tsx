@@ -1,10 +1,11 @@
+import React from "react";
 import Particles from "react-tsparticles";
 import { loadSlim } from "tsparticles-slim"; // loads tsparticles-slim
-import { useCallback, useMemo } from "react";
 import IntroBanner from "./intro-banner";
 import styled from "styled-components";
+
 const ParticlesContainer = ({ title, desc, bgImg }: { title: string, desc: string, bgImg: string }) => {
-    const options = useMemo(() => {
+    const options = React.useMemo(() => {
         return {
             autoPlay: true,
             fullScreen: {
@@ -64,7 +65,7 @@ const ParticlesContainer = ({ title, desc, bgImg }: { title: string, desc: strin
         };
     }, []);
 
-    const particlesInit = useCallback((engine: any) => {
+    const particlesInit = React.useCallback((engine: any) => {
         loadSlim(engine);
     }, []);
 

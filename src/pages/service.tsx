@@ -85,7 +85,7 @@ const Service = () => {
     return (
         <Layout>
             <StyledService>
-                <ParticlesContainer title={status.title} desc={status.desc} bgImg={`/img/bg/${imgPath}.png`}/>
+                <ParticlesContainer title={status.title} desc={status.desc} bgImg={`/img/bg/${imgPath}.png`} />
                 <section>
                     <div className="container">
                         <div className="text-header">
@@ -123,22 +123,26 @@ const Service = () => {
                         </Link>
                     </div>
                 </section>
-                <section className="container">
-                    <div className="row">
-                        <div className="col-md-4 text-header">
-                            <label className="h1">{status.faq?.title}</label>
-                            <div>Everything you need to know about DevTeam.Space. Can’t find the answer you’re looking for?</div>
-                        </div>
-                        <div className="col-md-8 pt-2">
-                            {status.faq?.item.map((i, k) => (
-                                <AskQuestion
-                                    title={i.title}
-                                    desc={i.desc}
-                                    isOpen={activeIndex === k}
-                                    onAccordian={() => onAccordian(k)}
-                                    key={k}
-                                />
-                            ))}
+                <section>
+                    <div className="container">
+                        <div className="row">
+                            <div className="col-md-4 text-header">
+                                <div className="ml">
+                                <label className="h1">{status.faq?.title}</label>
+                                <div>Everything you need to know about DevTeam.Space. Can’t find the answer you’re looking for?</div>
+                                </div>
+                            </div>
+                            <div className="col-md-8 pt-2">
+                                {status.faq?.item.map((i, k) => (
+                                    <AskQuestion
+                                        title={i.title}
+                                        desc={i.desc}
+                                        isOpen={activeIndex === k}
+                                        onAccordian={() => onAccordian(k)}
+                                        key={k}
+                                    />
+                                ))}
+                            </div>
                         </div>
                     </div>
                 </section>
@@ -174,7 +178,7 @@ const StyledService = styled.div`
     gap: 9em;
 
     .case-content {
-        padding: 4em 0 2em 0;
+        padding: 5em 0;
         display: flex;
         justify-content: center;
         background-image: linear-gradient(134deg, #0f258b 0%, #4b58a2 100%);
