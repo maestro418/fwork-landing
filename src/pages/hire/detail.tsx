@@ -11,6 +11,7 @@ import HireProcess from "../../components/hire-process";
 import Markdown from "../../components/markdown";
 import AskQuestion from "../../components/ask-question";
 import { StyledButton } from "../../components/button";
+import E404 from "../e404";
 import ParticlesContainer from "../../components/particle-content";
 
 interface HireDetailProps {
@@ -59,6 +60,7 @@ const HireDetail = ({ slug, category }: HireDetailProps) => {
     const [smallScreen, setSmallScreen] = React.useState(false);
     const [cases, setCases] = React.useState<Array<ProjectItemType>>()
     const [activeIndex, setActiveIndex] = React.useState<number | null>(null);
+    const [notFound, setNotFound] = useState(false)
 
     const onAccordian = (idx: number) => {
         setActiveIndex((prevIndex) => (prevIndex === idx ? null : idx));
@@ -89,15 +91,13 @@ const HireDetail = ({ slug, category }: HireDetailProps) => {
 
     React.useEffect(() => {
         const dataSlug = HireData.find((i) => i.slug === category)
-        if (!!dataSlug) {
-            const data = dataSlug?.list.find((i) => i.slug === slug);
-            if (data) {
-                setStatus(data)
-                setCases(data.item.project.item)
-            }
-            console.log("stress", dataSlug)
+        const data = dataSlug?.list.find((i) => i.slug === slug);
+        if (data) {
+            setStatus(data)
+            setCases(data?.item.project.item)
+            return;
         }
-        return;
+        setNotFound(true)
     }, [slug]);
 
     React.useEffect(() => {
@@ -109,70 +109,79 @@ const HireDetail = ({ slug, category }: HireDetailProps) => {
     }, [])
 
     return (
-        <Layout>
-            <StyledHireDetail>
-                <section>
-                    <ParticlesContainer title={status.name} desc={overview} bgImg="/img/bg/banner.png" />
-                </section>
-                <section id="hiring" className="container">
-                    <label className="h1">Developer Hiring Process</label>
-                    <div className=" process-content row">
-                        {process.map((i) => (
-                            <div key={i.id} className="col-lg-3 col-md-6 pb">
-                                <HireProcess id={i.id} title={i.title} desc={i.desc} img={""} />
-                            </div>
-                        ))}
-                    </div>
-                </section>
-                {!!cases && cases.length >= 1 && (
-                    <section id="case" className="case-content">
-                        <div className="container">
-                            <label className="h1">{status?.item.project.title}</label>
-                            <div className="row">
-                                {cases?.map((i, k) => (
-                                    <div className="col-md-4" >
-                                        <CaseCard title={i.title} tech={i.tech} img={`hiring/${i.img}`} team={i.team} smallScreen={smallScreen} />
+        <>
+            {!notFound && (
+
+                <Layout>
+                    <StyledHireDetail>
+                        <section>
+                            <IntroBanner title={status?.name} desc={overview} bgImg="/img/bg/banner.png" />
+                        </section>
+                        <section id="hiring" className="container">
+                            <label className="h1">Developer Hiring Process</label>
+                            <div className=" process-content row">
+                                {process.map((i) => (
+                                    <div key={i.id} className="col-lg-3 col-md-6 pb">
+                                        <HireProcess id={i.id} title={i.title} desc={i.desc} img={""} />
                                     </div>
                                 ))}
                             </div>
-                            <div className="d center gap">
-                                <Link to='https://fwork.io/freelancers'><StyledButton>Hire Top-notch Developer
-                                </StyledButton></Link>
-                                <Link to="https://fwork.io/blogs">
-                                    <StyledButton className="d middle" >
-                                        <div className="pr">See More Case Studies</div>
-                                        <img src="/img/icon/right-arrow.svg" width={16} alt="" />
-                                    </StyledButton>
-                                </Link>
+                        </section>
+                        {!!cases && cases.length >= 1 && (
+                            <section id="case" className="case-content">
+                                <div className="container">
+                                    <label className="h1">{status?.item.project.title}</label>
+                                    <div className="row">
+                                        {cases?.map((i, k) => (
+                                            <div className="col-md-4" >
+                                                <CaseCard title={i.title} tech={i.tech} img={`hiring/${i.img}`} team={i.team} smallScreen={smallScreen} />
+                                            </div>
+                                        ))}
+                                    </div>
+                                    <div className="d center gap">
+                                        <Link to='https://fwork.io/freelancers'><StyledButton>Hire Top-notch Developer
+                                        </StyledButton></Link>
+                                        <Link to="https://fwork.io/blogs">
+                                            <StyledButton className="d middle" >
+                                                <div className="pr">See More Case Studies</div>
+                                                <img src="/img/icon/right-arrow.svg" width={16} alt="" />
+                                            </StyledButton>
+                                        </Link>
+                                    </div>
+                                </div>
+                            </section>
+                        )}
+                        <section className="container">
+                            <div className="row">
+                                <div className="col-md-4 text-header">
+                                    <label className="h1">{status?.item.faq.title}</label>
+                                    <div>Everything you need to know about DevTeam.Space. Can’t find the answer you’re looking for?</div>
+                                </div>
+                                <div className="col-md-8 pt-2">
+                                    {status?.item.faq.item.map((i, k) => (
+                                        <AskQuestion
+                                            title={i.title}
+                                            desc={i.desc}
+                                            isOpen={activeIndex === k}
+                                            onAccordian={() => onAccordian(k)}
+                                        />
+                                    ))}
+                                </div>
                             </div>
-                        </div>
-                    </section>
-                )}
-                <section className="container">
-                    <div className="row">
-                        <div className="col-md-4 text-header">
-                            <label className="h1">{status?.item.faq.title}</label>
-                            <div>Everything you need to know about DevTeam.Space. Can’t find the answer you’re looking for?</div>
-                        </div>
-                        <div className="col-md-8 pt-2">
-                            {status.item.faq.item.map((i, k) => (
-                                <AskQuestion
-                                    title={i.title}
-                                    desc={i.desc}
-                                    isOpen={activeIndex === k}
-                                    onAccordian={() => onAccordian(k)}
-                                />
-                            ))}
-                        </div>
-                    </div>
-                </section>
-                <section className="mb-3">
-                    <div className="container">
-                        {status?.item.article && <Markdown text={status.item.article} />}
-                    </div>
-                </section>
-            </StyledHireDetail>
-        </Layout>
+                        </section>
+                        <section className="mb-3">
+                            <div className="container">
+                                {status?.item.article && <Markdown text={status.item.article} />}
+                            </div>
+                        </section>
+                    </StyledHireDetail>
+                </Layout>
+            )}
+            {!!notFound && (
+                <E404 />
+            )}
+        </>
+
 
     )
 }
