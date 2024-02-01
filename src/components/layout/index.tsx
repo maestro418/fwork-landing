@@ -5,7 +5,7 @@ import Footer from "./footer";
 
 import styled from "styled-components";
 
-const Layout = ({ children }: { children: React.ReactNode }) => {
+const Layout = ({ children, is404 }: { children: React.ReactNode, is404?: boolean }) => {
 
     const headerProps = {
         menuItems: [
@@ -66,7 +66,7 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
     }
     return (
         <StyledLayout className="d column">
-            <Header menuItems={headerProps.menuItems} />
+            <Header menuItems={headerProps.menuItems} is404={is404} />
             <main>{children}</main>
             <Footer />
         </StyledLayout>

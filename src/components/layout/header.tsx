@@ -5,14 +5,16 @@ import { Link } from "react-router-dom";
 import DropDown from "../dropdown";
 
 interface HeaderProps {
-    menuItems: { title: string, link?: string, items: { title: string, link: string }[] | [] }[]
+    menuItems: { title: string, link?: string, items: { title: string, link: string }[] | [] }[],
+    is404?: boolean
 }
 
 type StyledHeaderProps = {
-    $scrollEvent: Boolean
+    $scrollEvent: Boolean,
+    $is404?: Boolean
 }
 
-const Header = ({ menuItems }: HeaderProps) => {
+const Header = ({ menuItems, is404 }: HeaderProps) => {
     const [openSideBar, setOpenSideBar] = useState(false)
     const [mobile, setMobile] = useState(false);
     const [scrollEvent, setScrollEvent] = useState(false)
@@ -47,7 +49,7 @@ const Header = ({ menuItems }: HeaderProps) => {
     }, [])
 
     return (
-        <StyledHeader $scrollEvent={scrollEvent}>
+        <StyledHeader $scrollEvent={scrollEvent} $is404={is404}>
             <div className="d middle between container">
                 <Link to='/' className="" >
                     <svg xmlns="http://www.w3.org/2000/svg" width="150" height="32" viewBox="0 0 855 156">
@@ -109,9 +111,9 @@ const StyledHeader = styled.div<StyledHeaderProps>`
     position: fixed;
     top: 0em;
     width: 100%;
-    color:${(props) => !!props.$scrollEvent ? 'black' : 'white'};
-    background-color: ${(props) => !!props.$scrollEvent ? 'white' : 'none'};
-    box-shadow:${(props) => !!props.$scrollEvent && '0 0 15px 0 var(--shadow)'} ;
+    color:${(props) => (!!props.$scrollEvent || !!props.$is404) ? 'black' : 'white'};
+    background-color: ${(props) => (!!props.$scrollEvent || !!props.$is404) ? 'white' : 'none'};
+    box-shadow:${(props) => (!!props.$scrollEvent || !!props.$is404) && '0 0 15px 0 var(--shadow)'} ;
     padding: 1em 0em;
     z-index: 2;
     .hamburger {
@@ -119,10 +121,10 @@ const StyledHeader = styled.div<StyledHeaderProps>`
         top: 1em;
         right: 0;
         cursor: pointer;
-        color: ${(props) => !!props.$scrollEvent ? '#1967d2' : 'white'};
+        color: ${(props) => (!!props.$scrollEvent || !!props.$is404) ? '#1967d2' : 'white'};
     }
     a {
-        color:${(props) => !!props.$scrollEvent ? 'black' : 'white'};
+        color:${(props) => (!!props.$scrollEvent || !!props.$is404) ? 'black' : 'white'};
     }
     .menu {
         display: flex;
