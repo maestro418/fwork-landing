@@ -3,8 +3,6 @@ import styled from "styled-components";
 import { Link, useParams } from "react-router-dom";
 
 import Layout from "../components/layout";
-import IntroBanner from "../components/intro-banner";
-import HireProcess from "../components/hire-process";
 import CaseCard from "../components/case-card";
 import Markdown from "../components/markdown";
 
@@ -92,7 +90,7 @@ const Service = () => {
             {!!isValidId && (
                 <Layout>
                     <StyledService>
-                        <IntroBanner title={status.title} desc={status.desc} bgImg={`/img/bg/${imgPath}.png`} />
+                        <ParticlesContainer title={status.title} desc={status.desc} bgImg={`/img/bg/${imgPath}.png`} />
                         <section>
                             <div className="container">
                                 <div className="text-header">
@@ -119,7 +117,7 @@ const Service = () => {
                                     ))}
                                 </div>
                             </div>
-                            <div className="d center gap mt-1 mb-2">
+                            <div className="d center gap mt-2 mb-2">
                                 <Link to='https://fwork.io/freelancers'><StyledButton>Hire Top-notch Developer
                                 </StyledButton></Link>
                                 <Link to="https://fwork.io/blogs">
@@ -211,10 +209,13 @@ const StyledService = styled.div`
     }
 
     .text-header {
+        margin-bottom: 1.5em;
+
         &>:last-child {
             color: #6c757d;
             line-height: 2em;
             font-size: .9em;
+            margin-top: .5em;
         }
     }
 `
