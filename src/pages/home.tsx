@@ -279,7 +279,7 @@ const Home = () => {
                 </section>
                 <section id="case" className="case-content">
                     <div className="container mt-1">
-                        <label className="h1">Witness the magic of our expert developers and designers in action!</label>
+                        <label className="h1 mb-1">Witness the magic of our expert developers and designers in action!</label>
                         <div className="row">
                             {cases.map(i => (
                                 <div key={i._id} className="col-md-4" >
@@ -287,7 +287,7 @@ const Home = () => {
                                 </div>
                             ))}
                         </div>
-                        <div className="d center gap mt-1 mb-2">
+                        <div className="d center gap mt-2 mb-2">
                             <Link to='https://fwork.io/freelancers'><StyledButton>Hire Top-notch Developer
                             </StyledButton></Link>
                             <Link to="https://fwork.io/blogs">
@@ -300,7 +300,7 @@ const Home = () => {
                     </div>
                 </section>
                 <section id="hiring" className="container">
-                    <label className="h1">Developer Hiring Process</label>
+                    <label className="h1 mb-1">Developer Hiring Process</label>
                     <div className=" process-content row">
                         {process.map((i) => (
                             <div key={i.id} className="col-lg-3 col-md-6 pb">
@@ -310,7 +310,7 @@ const Home = () => {
                     </div>
                 </section>
                 <section id="services" className="container">
-                    <label className="h1">Services for Enterprise, Startups, and Entrepreneurs</label>
+                    <label className="h1 mb-1">Services for Enterprise, Startups, and Entrepreneurs</label>
                     <div className="row m-0">
                         {service.map((i, k) => (
                             <div key={k} className=" col-md-4 p-0">
@@ -322,7 +322,7 @@ const Home = () => {
                 <section id="faq" className="container faq-content center">
                     <div className="row m-0">
                         <div className="col-lg-4 p-0 text-header">
-                            <div className="h1">Frequently Asked Questions</div>
+                            <div className="h1 mb-1">Frequently Asked Questions</div>
                             <p className="m-0 mb-1 mt-1">Everything you need to know about Fwork. Can’t find the answer you’re looking for?</p>
                         </div>
                         <div className="col-lg-8 pt-3">
@@ -338,10 +338,10 @@ const Home = () => {
                         </div>
                     </div>
                 </section>
-                <section id="blog" className="container mb-3">
+                <section id="blog" className="container mb-5">
                     <div className="d column ">
                         <div className="h1">Find Work Blog</div>
-                        <div>Check out our mind-blowing product development tutorials and futuristic technology announcements cooked up by our brilliant software development wizards. Penned by humans, for humans (and maybe a few robots).</div>
+                        <div className=" mb-1">Check out our mind-blowing product development tutorials and futuristic technology announcements cooked up by our brilliant software development wizards. Penned by humans, for humans (and maybe a few robots).</div>
                     </div>
                     <div className="row m-0 p-0">
                         {blog.map((i, k) => (

@@ -3,7 +3,6 @@ import styled from "styled-components";
 import { Link } from "react-router-dom";
 
 import HireData from '../context/hiring.json'
-import IntroBanner from "../../components/intro-banner";
 import Layout from "../../components/layout";
 import CaseCard from "../../components/case-card";
 
@@ -116,10 +115,10 @@ const HireDetail = ({ slug, category }: HireDetailProps) => {
                 <Layout>
                     <StyledHireDetail>
                         <section>
-                            <IntroBanner title={status?.name} desc={overview} bgImg="/img/bg/banner.png" />
+                            <ParticlesContainer title={status?.name} desc={overview} bgImg="/img/bg/banner.png" />
                         </section>
                         <section id="hiring" className="container">
-                            <label className="h1">Developer Hiring Process</label>
+                            <label className="h1 mb-1">Developer Hiring Process</label>
                             <div className=" process-content row">
                                 {process.map((i) => (
                                     <div key={i.id} className="col-lg-3 col-md-6 pb">
@@ -131,7 +130,7 @@ const HireDetail = ({ slug, category }: HireDetailProps) => {
                         {!!cases && cases.length >= 1 && (
                             <section id="case" className="case-content">
                                 <div className="container">
-                                    <label className="h1">{status?.item.project.title}</label>
+                                    <label className="h1 mb-1">{status?.item.project.title}</label>
                                     <div className="row">
                                         {cases?.map((i, k) => (
                                             <div className="col-md-4" >
@@ -156,7 +155,7 @@ const HireDetail = ({ slug, category }: HireDetailProps) => {
                             <section className="container">
                                 <div className="row">
                                     <div className="col-md-4 text-header">
-                                        <label className="h1">{status?.item?.faq.title}</label>
+                                        <label className="h1 mb-1">{status?.item?.faq.title}</label>
                                         <div>Everything you need to know about DevTeam.Space. Can’t find the answer you’re looking for?</div>
                                     </div>
                                     <div className="col-md-8 pt-2">
@@ -195,7 +194,7 @@ const StyledHireDetail = styled.div`
     gap: 9em;
 
     .case-content {
-        padding: 2em 0;
+        padding: 5em 0;
         display: flex;
         justify-content: center;
         background-image: linear-gradient(134deg, #0f258b 0%, #4b58a2 100%);

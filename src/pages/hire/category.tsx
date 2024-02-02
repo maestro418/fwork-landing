@@ -138,7 +138,7 @@ const HireCategory = () => {
                 </section>
                 <section id="case" className="case-content">
                     <div className="container">
-                        <label className="h1">Witness the magic of our expert developers and designers in action!</label>
+                        <label className="h1 mb-1">Witness the magic of our expert developers and designers in action!</label>
                         <div className="row">
                             {cases.map(i => (
                                 <div key={i._id} className="col-md-4" >
@@ -158,8 +158,8 @@ const HireCategory = () => {
                         </div>
                     </div>
                 </section>
-                <section id="hiring" className="container mb-3">
-                    <label className="h1">Developer Hiring Process</label>
+                <section id="hiring" className="container mb-5">
+                    <label className="h1 mb-1">Developer Hiring Process</label>
                     <div className=" process-content row">
                         {process.map((i) => (
                             <div key={i.id} className="col-lg-3 col-md-6">
@@ -180,7 +180,7 @@ const StyledHireCategory = styled.div`
     gap: 3em;
 
     .case-content {
-        padding: 2em 0;
+        padding: 5em 0;
         display: flex;
         justify-content: center;
         background-image: linear-gradient(134deg, #0f258b 0%, #4b58a2 100%);
