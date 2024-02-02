@@ -92,13 +92,14 @@ const HireDetail = ({ slug, category }: HireDetailProps) => {
     React.useEffect(() => {
         const dataSlug = HireData.find((i) => i.slug === category)
         const data = dataSlug?.list.find((i) => i.slug === slug);
+        console.log("detail ::: data", data)
         if (data) {
             setStatus(data)
             setCases(data?.item.project.item)
             return;
         }
         setNotFound(true)
-    }, [slug]);
+    }, []);
 
     React.useEffect(() => {
         const handleScreen = () => {
@@ -110,7 +111,7 @@ const HireDetail = ({ slug, category }: HireDetailProps) => {
 
     return (
         <>
-            {!notFound && (
+            {!notFound && status && (
 
                 <Layout>
                     <StyledHireDetail>
@@ -151,27 +152,29 @@ const HireDetail = ({ slug, category }: HireDetailProps) => {
                                 </div>
                             </section>
                         )}
-                        <section className="container">
-                            <div className="row">
-                                <div className="col-md-4 text-header">
-                                    <label className="h1">{status?.item.faq.title}</label>
-                                    <div>Everything you need to know about DevTeam.Space. Can’t find the answer you’re looking for?</div>
+                        {!!status.item && !!status.item?.faq.item[0] && (
+                            <section className="container">
+                                <div className="row">
+                                    <div className="col-md-4 text-header">
+                                        <label className="h1">{status?.item?.faq.title}</label>
+                                        <div>Everything you need to know about DevTeam.Space. Can’t find the answer you’re looking for?</div>
+                                    </div>
+                                    <div className="col-md-8 pt-2">
+                                        {status?.item?.faq.item.map((i, k) => (
+                                            <AskQuestion
+                                                title={i.title}
+                                                desc={i.desc}
+                                                isOpen={activeIndex === k}
+                                                onAccordian={() => onAccordian(k)}
+                                            />
+                                        ))}
+                                    </div>
                                 </div>
-                                <div className="col-md-8 pt-2">
-                                    {status?.item.faq.item.map((i, k) => (
-                                        <AskQuestion
-                                            title={i.title}
-                                            desc={i.desc}
-                                            isOpen={activeIndex === k}
-                                            onAccordian={() => onAccordian(k)}
-                                        />
-                                    ))}
-                                </div>
-                            </div>
-                        </section>
+                            </section>
+                        )}
                         <section className="mb-3">
                             <div className="container">
-                                {status?.item.article && <Markdown text={status.item.article} />}
+                                {status?.item?.article && <Markdown text={status.item.article} />}
                             </div>
                         </section>
                     </StyledHireDetail>
