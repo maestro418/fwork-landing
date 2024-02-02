@@ -28,10 +28,12 @@ interface CategoryType {
 const HireCategory = () => {
     const [status, setStatus] = useState<Array<CategoryType>>();
     const [smallScreen, setSmallScreen] = React.useState(false);
+
     const bannerContents = {
         title: 'Developers With Specific Skills',
         desc: 'Fwork is a vetted community of expert development teams supported by an AI-powered Agile process. Top companies and startups rely on us to help them to build great products. We can help you too, by enabling you to hire and effortlessly manage expert developers.',
     }
+
     const process = [
         {
             id: 1,
@@ -54,6 +56,7 @@ const HireCategory = () => {
             desc: "Once satisfied with our exceptional quality and dedication, you can easily hire more expert engineers to scale your team."
         }
     ]
+
     const cases = [
         {
             "_id": 1,
@@ -116,7 +119,7 @@ const HireCategory = () => {
         <Layout>
             <StyledHireCategory>
                 <section>
-                    <ParticlesContainer title={bannerContents.title} desc={bannerContents.desc} bgImg="/img/bg/banner.png"/>
+                    <ParticlesContainer title={bannerContents.title} desc={bannerContents.desc} bgImg="/img/bg/banner.png" />
                 </section>
                 <section className="container">
                     <div className="row">
@@ -126,7 +129,7 @@ const HireCategory = () => {
                                 {i.list.map((j, key) => (
                                     <div key={key} className="d middle gap">
                                         <img src={`/img/icon/${j.img}`} />
-                                        <Link to={`${i.slug}/${j.slug}`}>{j.name}</Link>
+                                        <Link to={`/hire-dev/${i.slug}/${j.slug}`}>{j.name}</Link>
                                     </div>
                                 ))}
                             </div>

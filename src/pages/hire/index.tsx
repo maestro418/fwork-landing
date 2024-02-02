@@ -2,7 +2,7 @@ import React, { Suspense } from "react";
 import { useParams } from "react-router";
 
 import HireCategory from "./category";
-import HireDetal from "./detail";
+import HireDetail from "./detail";
 
 import HireData from '../context/hiring.json'
 import E404 from "../e404";
@@ -20,7 +20,7 @@ const HireDev = () => {
     if (!!slug && !!category) {
 
         return (
-            <HireDetal slug={slug} category={category} />
+            <HireDetail slug={slug} category={category} />
         )
     } else if ((!slug && !!category && !!validateCategory(category) || (!slug && !category))) {
         return (
