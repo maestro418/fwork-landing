@@ -14,11 +14,11 @@ interface CaseCardProps {
 
 const CaseCard = ({ title, tech, img, team, smallScreen }: CaseCardProps) => {
     return (
-        <Link to={""}>
+        <Link to={""} aria-label="case-card">
             <StyledCaseCard>
 
                 <div className="r-30">
-                    <img className="r-30" src={`/img/${img}`} width='100%' />
+                    <img className="r-30" src={`/img/${img}`} width='100%' alt="No image" />
                 </div>
                 <div>
                     <div>{tech}</div>
@@ -32,7 +32,7 @@ const CaseCard = ({ title, tech, img, team, smallScreen }: CaseCardProps) => {
                         {team.map((i, k) => (
                             <div key={k} className="d">
                                 <div>
-                                    <img src={`/img/icon/${i.gender}.svg`} width={24} alt="" />
+                                    <img src={`/img/icon/${i.gender}.svg`} width={24} alt="No image" />
                                 </div>
                                 <div>{i.member}</div>
                             </div>

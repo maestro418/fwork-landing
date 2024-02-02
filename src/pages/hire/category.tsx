@@ -128,8 +128,8 @@ const HireCategory = () => {
                                 <div className="h2">{i.title}</div>
                                 {i.list.map((j, key) => (
                                     <div key={key} className="d middle gap">
-                                        <img src={`/img/icon/${j.img}`} />
-                                        <Link to={`/hire-dev/${i.slug}/${j.slug}`}>{j.name}</Link>
+                                        <img src={`/img/icon/${j.img}`} alt="No image" />
+                                        <Link to={`/hire-dev/${i.slug}/${j.slug}`} aria-label={`${k} +1`}>{j.name}</Link>
                                     </div>
                                 ))}
                             </div>
@@ -147,12 +147,12 @@ const HireCategory = () => {
                             ))}
                         </div>
                         <div className="d center gap">
-                            <Link to='https://fwork.io/freelancers'><StyledButton>Hire Top-notch Developer
+                            <Link to='https://fwork.io/freelancers' aria-label="category-top"><StyledButton>Hire Top-notch Developer
                             </StyledButton></Link>
-                            <Link to="https://fwork.io/blogs">
+                            <Link to="https://fwork.io/blogs" aria-label="category-more" >
                                 <StyledButton className="d middle" >
                                     <div className="pr">See More Case Studies</div>
-                                    <img src="/img/icon/right-arrow.svg" width={16} alt="" />
+                                    <img src="/img/icon/right-arrow.svg" width={16} alt="No image" />
                                 </StyledButton>
                             </Link>
                         </div>

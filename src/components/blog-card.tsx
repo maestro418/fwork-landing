@@ -11,19 +11,18 @@ interface BlogCardPropsType {
 }
 
 const BlogCard = (props: BlogCardPropsType) => {
-    const { banner, title, desc, img, link } = props;
+    const { banner, title, desc, img } = props;
 
     return (
         <StyledBlogCard>
-            <Link to={link}>
+            <Link to="https://fwork.io/blogs" aria-label="card">
                 <div className="card-header">
-                    <img src={`/img/${img}`} className="w-100" style={{height: "335.7px"}}  alt="" />
+                    <img src={`/img/${img}`} className="w-100" style={{ height: "335.7px" }} alt="" />
                     <strong className="banner">{banner}</strong>
                     <div className="title">{title}</div>
                 </div>
                 <div className="card-body">
                     <div className="desc">{desc}</div>
-                    <Link to={link} className="link">Read more</Link>
                 </div>
 
             </Link>

@@ -52,17 +52,17 @@ const IntroBanner = ({ title, desc, bgImg }: IntroBannerProps) => {
                             {desc}
                         </div>
                         <HireBtn className={`${!!mobile ? 'btn-mobile' : 'w-50'}`}>
-                            <Link to="https://fwork.io/freelancers" className={`btn-hire d center middle `}>
+                            <Link to="https://fwork.io/freelancers" aria-label="hire-btn" className={`btn-hire d center middle `}>
                                 <div className="h4">
                                     Hire Developers
                                 </div>
-                                <img src="/img/hire.svg" alt="" width={25} />
+                                <img src="/img/hire.svg" alt="No image" width={25} />
                             </Link>
                         </HireBtn>
                     </div>
                 </div>
             </div>
-           
+
         </StyledBanner>
     )
 }

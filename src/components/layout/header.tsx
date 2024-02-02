@@ -51,8 +51,8 @@ const Header = ({ menuItems, is404 }: HeaderProps) => {
     return (
         <StyledHeader $scrollEvent={scrollEvent} $is404={is404}>
             <div className="d middle between container">
-                <Link to='/' className="" >
-                    <svg xmlns="http://www.w3.org/2000/svg" width="150" height="32" viewBox="0 0 855 156">
+                <Link to='/' aria-label="header">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="200" height="32" viewBox="0 0 855 156">
                         <path data-name="Rectangle 2 copy" fill="#1967d2" d="M76.019,118.61H149V137H40.236V80.531H76.019V118.61Z" />
                         <path fill="currentColor" d="M810.6,76.809l12.45-6.991S805.652,42.781,777,56c-29.119,13.434-21.911,43.841-10.611,63.834,9.649,17.071,33.329,29.631,55.637,19.085,31.586-14.932,13.92-47.887,11.949-51.687L821,95s13.062,22.262-2.574,30.121c-13.813,6.942-26.2-4.416-34.4-17.623-7.843-12.643-13.9-28.8-.209-37.127C800.107,60.462,810.6,76.809,810.6,76.809Z" />
                         <path fill="currentColor" d="M702,124s-13.5,30.707-49,13c-6.28-3.133-20-13.478-20-34V47h24v53c0,12.729,3.181,25.3,18,27,16.448,1.887,20-23,20-23a71.68,71.68,0,0,0,2.726,11.645A36.03,36.03,0,0,0,702,124Z" />
@@ -65,7 +65,7 @@ const Header = ({ menuItems, is404 }: HeaderProps) => {
                     {!mobile && menuItems.map((i, k) => (
                         <React.Fragment key={k}>
                             {!!i.link && (
-                                <a href={i.link} ><div>{i.title}</div></a>
+                                <a href={i.link} aria-label={`${k} +1`} ><div>{i.title}</div></a>
                             )}
                             {!i.link && (
                                 <DropDown title={i.title} options={i.items} openDropDown={openDropDown} setOpenDropDown={setOpenDropDown} scrollEvent={scrollEvent} isMobile={mobile} />
@@ -92,14 +92,13 @@ const Header = ({ menuItems, is404 }: HeaderProps) => {
                         {menuItems.map((i, k) => (
                             <React.Fragment key={k}>
                                 {!!i.link && (
-                                    <a href={i.link} ><div>{i.title}</div></a>
+                                    <a href={i.link} aria-label={`${k} +1`} ><div>{i.title}</div></a>
                                 )}
                                 {!i.link && (
                                     <DropDown title={i.title} options={i.items} openDropDown={openDropDown} setOpenDropDown={setOpenDropDown} scrollEvent={scrollEvent} isMobile={mobile} />
                                 )}
                             </React.Fragment>
                         ))}
-                        {/* <a href="https://fwork.io/login">Get started</a> */}
                     </div>
                 </div>
             )}

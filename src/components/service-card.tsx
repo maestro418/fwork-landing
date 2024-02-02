@@ -20,7 +20,7 @@ const ServiceCard = ({ title, icon, desc, bgColor, btnContent, btnLink }: Servic
     return (
         <StyledServiceCard $bgColor={bgColor}>
             <div className="" >
-                <img src={icon} width={50} />
+                <img src={icon} width={50} alt="No image" />
             </div>
             <div>
                 {title}
@@ -29,7 +29,7 @@ const ServiceCard = ({ title, icon, desc, bgColor, btnContent, btnLink }: Servic
                 {desc}
             </div>
             {btnLink && (
-                <Link to={btnLink} >
+                <Link to={btnLink} aria-label="service-card">
                     <StyledButton className="btn">{btnContent}</StyledButton>
                 </Link >
             )
