@@ -40,20 +40,20 @@ const DropDown = ({ title, options, openDropDown, setOpenDropDown, scrollEvent, 
                             <Icon icon={`${!!openDropDown ? "UpArrow" : "DownArrow"}`} />
                         </div>
                     </div>
-                    <div className="dropdown">
+                    <div className="dropdown" ref={dropdownRef}>
                         {!!openDropDown && options.map((i, k) => (
-                            <Link to={i.link} key={k} onClick={() => setOpenDropDown(false)}>{i.title}</Link>
+                            <Link to={i.link} aria-label={`${k} +1`} key={k} onClick={() => setOpenDropDown(false)}>{i.title}</Link>
                         ))}
                     </div>
                 </>
             )}
             {!!isMobile && (
                 <>
-                    <a href="#" onClick={() => setOpenDropDown(!openDropDown)}><div>{title}</div></a>
+                    <a href="#" onClick={() => setOpenDropDown(!openDropDown)} aria-label="dropdown-menu"><div>{title}</div></a>
                     {!!isMobile && !!openDropDown && (
                         <>
                             {options.map((i, k) => (
-                                <a href={i.link} key={k} className="ml">{i.title}</a>
+                                <a href={i.link} aria-label={`${k} +1`} key={k} className="ml">{i.title}</a>
                             ))}
                         </>
                     )}

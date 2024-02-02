@@ -29,11 +29,11 @@ const E404 = () => {
         <Layout is404={true}>
             <StyledE404Page className="container">
                 <div className="img-404">
-                    <img src="/img/404-page.svg" width="100%" />
+                    <img src="/img/404-page.svg" width="100%" alt="No image" />
                 </div>
                 <div className={`d gap w-100 center middle ${!!mobile && "column"}`}>
                     <div>Sorry! The page not found.</div>
-                    <Link to="/">Go to Homepage</Link>
+                    <Link to="/" aria-label="e404">Go to Homepage</Link>
                 </div>
             </StyledE404Page>
         </Layout>

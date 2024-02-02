@@ -229,7 +229,7 @@ const Home = () => {
         <Layout>
             <StyledHome>
                 <section>
-                    <ParticlesContainer title={bannerContents.title} desc={bannerContents.desc} bgImg="/img/bg/banner.png"/>
+                    <ParticlesContainer title={bannerContents.title} desc={bannerContents.desc} bgImg="/img/bg/banner.png" />
                 </section>
                 <section className="container">
                     <div className="world-card row">
@@ -288,12 +288,12 @@ const Home = () => {
                             ))}
                         </div>
                         <div className="d center gap mt-2 mb-2">
-                            <Link to='https://fwork.io/freelancers'><StyledButton>Hire Top-notch Developer
+                            <Link to='https://fwork.io/freelancers' aria-label="top-hire"><StyledButton>Hire Top-notch Developer
                             </StyledButton></Link>
-                            <Link to="https://fwork.io/blogs">
+                            <Link to="https://fwork.io/blogs" aria-label="more-case">
                                 <StyledButton className="d middle" >
                                     <div className="pr">See More Case Studies</div>
-                                    <img src="/img/icon/right-arrow.svg" width={16} alt="" />
+                                    <img src="/img/icon/right-arrow.svg" width={16} alt="No image" />
                                 </StyledButton>
                             </Link>
                         </div>
