@@ -65,7 +65,11 @@ const Header = ({ menuItems, is404 }: HeaderProps) => {
                     {!mobile && menuItems.map((i, k) => (
                         <React.Fragment key={k}>
                             {!!i.link && (
-                                <a href={i.link} aria-label={`${k} +1`} ><div>{i.title}</div></a>
+                                i.link.indexOf('http') === -1 ? (
+                                    <Link to={i.link} aria-label={`${k} +1`} ><div>{i.title}</div></Link>
+                                ) : (
+                                    <a href={i.link} aria-label={`${k} +1`} ><div>{i.title}</div></a>
+                                )
                             )}
                             {!i.link && (
                                 <DropDown title={i.title} options={i.items} openDropDown={openDropDown} setOpenDropDown={setOpenDropDown} scrollEvent={scrollEvent} isMobile={mobile} />
@@ -92,7 +96,11 @@ const Header = ({ menuItems, is404 }: HeaderProps) => {
                         {menuItems.map((i, k) => (
                             <React.Fragment key={k}>
                                 {!!i.link && (
-                                    <a href={i.link} aria-label={`${k} +1`} ><div>{i.title}</div></a>
+                                    i.link.indexOf('http') === -1 ? (
+                                        <Link to={i.link} aria-label={`${k} +1`} ><div>{i.title}</div></Link>
+                                    ) : (
+                                        <a href={i.link} aria-label={`${k} +1`} ><div>{i.title}</div></a>
+                                    )
                                 )}
                                 {!i.link && (
                                     <DropDown title={i.title} options={i.items} openDropDown={openDropDown} setOpenDropDown={setOpenDropDown} scrollEvent={scrollEvent} isMobile={mobile} />
