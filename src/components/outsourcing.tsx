@@ -12,7 +12,6 @@ const OutSourcing = (props: OutSourcingType) => {
 
     const { id, title, desc, img } = props;
 
-
     return (
         <StyledOutSourcing style={id === 1 ? { backgroundColor: 'rgb(47, 78, 131)', color: "white", height: "100%" } : { backgroundColor: '', color: "", height: "100%" }}>
             <div className="pl-1 pr-1">

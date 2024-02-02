@@ -12,6 +12,7 @@ import AskQuestion from "../../components/ask-question";
 import { StyledButton } from "../../components/button";
 import E404 from "../e404";
 import ParticlesContainer from "../../components/particle-content";
+import PageTransition from "../../components/page-transition";
 
 interface HireDetailProps {
     category: string,
@@ -111,73 +112,75 @@ const HireDetail = ({ slug, category }: HireDetailProps) => {
     return (
         <>
             {!notFound && status && (
-
-                <Layout>
-                    <StyledHireDetail>
-                        <section>
-                            <ParticlesContainer title={status?.name} desc={overview} bgImg="/img/bg/banner.png" />
-                        </section>
-                        <section id="hiring" className="container">
-                            <label className="h1 mb-1">Developer Hiring Process</label>
-                            <div className=" process-content row">
-                                {process.map((i) => (
-                                    <div key={i.id} className="col-lg-3 col-md-6 pb">
-                                        <HireProcess id={i.id} title={i.title} desc={i.desc} img={""} />
+                <PageTransition>
+                    <Layout>
+                        <StyledHireDetail>
+                            <section>
+                                <ParticlesContainer title={status?.name} desc={overview} bgImg="/img/bg/banner.png" />
+                            </section>
+                            <section id="hiring" className="container">
+                                <label className="h1 mb-1">Developer Hiring Process</label>
+                                <div className=" process-content row">
+                                    {process.map((i) => (
+                                        <div key={i.id} className="col-lg-3 col-md-6 pb">
+                                            <HireProcess id={i.id} title={i.title} desc={i.desc} img={""} />
+                                        </div>
+                                    ))}
+                                </div>
+                            </section>
+                            {!!cases && cases.length >= 1 && (
+                                <section id="case" className="case-content">
+                                    <div className="container">
+                                        <label className="h1 mb-1">{status?.item.project.title}</label>
+                                        <div className="row">
+                                            {cases?.map((i, k) => (
+                                                <div className="col-md-4" >
+                                                    <CaseCard title={i.title} tech={i.tech} img={`hiring/${i.img}`} team={i.team} smallScreen={smallScreen} />
+                                                </div>
+                                            ))}
+                                        </div>
+                                        <div className="d center gap">
+                                            <Link to='https://fwork.io/freelancers' aria-label="detail-top"><StyledButton>Hire Top-notch Developer
+                                            </StyledButton></Link>
+                                            <Link to="https://fwork.io/blogs" aria-label="detail-more">
+                                                <StyledButton className="d middle" >
+                                                    <div className="pr">See More Case Studies</div>
+                                                    <img src="/img/icon/right-arrow.svg" width={16} alt="No image" />
+                                                </StyledButton>
+                                            </Link>
+                                        </div>
                                     </div>
-                                ))}
-                            </div>
-                        </section>
-                        {!!cases && cases.length >= 1 && (
-                            <section id="case" className="case-content">
-                                <div className="container">
-                                    <label className="h1 mb-1">{status?.item.project.title}</label>
+                                </section>
+                            )}
+                            {!!status.item && !!status.item?.faq.item[0] && (
+                                <section className="container">
                                     <div className="row">
-                                        {cases?.map((i, k) => (
-                                            <div className="col-md-4" >
-                                                <CaseCard title={i.title} tech={i.tech} img={`hiring/${i.img}`} team={i.team} smallScreen={smallScreen} />
-                                            </div>
-                                        ))}
+                                        <div className="col-md-4 text-header">
+                                            <label className="h1 mb-1">{status?.item?.faq.title}</label>
+                                            <div>Everything you need to know about DevTeam.Space. Can’t find the answer you’re looking for?</div>
+                                        </div>
+                                        <div className="col-md-8 pt-2">
+                                            {status?.item?.faq.item.map((i, k) => (
+                                                <AskQuestion
+                                                    title={i.title}
+                                                    desc={i.desc}
+                                                    isOpen={activeIndex === k}
+                                                    onAccordian={() => onAccordian(k)}
+                                                />
+                                            ))}
+                                        </div>
                                     </div>
-                                    <div className="d center gap">
-                                        <Link to='https://fwork.io/freelancers' aria-label="detail-top"><StyledButton>Hire Top-notch Developer
-                                        </StyledButton></Link>
-                                        <Link to="https://fwork.io/blogs" aria-label="detail-more">
-                                            <StyledButton className="d middle" >
-                                                <div className="pr">See More Case Studies</div>
-                                                <img src="/img/icon/right-arrow.svg" width={16} alt="No image" />
-                                            </StyledButton>
-                                        </Link>
-                                    </div>
+                                </section>
+                            )}
+                            <section className="mb-3">
+                                <div className="container">
+                                    {status?.item?.article && <Markdown text={status.item.article} />}
                                 </div>
                             </section>
-                        )}
-                        {!!status.item && !!status.item?.faq.item[0] && (
-                            <section className="container">
-                                <div className="row">
-                                    <div className="col-md-4 text-header">
-                                        <label className="h1 mb-1">{status?.item?.faq.title}</label>
-                                        <div>Everything you need to know about DevTeam.Space. Can’t find the answer you’re looking for?</div>
-                                    </div>
-                                    <div className="col-md-8 pt-2">
-                                        {status?.item?.faq.item.map((i, k) => (
-                                            <AskQuestion
-                                                title={i.title}
-                                                desc={i.desc}
-                                                isOpen={activeIndex === k}
-                                                onAccordian={() => onAccordian(k)}
-                                            />
-                                        ))}
-                                    </div>
-                                </div>
-                            </section>
-                        )}
-                        <section className="mb-3">
-                            <div className="container">
-                                {status?.item?.article && <Markdown text={status.item.article} />}
-                            </div>
-                        </section>
-                    </StyledHireDetail>
-                </Layout>
+                        </StyledHireDetail>
+                    </Layout>
+                </PageTransition>
+
             )}
             {!!notFound && (
                 <E404 />

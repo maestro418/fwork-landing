@@ -1,9 +1,10 @@
 import React from "react";
+import styled from "styled-components";
 
 import Header from "./header";
 import Footer from "./footer";
 
-import styled from "styled-components";
+
 
 const Layout = ({ children, is404 }: { children: React.ReactNode, is404?: boolean }) => {
 

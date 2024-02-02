@@ -65,11 +65,8 @@ const Header = ({ menuItems, is404 }: HeaderProps) => {
                     {!mobile && menuItems.map((i, k) => (
                         <React.Fragment key={k}>
                             {!!i.link && (
-                                i.link.indexOf('http') === -1 ? (
-                                    <Link to={i.link} aria-label={`${k} +1`} ><div>{i.title}</div></Link>
-                                ) : (
-                                    <a href={i.link} aria-label={`${k} +1`} ><div>{i.title}</div></a>
-                                )
+                                <Link to={i.link} aria-label={`${k} +1`} ><div>{i.title}</div></Link>
+
                             )}
                             {!i.link && (
                                 <DropDown title={i.title} options={i.items} openDropDown={openDropDown} setOpenDropDown={setOpenDropDown} scrollEvent={scrollEvent} isMobile={mobile} />
@@ -84,11 +81,6 @@ const Header = ({ menuItems, is404 }: HeaderProps) => {
                         </div>
                     )}
                 </div>
-                {/* <div>
-                    {!mobile && (
-                        <a href="https://fwork.io/">Get started</a>
-                    )}
-                </div> */}
             </div>
             {!!openSideBar && (
                 <div className="">
@@ -96,11 +88,8 @@ const Header = ({ menuItems, is404 }: HeaderProps) => {
                         {menuItems.map((i, k) => (
                             <React.Fragment key={k}>
                                 {!!i.link && (
-                                    i.link.indexOf('http') === -1 ? (
-                                        <Link to={i.link} aria-label={`${k} +1`} ><div>{i.title}</div></Link>
-                                    ) : (
-                                        <a href={i.link} aria-label={`${k} +1`} ><div>{i.title}</div></a>
-                                    )
+                                    <Link to={i.link} aria-label={`${k} +1`} ><div>{i.title}</div></Link>
+
                                 )}
                                 {!i.link && (
                                     <DropDown title={i.title} options={i.items} openDropDown={openDropDown} setOpenDropDown={setOpenDropDown} scrollEvent={scrollEvent} isMobile={mobile} />
