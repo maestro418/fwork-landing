@@ -88,6 +88,10 @@ const Service = () => {
         return () => window.removeEventListener("resize", handleScreen);
     }, []);
 
+    React.useEffect(() => {
+        window.scrollTo(0, 0);
+    }, [id])
+
     return (
         <>
             {!!isValidId && (

@@ -9,7 +9,7 @@ import CaseCard from "../../components/case-card";
 import HireProcess from "../../components/hire-process";
 import Markdown from "../../components/markdown";
 import AskQuestion from "../../components/ask-question";
-import { StyledButton } from "../../components/button";
+import { StyledButton, Up2Button } from "../../components/button";
 import E404 from "../e404";
 import ParticlesContainer from "../../components/particle-content";
 import PageTransition from "../../components/page-transition";
@@ -108,6 +108,10 @@ const HireDetail = ({ slug, category }: HireDetailProps) => {
         window.addEventListener("resize", handleScreen);
         return () => window.removeEventListener("resize", handleScreen);
     }, [])
+
+    React.useEffect(() => {
+        window.scrollTo(0, 0);
+    }, [status])
 
     return (
         <>

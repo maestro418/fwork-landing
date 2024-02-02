@@ -6,7 +6,7 @@ import HireData from '../context/hiring.json'
 import Layout from "../../components/layout";
 import CaseCard from "../../components/case-card";
 import HireProcess from "../../components/hire-process";
-import { StyledButton } from "../../components/button";
+import { StyledButton, Up2Button } from "../../components/button";
 import ParticlesContainer from "../../components/particle-content";
 import PageTransition from "../../components/page-transition";
 
@@ -90,7 +90,6 @@ const HireCategory = () => {
         },
     ]
 
-
     React.useEffect(() => {
         const initData: Array<CategoryType> = []
         HireData.map((i, k) => {
@@ -111,6 +110,10 @@ const HireCategory = () => {
         window.addEventListener("resize", handleScreen);
         return () => window.removeEventListener("resize", handleScreen);
     }, [])
+
+    React.useEffect(() => {
+        window.scrollTo(0, 0);
+    }, [status])
 
     return (
         <PageTransition>

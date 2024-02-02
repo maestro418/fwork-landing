@@ -34,6 +34,7 @@ const StyledOutSourcing = styled.div`
     box-shadow: rgba(0, 0, 0, 0.09) 0px 3px 12px;
     border-radius: 0.5em;
     transition: all .35s;
+    
     &>:nth-child(2) {
         span {
             font-size: 1em;
@@ -46,24 +47,6 @@ const StyledOutSourcing = styled.div`
             line-height: 1.5em;
             color: #6c757d;
         }
-    }
-
-    &:hover {
-        background: #163eaf;
-        span {
-            color: white;
-        }
-
-        div {
-            color: #b1bcdb;
-
-        }
-    }
-
-    &:hover img {
-        filter: brightness(0) invert(1);
-        transition: all .35s cubic-bezier(.38, 3, .57, 1.6);
-        transform: translate3d(0px, 0, 0);
     }
 `
 
