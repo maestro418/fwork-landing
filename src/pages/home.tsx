@@ -1,16 +1,15 @@
 import React from "react";
-
+import { Link } from "react-router-dom";
 import Layout from "../components/layout";
 import styled from "styled-components";
 
-import IntroBanner from "../components/intro-banner";
 import HireProcess from "../components/hire-process";
 import { StyledButton } from "../components/button";
 import CaseCard from "../components/case-card";
 import BlogCard from "../components/blog-card";
 import ServiceCard from "../components/service-card";
 import AskQuestion from "../components/ask-question";
-import { Link } from "react-router-dom";
+
 import ParticlesContainer from "../components/particle-content";
 
 const process = [

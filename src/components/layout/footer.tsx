@@ -9,23 +9,23 @@ type footerProps = {
 const footerIcons = [
     {
         icon: '/img/icon/twitter.svg',
-        link: ''
+        link: 'https://twitter.com/fwork_io'
     },
     {
         icon: '/img/icon/youtube.svg',
-        link: ''
+        link: 'https://youtube.com/@fwork_io'
     },
     {
         icon: '/img/icon/facebook.svg',
-        link: ''
+        link: 'https://facebook.com/fwork'
     },
     {
         icon: '/img/icon/linkedin.svg',
-        link: ''
+        link: 'https://linkedin.com/company/fwork-io'
     },
     {
         icon: '/img/icon/telegram.svg',
-        link: ''
+        link: 'https://t.me/fwork_io'
     },
 ]
 
