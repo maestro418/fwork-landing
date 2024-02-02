@@ -4,7 +4,7 @@ import Layout from "../components/layout";
 import styled from "styled-components";
 
 import HireProcess from "../components/hire-process";
-import { StyledButton } from "../components/button";
+import { StyledButton, Up2Button } from "../components/button";
 import CaseCard from "../components/case-card";
 import BlogCard from "../components/blog-card";
 import ServiceCard from "../components/service-card";
@@ -41,7 +41,7 @@ const process = [
 
 const bannerContents = {
     title: 'Hire Developers',
-    desc: 'Fwork is a vetted community of expert development teams supported by an AI-powered Agile process. Top companies and startups rely on us to help them to build great products. We can help you too, by enabling you to hire and effortlessly manage expert developers.',
+    desc: 'Fwork LLC is a vetted community of expert development teams supported by an AI-powered Agile process. Top companies and startups rely on us to help them to build great products. We can help you too, by enabling you to hire and effortlessly manage expert developers.',
     btnContent: 'Hire Expert Developers'
 }
 
@@ -155,13 +155,13 @@ const service = [
 const faq = [
     {
         "_id": 1,
-        "title": "What is Fwork?",
-        "desc": "Fwork is a community of field-expert development teams supported by a AI-powered agile process.\nWe pair you with the most relevant development teams, based on your tech stack and project specification, and help to manage your project with our AI-powered agile process.\nThis unique approach helps us build world-class software applications in the most efficient way, delivering the highest ROI to our clients. Businesses rely on Fwork for their most innovative projects.\nFwork is most suited for businesses that don't want to handle product development by themselves and are looking for a reliable long-term product development partner.\nUsually, these projects consist of building both mobile and web apps, require serious back-end architecture, security expertise, and need other experts to be connected to the project on a per-request basis. Read more about our process here our process.\nOur development teams have helped thousands of startups and well-established businesses to solve their tech challenges. Whether you’re looking for a complete development team or just a single developer, we can help!"
+        "title": "What is Fwork LLC?",
+        "desc": "Fwork LLC is a community of field-expert development teams supported by a AI-powered agile process.\nWe pair you with the most relevant development teams, based on your tech stack and project specification, and help to manage your project with our AI-powered agile process.\nThis unique approach helps us build world-class software applications in the most efficient way, delivering the highest ROI to our clients. Businesses rely on Fwork LLC for their most innovative projects.\nFwork LLC is most suited for businesses that don't want to handle product development by themselves and are looking for a reliable long-term product development partner.\nUsually, these projects consist of building both mobile and web apps, require serious back-end architecture, security expertise, and need other experts to be connected to the project on a per-request basis. Read more about our process here our process.\nOur development teams have helped thousands of startups and well-established businesses to solve their tech challenges. Whether you’re looking for a complete development team or just a single developer, we can help!"
     },
     {
         "_id": 2,
         "title": "What are you best at?",
-        "desc": "Over the years, we’ve discovered that our service works best for businesses with long-term complex projects. Usually, these projects require building both mobile and web apps, need serious architecture and security expertise, and require other experts to be connected to the project on a per-request basis. Thanks to our AI-powered process, it's easy for us to manage such projects and scale your dev team up and down should you decide to alter your project.\nIn addition to this, our exclusive community consists of field-expert software development teams. Each dev team specializes in a specific tech stack or product type. We assign the most relevant development team to your project.\nThis allows us to undertake software development projects of any size and complexity as well as giving our clients maximum return on their investment at zero risk.\nLearn more about Fwork’s AI-powered process."
+        "desc": "Over the years, we’ve discovered that our service works best for businesses with long-term complex projects. Usually, these projects require building both mobile and web apps, need serious architecture and security expertise, and require other experts to be connected to the project on a per-request basis. Thanks to our AI-powered process, it's easy for us to manage such projects and scale your dev team up and down should you decide to alter your project.\nIn addition to this, our exclusive community consists of field-expert software development teams. Each dev team specializes in a specific tech stack or product type. We assign the most relevant development team to your project.\nThis allows us to undertake software development projects of any size and complexity as well as giving our clients maximum return on their investment at zero risk.\nLearn more about Fwork LLC’s AI-powered process."
     },
     {
         "_id": 3,
@@ -170,38 +170,28 @@ const faq = [
     },
     {
         "_id": 4,
-        "title": "What is the value proposition for dev teams to become a part of Dev Teams?",
-        "desc": "At Fwork, we are on a mission to make the software development process drastically more efficient and transparent for businesses around the world. No matter whether you are a growing startup or a multinational company that's looking for a reliable software development partner, we want to help you improve your development process.\nA world-class development process requires world-class teams that are experts in their chosen field. That's why we rigorously follow a strict vetting process when selecting our partners. Only those dev teams that are able to reach our high standards of excellence are invited to join our community to help us create the world's most innovative products for our clients.\nOnce aboard, teams can rely on us to be a trusted partner. We help all our teams find challenging and meaningful projects. Want to become a part of our exclusive dev team community? Apply now"
-    },
-    {
-        "_id": 5,
         "title": "What types of projects do you do?",
         "desc": "Our vetted community of field expert development teams has built thousands of Web, mobile, blockchain, data-engineering, and IoT projects. We are experienced in all the major tech stacks including NodeJS, Ruby on Rails, iOS/Android, Java, Python, PHP, .NET, and others. No matter how complex or revolutionary your project is, we have the process, the developers, and the experience to successfully complete it."
     },
     {
-        "_id": 6,
+        "_id": 5,
         "title": "How do you use AI-powered technologies to assign the best matching developers to my project?",
         "desc": "We have a strict vetting process. We evaluate each dev team based on their communication skills, development experience, referrals, and past project feedback. However, our process does not stop there. After a new dev team is accepted, we continue to rate their performance on every single project. This ensures that our clients work only with top-rater developers, those that consistently perform at the highest level. You can read about our dev team vetting and continuous performance tracking processes on this page."
     },
     {
-        "_id": 7,
-        "title": "Which countries your dev teams are from?",
-        "desc": "Our dev teams are from Canada, US and Europe. However, we don't have a specific preference where dev teams come from. Our focus is to find and hire only the most skilled field-expert dev teams, no matter where they come from. Want to become a part of our exclusive dev team community? Apply now"
-    },
-    {
-        "_id": 8,
+        "_id": 6,
         "title": "How can we ensure that our company's data is kept confidential?",
         "desc": "Your company's private data security is our highest priority. We never reveal any confidential information to our dev teams unless you, the client, have approved it first. In addition, we always offer our clients the option of us signing a mutual non-disclosure agreement (NDA), prior to them sharing any information with us.\nOur unique blockchain technology protects your intellectual property by securing your code with “proof of work” hash signatures. If our clients are not experienced in intellectual property protection, we always provide them with plenty of advice and guidance.\nThroughout the product development process, we always operate according to the highest security standards. Once the project is finished, we make sure to transfer all the necessary information and documentation to the client, upon request."
     },
     {
-        "_id": 9,
+        "_id": 7,
         "title": "What if I love an Elite Dev Team or a particular developer and I want to hire them/him/her full-time?",
         "desc": "Companies sometimes wish to retain one or more of our developers. This option and terms are up for discussion based on each particular case."
     },
     {
-        "_id": 10,
+        "_id": 8,
         "title": "How can I be guaranteed that your service is excellent?",
-        "desc": "Once the project roll-out is approved, we sign a \"work-for-hire\" master agreement, which includes two crucial statements 1. The client owns all intellectual property (IP) from day one 2. Development teams do not get paid before successfully completing all assigned tasks to the client's satisfaction. This is done on a weekly basis. We hold your payment securely at Fwork until you approve its release.\nOnce we start working on your project, your account manager guides you at every step and oversees the development process. You receive daily updates and weekly AI-powered performance reports. Every week, we review the completed work and approve the tasks for the upcoming weekly sprint with you. This way, you keep your hand on the pulse of the project.\nOn a larger scale, we split the project into phases, where each phase lasts from 3 to 6 months. At the end of each phase, we make sure to allocate additional time to clean up the code base, bugs, and to re-align the product development activities with your business and marketing KPIs.\nThis approach allows us to support your product growth on an ongoing basis, delivering the best results."
+        "desc": "Once the project roll-out is approved, we sign a \"work-for-hire\" master agreement, which includes two crucial statements 1. The client owns all intellectual property (IP) from day one 2. Development teams do not get paid before successfully completing all assigned tasks to the client's satisfaction. This is done on a weekly basis. We hold your payment securely at Fwork LLC until you approve its release.\nOnce we start working on your project, your account manager guides you at every step and oversees the development process. You receive daily updates and weekly AI-powered performance reports. Every week, we review the completed work and approve the tasks for the upcoming weekly sprint with you. This way, you keep your hand on the pulse of the project.\nOn a larger scale, we split the project into phases, where each phase lasts from 3 to 6 months. At the end of each phase, we make sure to allocate additional time to clean up the code base, bugs, and to re-align the product development activities with your business and marketing KPIs.\nThis approach allows us to support your product growth on an ongoing basis, delivering the best results."
     }
 ]
 
@@ -223,6 +213,10 @@ const Home = () => {
         window.addEventListener("resize", handleScreen);
         return () => window.removeEventListener("resize", handleScreen);
     }, []);
+
+    React.useEffect(() => {
+        window.scrollTo(0, 0);
+    }, [])
 
     return (
         <Layout>
@@ -264,7 +258,7 @@ const Home = () => {
                                 <p>Freelancers Are</p>
                                 <p>Available Now</p>
                             </div>
-                            <p>Building a great product in today’s world requires expert developers,<br />not freelancers. Fwork is a vetted community where you can hire expert developers for all your software development needs.</p>
+                            <p>Building a great product in today’s world requires expert developers,<br />Fwork LLC is a vetted community where you can hire expert developers for all your software development needs.</p>
                         </div>
                         <div className="col-md-4 col-sm-6 pr-2 pl-2" style={{ color: "white", backgroundImage: "linear-gradient(134deg, #667EEA 0%, #764BA2 100%)" }}>
                             <div className="b-content"><p>Get a World-class</p><p>Looking and Working</p><p>Product</p></div>
@@ -322,7 +316,7 @@ const Home = () => {
                     <div className="row m-0">
                         <div className="col-lg-4 p-0 text-header">
                             <div className="h1 mb-1">Frequently Asked Questions</div>
-                            <p className="m-0 mb-1 mt-1">Everything you need to know about Fwork. Can’t find the answer you’re looking for?</p>
+                            <p className="m-0 mb-1 mt-1">Everything you need to know about Fwork LLC. Can’t find the answer you’re looking for?</p>
                         </div>
                         <div className="col-lg-8 pt-3">
                             {faq.map((i, k) => (
@@ -340,7 +334,7 @@ const Home = () => {
                 <section id="blog" className="container mb-5">
                     <div className="d column ">
                         <div className="h1">Find Work Blog</div>
-                        <div className=" mb-1">Check out our mind-blowing product development tutorials and futuristic technology announcements cooked up by our brilliant software development wizards. Penned by humans, for humans (and maybe a few robots).</div>
+                        <div className=" mb-1">Check out our mind-blowing product development tutorials and futuristic technology announcements cooked up by our brilliant software developer.</div>
                     </div>
                     <div className="row m-0 p-0">
                         {blog.map((i, k) => (
@@ -350,6 +344,7 @@ const Home = () => {
                         ))}
                     </div>
                 </section>
+                <Up2Button />
             </StyledHome>
         </Layout>
     )

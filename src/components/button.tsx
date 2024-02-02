@@ -1,5 +1,37 @@
 import React from "react";
 import styled, { css } from 'styled-components'
+import Icon from "./icons";
+
+export const Up2Button = () => {
+    const [isVisible, setIsVisible] = React.useState(false);
+
+    const toggleVisibility = () => {
+        if (window.scrollY > 300) {
+            setIsVisible(true);
+        } else {
+            setIsVisible(false);
+        }
+    };
+
+    const scrollToTop = () => {
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth"
+        });
+    };
+
+    window.addEventListener('scroll', toggleVisibility);
+
+    return (
+        <StyledUp2Button>
+            {isVisible &&
+                <div onClick={scrollToTop}>
+                    <Icon icon="UpArrow"  />
+                </div>
+            }
+        </StyledUp2Button>
+    );
+}
 
 const buttonStyle = css`
     font-size: 15px;
@@ -61,6 +93,25 @@ const hireBtnStyle = css`
     }
 
 `
+
+const StyledUp2Button = styled.div`
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+
+    &>:first-child {
+        border-radius: 50%;
+        background-color: #1967d2;
+        color: white;
+        padding: 1em;
+        cursor: pointer;
+        box-shadow: rgba(0, 0, 0, 0.09) 0px 3px 12px;
+    }
+`;
+
+const ScrollToTopButtonStyled = styled.button`
+ 
+`;
 
 export const StyledButton = styled.button`
   ${buttonStyle}

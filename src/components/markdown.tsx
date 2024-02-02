@@ -142,6 +142,26 @@ const StyledView = styled.div`
 		}
 	}
 
+	a,
+	.link {
+		cursor: pointer;
+		text-decoration: none;
+		color: var(--primary);
+		transition: all 0.3s ease;
+
+		&.link {
+			color: var(--primary);
+		}
+
+		&:hover {
+			color: var(--primary-hover);
+		}
+
+		&:active {
+			color: var(--primary-active);
+		}
+	}
+
 	img {width: 100%;}
 `;
 

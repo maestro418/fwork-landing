@@ -10,7 +10,7 @@ import data from "./context/service.json";
 import AskQuestion from "../components/ask-question";
 import BlogCard from "../components/blog-card";
 import OutSourcing from "../components/outsourcing";
-import { StyledButton } from "../components/button";
+import { StyledButton, Up2Button } from "../components/button";
 import E404 from "./e404";
 import ParticlesContainer from "../components/particle-content";
 
@@ -85,6 +85,10 @@ const Service = () => {
         return () => window.removeEventListener("resize", handleScreen);
     }, []);
 
+    React.useEffect(() => {
+        window.scrollTo(0, 0);
+    }, [id])
+
     return (
         <>
             {!!isValidId && (
@@ -132,7 +136,7 @@ const Service = () => {
                             <div className="row">
                                 <div className="col-md-4 text-header">
                                     <label className="h1">{status.faq?.title}</label>
-                                    <div>Everything you need to know about DevTeam.Space. Can’t find the answer you’re looking for?</div>
+                                    <div>Everything you need to know about Fwork LLC. Can’t find the answer you’re looking for?</div>
                                 </div>
                                 <div className="col-md-8 pt-2">
                                     {status.faq?.item.map((i, k) => (
@@ -167,6 +171,7 @@ const Service = () => {
                                 {status.article && <Markdown text={status.article} />}
                             </div>
                         </section>
+                        <Up2Button />
                     </StyledService>
                 </Layout>
             )}
