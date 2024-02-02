@@ -1,8 +1,8 @@
 import React from "react";
-
 import styled from "styled-components";
-import { StyledButton } from "./button";
 import { Link } from "react-router-dom";
+
+import { StyledButton } from "./button";
 
 interface ServiceCardProps {
     icon?: string,
@@ -12,6 +12,7 @@ interface ServiceCardProps {
     bgColor?: string
     title?: string
 }
+
 type StyledCardProps = {
     $bgColor?: string
 }
@@ -32,9 +33,7 @@ const ServiceCard = ({ title, icon, desc, bgColor, btnContent, btnLink }: Servic
                 <Link to={btnLink} aria-label="service-card">
                     <StyledButton className="btn">{btnContent}</StyledButton>
                 </Link >
-            )
-
-            }
+            )}
 
         </StyledServiceCard >
     )

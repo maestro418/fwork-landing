@@ -1,17 +1,14 @@
 import React, { useState } from "react";
 import styled from "styled-components";
-import IntroBanner from "../../components/intro-banner";
+import { Link } from "react-router-dom";
 
 import HireData from '../context/hiring.json'
 import Layout from "../../components/layout";
-import { Link } from "react-router-dom";
 import CaseCard from "../../components/case-card";
 import HireProcess from "../../components/hire-process";
 import { StyledButton, Up2Button } from "../../components/button";
 import ParticlesContainer from "../../components/particle-content";
-
-
-
+import PageTransition from "../../components/page-transition";
 
 
 interface CategoryType {
@@ -119,61 +116,63 @@ const HireCategory = () => {
     }, [status])
 
     return (
-        <Layout>
-            <StyledHireCategory>
-                <section>
-                    <ParticlesContainer title={bannerContents.title} desc={bannerContents.desc} bgImg="/img/bg/banner.png" />
-                </section>
-                <section className="container">
-                    <div className="row">
-                        {status?.map((i, k) => (
-                            <div key={k} className="d column col-md-4 col-sm-6 mb-3" style={{ 'gap': '1em' }}>
-                                <div className="h2">{i.title}</div>
-                                {i.list.map((j, key) => (
-                                    <div key={key} className="d middle gap">
-                                        <img src={`/img/icon/${j.img}`} alt="No image" />
-                                        <Link to={`/hire-dev/${i.slug}/${j.slug}`} aria-label={`${k} +1`}>{j.name}</Link>
-                                    </div>
-                                ))}
-                            </div>
-                        ))}
-                    </div>
-                </section>
-                <section id="case" className="case-content">
-                    <div className="container">
-                        <label className="h1 mb-1">Witness the magic of our expert developers and designers in action!</label>
+        <PageTransition>
+            <Layout>
+                <StyledHireCategory>
+                    <section>
+                        <ParticlesContainer title={bannerContents.title} desc={bannerContents.desc} bgImg="/img/bg/banner.png" />
+                    </section>
+                    <section className="container">
                         <div className="row">
-                            {cases.map(i => (
-                                <div key={i._id} className="col-md-4" >
-                                    <CaseCard title={i.title} tech={i.tech} img={i.img} team={i.team} smallScreen={smallScreen} />
+                            {status?.map((i, k) => (
+                                <div key={k} className="d column col-md-4 col-sm-6 mb-3" style={{ 'gap': '1em' }}>
+                                    <div className="h2">{i.title}</div>
+                                    {i.list.map((j, key) => (
+                                        <div key={key} className="d middle gap">
+                                            <img src={`/img/icon/${j.img}`} alt="No image" />
+                                            <Link to={`/hire-dev/${i.slug}/${j.slug}`} aria-label={`${k} +1`}>{j.name}</Link>
+                                        </div>
+                                    ))}
                                 </div>
                             ))}
                         </div>
-                        <div className="d center gap">
-                            <Link to='https://fwork.io/freelancers' aria-label="category-top"><StyledButton>Hire Top-notch Developer
-                            </StyledButton></Link>
-                            <Link to="https://fwork.io/blogs" aria-label="category-more" >
-                                <StyledButton className="d middle" >
-                                    <div className="pr">See More Case Studies</div>
-                                    <img src="/img/icon/right-arrow.svg" width={16} alt="No image" />
-                                </StyledButton>
-                            </Link>
-                        </div>
-                    </div>
-                </section>
-                <section id="hiring" className="container mb-5">
-                    <label className="h1 mb-1">Developer Hiring Process</label>
-                    <div className=" process-content row">
-                        {process.map((i) => (
-                            <div key={i.id} className="col-lg-3 col-md-6">
-                                <HireProcess id={i.id} title={i.title} desc={i.desc} img={""} />
+                    </section>
+                    <section id="case" className="case-content">
+                        <div className="container">
+                            <label className="h1 mb-1">Witness the magic of our expert developers and designers in action!</label>
+                            <div className="row">
+                                {cases.map(i => (
+                                    <div key={i._id} className="col-md-4" >
+                                        <CaseCard title={i.title} tech={i.tech} img={i.img} team={i.team} smallScreen={smallScreen} />
+                                    </div>
+                                ))}
                             </div>
-                        ))}
-                    </div>
-                </section>
-                <Up2Button />
-            </StyledHireCategory>
-        </Layout>
+                            <div className="d center gap">
+                                <Link to='https://fwork.io/freelancers' aria-label="category-top"><StyledButton>Hire Top-notch Developer
+                                </StyledButton></Link>
+                                <Link to="https://fwork.io/blogs" aria-label="category-more" >
+                                    <StyledButton className="d middle" >
+                                        <div className="pr">See More Case Studies</div>
+                                        <img src="/img/icon/right-arrow.svg" width={16} alt="No image" />
+                                    </StyledButton>
+                                </Link>
+                            </div>
+                        </div>
+                    </section>
+                    <section id="hiring" className="container mb-5">
+                        <label className="h1 mb-1">Developer Hiring Process</label>
+                        <div className=" process-content row">
+                            {process.map((i) => (
+                                <div key={i.id} className="col-lg-3 col-md-6">
+                                    <HireProcess id={i.id} title={i.title} desc={i.desc} img={""} />
+                                </div>
+                            ))}
+                        </div>
+                    </section>
+                </StyledHireCategory>
+            </Layout>
+        </PageTransition>
+
 
     )
 }
