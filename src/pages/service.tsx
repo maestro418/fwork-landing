@@ -186,7 +186,7 @@ const StyledService = styled.div`
     gap: 9em;
 
     .case-content {
-        padding: 4em 0 2em 0;
+        padding: 5em 0;
         display: flex;
         justify-content: center;
         background-image: linear-gradient(134deg, #0f258b 0%, #4b58a2 100%);
