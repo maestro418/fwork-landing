@@ -1,7 +1,8 @@
 import React, { useState } from "react";
-import Layout from "../components/layout";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
+
+import Layout from "../components/layout";
 
 const E404 = () => {
     const [mobile, setMobile] = useState(false);

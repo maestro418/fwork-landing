@@ -1,8 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import Layout from "../components/layout";
 import styled from "styled-components";
 
+import Layout from "../components/layout";
 import HireProcess from "../components/hire-process";
 import { StyledButton } from "../components/button";
 import CaseCard from "../components/case-card";
@@ -11,6 +11,7 @@ import ServiceCard from "../components/service-card";
 import AskQuestion from "../components/ask-question";
 
 import ParticlesContainer from "../components/particle-content";
+import PageTransition from "../components/page-transition";
 
 const process = [
     {
@@ -152,6 +153,7 @@ const service = [
         bgColor: '#ebeaea'
     }
 ]
+
 const faq = [
     {
         "_id": 1,
@@ -225,133 +227,136 @@ const Home = () => {
     }, []);
 
     return (
-        <Layout>
-            <StyledHome>
-                <section>
-                    <ParticlesContainer title={bannerContents.title} desc={bannerContents.desc} bgImg="/img/bg/banner.png" />
-                </section>
-                <section className="container">
-                    <div className="world-card row">
-                        <div className="col-md-4 col-sm-6 p-0"></div>
-                        <div className="col-md-4 col-sm-6 pr-2 pl-2">
-                            <div className="">
-                                <div className="number">1,200</div>
-                                <div className="h3">Expert developers from Europe, Asia, North America .</div>
-                            </div>
-                            <div className="d middle">
-                                <div className="number">62</div>
-                                <div className="pl">
-                                    <p>EXPERT</p>
-                                    <p>DEVELOPMENT</p>
-                                    <p>TEAMS</p>
+        <PageTransition>
+            <Layout>
+                <StyledHome>
+                    <section>
+                        <ParticlesContainer title={bannerContents.title} desc={bannerContents.desc} bgImg="/img/bg/banner.png" />
+                    </section>
+                    <section className="container">
+                        <div className="world-card row">
+                            <div className="col-md-4 col-sm-6 p-0"></div>
+                            <div className="col-md-4 col-sm-6 pr-2 pl-2">
+                                <div className="">
+                                    <div className="number">1,200</div>
+                                    <div className="h3">Expert developers from Europe, Asia, North America .</div>
+                                </div>
+                                <div className="d middle">
+                                    <div className="number">62</div>
+                                    <div className="pl">
+                                        <p>EXPERT</p>
+                                        <p>DEVELOPMENT</p>
+                                        <p>TEAMS</p>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <div className="col-md-4 col-sm-6 pr-2 pl-2">
-                            <div>
-                                <div className="number">$140M+</div>
-                                <p >Raised by early-stage startups who worked with us.</p>
+                            <div className="col-md-4 col-sm-6 pr-2 pl-2">
+                                <div>
+                                    <div className="number">$140M+</div>
+                                    <p >Raised by early-stage startups who worked with us.</p>
+                                </div>
+                                <div className={`${smallScreen ? "mb-1" : ""} d gap`}>
+                                    {devbtns.map((i, k) => (
+                                        <StyledButton key={k}>{i}</StyledButton>
+                                    ))}
+                                </div>
                             </div>
-                            <div className={`${smallScreen ? "mb-1" : ""} d gap`}>
-                                {devbtns.map((i, k) => (
-                                    <StyledButton key={k}>{i}</StyledButton>
+                            <div className="col-md-4 col-sm-6 pr-2 pl-2" >
+                                <div className="b-content">
+                                    <p>Hire Expert Developers,</p>
+                                    <p>Freelancers Are</p>
+                                    <p>Available Now</p>
+                                </div>
+                                <p>Building a great product in today’s world requires expert developers,<br />not freelancers. Fwork is a vetted community where you can hire expert developers for all your software development needs.</p>
+                            </div>
+                            <div className="col-md-4 col-sm-6 pr-2 pl-2" style={{ color: "white", backgroundImage: "linear-gradient(134deg, #667EEA 0%, #764BA2 100%)" }}>
+                                <div className="b-content"><p>Get a World-class</p><p>Looking and Working</p><p>Product</p></div>
+                                <p>Our expert developers deliver supportable and maintainable code. So any new developers can onboard and continue working on the code immediately.</p>
+                            </div>
+                            <div className="col-md-4 col-sm-6 pr-2 pl-2">
+                                <div className="b-content"><p>Clear Communication,</p><p>Tasks and Payments</p><p>Management</p></div>
+                                <p>Get complimentary support from a dedicated tech account manager and AI-powered agile process with all the tools, notifications, and performance tracking to ensure ongoing success.</p>
+                            </div>
+                        </div>
+                    </section>
+                    <section id="case" className="case-content">
+                        <div className="container mt-1">
+                            <label className="h1 mb-1">Witness the magic of our expert developers and designers in action!</label>
+                            <div className="row">
+                                {cases.map(i => (
+                                    <div key={i._id} className="col-md-4" >
+                                        <CaseCard title={i.title} tech={i.tech} img={i.img} team={i.team} smallScreen={smallScreen} />
+                                    </div>
+                                ))}
+                            </div>
+                            <div className="d center gap mt-2 mb-2">
+                                <Link to='https://fwork.io/freelancers' aria-label="top-hire"><StyledButton>Hire Top-notch Developer
+                                </StyledButton></Link>
+                                <Link to="https://fwork.io/blogs" aria-label="more-case">
+                                    <StyledButton className="d middle" >
+                                        <div className="pr">See More Case Studies</div>
+                                        <img src="/img/icon/right-arrow.svg" width={16} alt="No image" />
+                                    </StyledButton>
+                                </Link>
+                            </div>
+                        </div>
+                    </section>
+                    <section id="hiring" className="container">
+                        <label className="h1 mb-1">Developer Hiring Process</label>
+                        <div className=" process-content row">
+                            {process.map((i) => (
+                                <div key={i.id} className="col-lg-3 col-md-6 pb">
+                                    <HireProcess id={i.id} title={i.title} desc={i.desc} img={i.img} />
+                                </div>
+                            ))}
+                        </div>
+                    </section>
+                    <section id="services" className="container">
+                        <label className="h1 mb-1">Services for Enterprise, Startups, and Entrepreneurs</label>
+                        <div className="row m-0">
+                            {service.map((i, k) => (
+                                <div key={k} className=" col-md-4 p-0">
+                                    <ServiceCard icon={i.icon} desc={i.desc} btnContent={i.btnContent} btnLink={i.btnLink} bgColor={i.bgColor} />
+                                </div>
+                            ))}
+                        </div>
+                    </section>
+                    <section id="faq" className="container faq-content center">
+                        <div className="row m-0">
+                            <div className="col-lg-4 p-0 text-header">
+                                <div className="h1 mb-1">Frequently Asked Questions</div>
+                                <p className="m-0 mb-1 mt-1">Everything you need to know about Fwork. Can’t find the answer you’re looking for?</p>
+                            </div>
+                            <div className="col-lg-8 pt-3">
+                                {faq.map((i, k) => (
+                                    <AskQuestion
+                                        title={i.title}
+                                        desc={i.desc}
+                                        isOpen={activeIndex === k}
+                                        onAccordian={() => onAccordian(k)}
+                                        key={k}
+                                    />
                                 ))}
                             </div>
                         </div>
-                        <div className="col-md-4 col-sm-6 pr-2 pl-2" >
-                            <div className="b-content">
-                                <p>Hire Expert Developers,</p>
-                                <p>Freelancers Are</p>
-                                <p>Available Now</p>
-                            </div>
-                            <p>Building a great product in today’s world requires expert developers,<br />not freelancers. Fwork is a vetted community where you can hire expert developers for all your software development needs.</p>
+                    </section>
+                    <section id="blog" className="container mb-5">
+                        <div className="d column ">
+                            <div className="h1">Find Work Blog</div>
+                            <div className=" mb-1">Check out our mind-blowing product development tutorials and futuristic technology announcements cooked up by our brilliant software development wizards. Penned by humans, for humans (and maybe a few robots).</div>
                         </div>
-                        <div className="col-md-4 col-sm-6 pr-2 pl-2" style={{ color: "white", backgroundImage: "linear-gradient(134deg, #667EEA 0%, #764BA2 100%)" }}>
-                            <div className="b-content"><p>Get a World-class</p><p>Looking and Working</p><p>Product</p></div>
-                            <p>Our expert developers deliver supportable and maintainable code. So any new developers can onboard and continue working on the code immediately.</p>
-                        </div>
-                        <div className="col-md-4 col-sm-6 pr-2 pl-2">
-                            <div className="b-content"><p>Clear Communication,</p><p>Tasks and Payments</p><p>Management</p></div>
-                            <p>Get complimentary support from a dedicated tech account manager and AI-powered agile process with all the tools, notifications, and performance tracking to ensure ongoing success.</p>
-                        </div>
-                    </div>
-                </section>
-                <section id="case" className="case-content">
-                    <div className="container mt-1">
-                        <label className="h1 mb-1">Witness the magic of our expert developers and designers in action!</label>
-                        <div className="row">
-                            {cases.map(i => (
-                                <div key={i._id} className="col-md-4" >
-                                    <CaseCard title={i.title} tech={i.tech} img={i.img} team={i.team} smallScreen={smallScreen} />
+                        <div className="row m-0 p-0">
+                            {blog.map((i, k) => (
+                                <div key={k} className="col-md-4">
+                                    <BlogCard banner={i.banner} title={i.title} desc={i.desc} img={i.img} link={i.banner} />
                                 </div>
                             ))}
                         </div>
-                        <div className="d center gap mt-2 mb-2">
-                            <Link to='https://fwork.io/freelancers' aria-label="top-hire"><StyledButton>Hire Top-notch Developer
-                            </StyledButton></Link>
-                            <Link to="https://fwork.io/blogs" aria-label="more-case">
-                                <StyledButton className="d middle" >
-                                    <div className="pr">See More Case Studies</div>
-                                    <img src="/img/icon/right-arrow.svg" width={16} alt="No image" />
-                                </StyledButton>
-                            </Link>
-                        </div>
-                    </div>
-                </section>
-                <section id="hiring" className="container">
-                    <label className="h1 mb-1">Developer Hiring Process</label>
-                    <div className=" process-content row">
-                        {process.map((i) => (
-                            <div key={i.id} className="col-lg-3 col-md-6 pb">
-                                <HireProcess id={i.id} title={i.title} desc={i.desc} img={i.img} />
-                            </div>
-                        ))}
-                    </div>
-                </section>
-                <section id="services" className="container">
-                    <label className="h1 mb-1">Services for Enterprise, Startups, and Entrepreneurs</label>
-                    <div className="row m-0">
-                        {service.map((i, k) => (
-                            <div key={k} className=" col-md-4 p-0">
-                                <ServiceCard icon={i.icon} desc={i.desc} btnContent={i.btnContent} btnLink={i.btnLink} bgColor={i.bgColor} />
-                            </div>
-                        ))}
-                    </div>
-                </section>
-                <section id="faq" className="container faq-content center">
-                    <div className="row m-0">
-                        <div className="col-lg-4 p-0 text-header">
-                            <div className="h1 mb-1">Frequently Asked Questions</div>
-                            <p className="m-0 mb-1 mt-1">Everything you need to know about Fwork. Can’t find the answer you’re looking for?</p>
-                        </div>
-                        <div className="col-lg-8 pt-3">
-                            {faq.map((i, k) => (
-                                <AskQuestion
-                                    title={i.title}
-                                    desc={i.desc}
-                                    isOpen={activeIndex === k}
-                                    onAccordian={() => onAccordian(k)}
-                                    key={k}
-                                />
-                            ))}
-                        </div>
-                    </div>
-                </section>
-                <section id="blog" className="container mb-5">
-                    <div className="d column ">
-                        <div className="h1">Find Work Blog</div>
-                        <div className=" mb-1">Check out our mind-blowing product development tutorials and futuristic technology announcements cooked up by our brilliant software development wizards. Penned by humans, for humans (and maybe a few robots).</div>
-                    </div>
-                    <div className="row m-0 p-0">
-                        {blog.map((i, k) => (
-                            <div key={k} className="col-md-4">
-                                <BlogCard banner={i.banner} title={i.title} desc={i.desc} img={i.img} link={i.banner} />
-                            </div>
-                        ))}
-                    </div>
-                </section>
-            </StyledHome>
-        </Layout>
+                    </section>
+                </StyledHome>
+            </Layout>
+        </PageTransition>
+
     )
 }
 

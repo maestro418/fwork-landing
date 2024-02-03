@@ -1,26 +1,16 @@
 import React, { useEffect } from 'react';
 import styled from 'styled-components';
 import katex from 'katex';
-// MdViewer { showToast } from 'context/helper';
+
 import rehypeSanitize from "rehype-sanitize";
-
-
-// import * as marked from 'marked';
 import markdownit from 'markdown-it'
+
 const md = markdownit()
 
 
 // const randomid = () => parseInt(String(Math.random() * 1e15), 10).toString(36);
 const rehypePlugins = [rehypeSanitize];
 
-const CHROME_MIN_VERSION_FOR_MARKDOWN = 200; // 70
-const FIREFOX_MIN_VERSION_FOR_MARKDOWN = 200; // 64
-
-// marked.setOptions({
-// 	breaks: true,
-// });
-
-// const renderer = new marked.Renderer();
 
 export const Markdown = ({ text }: { text: string }) => {
 	// const { browser, darkTheme } = useSocket();

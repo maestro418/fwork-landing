@@ -1,8 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-// import Button from "./button";
 import { Link } from "react-router-dom";
-import { StyledButton } from "./button";
 
 interface CaseCardProps {
     tech: string,

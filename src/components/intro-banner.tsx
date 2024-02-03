@@ -1,13 +1,8 @@
 import React, { useState } from "react";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
-// import ParticlesContainer from "react-particles";
-import type { Engine } from "@tsparticles/engine";
-import { loadFull } from "tsparticles";
-
 
 import { HireBtn } from "./button";
-import ParticlesContainer from "./particle-content";
 
 interface IntroBannerProps {
     title: string | undefined,
