@@ -261,7 +261,7 @@ const Home = () => {
                                     <p>Freelancers Are</p>
                                     <p>Available Now</p>
                                 </div>
-                                <p>Building a great product in today’s world requires expert developers,<br />not freelancers. Fwork is a vetted community where you can hire expert developers for all your software development needs.</p>
+                                <p>Building a great product in today’s world requires expert developers,<br />Fwork LLC is a vetted community where you can hire expert developers for all your software development needs.</p>
                             </div>
                             <div className="col-md-4 col-sm-6 pr-2 pl-2" style={{ color: "white", backgroundImage: "linear-gradient(134deg, #667EEA 0%, #764BA2 100%)" }}>
                                 <div className="b-content"><p>Get a World-class</p><p>Looking and Working</p><p>Product</p></div>
@@ -319,7 +319,7 @@ const Home = () => {
                         <div className="row m-0">
                             <div className="col-lg-4 p-0 text-header">
                                 <div className="h1 mb-1">Frequently Asked Questions</div>
-                                <p className="m-0 mb-1 mt-1">Everything you need to know about Fwork. Can’t find the answer you’re looking for?</p>
+                                <p className="m-0 mb-1 mt-1">Everything you need to know about Fwork LLC. Can’t find the answer you’re looking for?</p>
                             </div>
                             <div className="col-lg-8 pt-3">
                                 {faq.map((i, k) => (
@@ -347,6 +347,7 @@ const Home = () => {
                             ))}
                         </div>
                     </section>
+                    <Up2Button />
                 </StyledHome>
             </Layout>
         </PageTransition>

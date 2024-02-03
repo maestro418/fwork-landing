@@ -53,7 +53,7 @@ interface DataListType {
 
 }
 
-const overview = 'Fwork is a vetted community of expert development teams supported by an AI-powered Agile process. Top companies and startups rely on us to help them to build great products. We can help you too, by enabling you to hire and effortlessly manage expert developers.'
+const overview = 'Fwork LLC is a vetted community of expert development teams supported by an AI-powered Agile process. Top companies and startups rely on us to help them to build great products. We can help you too, by enabling you to hire and effortlessly manage expert developers.'
 
 const HireDetail = ({ slug, category }: HireDetailProps) => {
     const [status, setStatus] = useState({} as DataListType);
@@ -181,6 +181,7 @@ const HireDetail = ({ slug, category }: HireDetailProps) => {
                                     {status?.item?.article && <Markdown text={status.item.article} />}
                                 </div>
                             </section>
+                            <Up2Button />
                         </StyledHireDetail>
                     </Layout>
                 </PageTransition>

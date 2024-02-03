@@ -28,7 +28,7 @@ const HireCategory = () => {
 
     const bannerContents = {
         title: 'Developers With Specific Skills',
-        desc: 'Fwork is a vetted community of expert development teams supported by an AI-powered Agile process. Top companies and startups rely on us to help them to build great products. We can help you too, by enabling you to hire and effortlessly manage expert developers.',
+        desc: 'Fwork LLC is a vetted community of expert development teams supported by an AI-powered Agile process. Top companies and startups rely on us to help them to build great products. We can help you too, by enabling you to hire and effortlessly manage expert developers.',
     }
 
     const process = [
@@ -169,6 +169,7 @@ const HireCategory = () => {
                             ))}
                         </div>
                     </section>
+                    <Up2Button />
                 </StyledHireCategory>
             </Layout>
         </PageTransition>
