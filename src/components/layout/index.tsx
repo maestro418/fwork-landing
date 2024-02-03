@@ -11,6 +11,11 @@ const Layout = ({ children, is404 }: { children: React.ReactNode, is404?: boolea
     const headerProps = {
         menuItems: [
             {
+                title: 'Home',
+                link: '/',
+                items: []
+            },
+            {
                 title: 'Services',
                 items: [
                     {
