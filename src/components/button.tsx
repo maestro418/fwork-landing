@@ -67,6 +67,8 @@ const buttonStyle = css`
     }
 `
 const hireBtnStyle = css`
+    position: relative;
+    overflow: hidden;
     padding: .5em 0;
     text-align: center;
     text-transform: uppercase;
@@ -77,15 +79,25 @@ const hireBtnStyle = css`
     font-weight: 700;
     border: 0;
     background-image: linear-gradient(45deg, rgba(0, 98, 255, 0.94) 0%, rgba(41, 118, 250, 0.52) 51%,rgba(0, 41, 107, 0.94) 100%);
+    box-shadow: rgba(0, 0, 0, 0.09) 0px 3px 12px;
     cursor: pointer;
     user-select: none;
     -webkit-user-select: none;
     touch-action: manipulation;
-    box-shadow: inset 0 0 10px rgba(175, 175, 255, 0.6), 0 0 9px 3px#282f5e;
-    &:hover {
-        background-position: right center;
-        color: #fff;
-        text-decoration: none;
+
+    &:before {
+        content: "";
+        position: absolute;
+        left: -2em;
+        width: 2em;
+        height: 100%;
+        top: 0;
+        transition: transform 1.5s ease-in-out;
+        background: linear-gradient(to right, transparent 1%, rgba(255, 255, 255, 0.1) 90%,rgba(102, 101, 101, 0.1) 80% , transparent 100%);
+    }
+
+    &:hover:before {
+        transform: translateX(30em);
     }
 
     &:active {
