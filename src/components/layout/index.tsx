@@ -46,20 +46,20 @@ const Layout = ({ children, is404 }: { children: React.ReactNode, is404?: boolea
             },
             {
 
-                title: 'About us',
+                title: 'About Us',
                 link: 'https://fwork.io/about-us',
                 items: []
 
             },
             {
 
-                title: 'Contact us',
+                title: 'Contact Us',
                 link: 'https://fwork.io/contact-us',
                 items: []
             },
             {
 
-                title: 'Get started',
+                title: 'Get Started',
                 link: 'https://fwork.io/login',
                 items: []
             }
