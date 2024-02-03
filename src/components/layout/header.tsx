@@ -89,7 +89,6 @@ const Header = ({ menuItems, is404 }: HeaderProps) => {
                             <React.Fragment key={k}>
                                 {!!i.link && (
                                     <Link to={i.link} aria-label={`${k} +1`} ><div>{i.title}</div></Link>
-
                                 )}
                                 {!i.link && (
                                     <DropDown title={i.title} options={i.items} openDropDown={openDropDown} setOpenDropDown={setOpenDropDown} scrollEvent={scrollEvent} isMobile={mobile} />

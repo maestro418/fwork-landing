@@ -3,6 +3,7 @@ import styled from "styled-components";
 import { Link } from "react-router-dom";
 
 import { HireBtn } from "./button";
+import Loading from "../pages/loading";
 
 interface IntroBannerProps {
     title: string | undefined,
@@ -37,7 +38,8 @@ const IntroBanner = ({ title, desc, bgImg }: IntroBannerProps) => {
 
     return (
         <StyledBanner $isMobile={mobile} $bgImg={bgImg}>
-            <div className="container">
+            {(title && desc && bgImg) ? (
+                <div className="container">
                 <div className="row main-content">
                     <div className="">
                         <div className="h1 bold-550">
@@ -57,7 +59,7 @@ const IntroBanner = ({ title, desc, bgImg }: IntroBannerProps) => {
                     </div>
                 </div>
             </div>
-
+            ) : (<Loading />)}
         </StyledBanner>
     )
 }
@@ -155,7 +157,9 @@ const StyledBanner = styled.div<StyledBannerProps>`
             line-height: 2;
         }
     }   
-    
+    .noImg-content {
+        background-color: "rgb(31, 48, 122)";
+    }
 `
 
 export default IntroBanner
