@@ -81,21 +81,24 @@ const Header = ({ menuItems, is404 }: HeaderProps) => {
                         </div>
                     )}
                 </div>
+                {!mobile && (
+                    <Link to="https://fwork.io" aria-label="start">Get started</Link>
+                )}
+
             </div>
             {!!openSideBar && (
-                <div className="">
-                    <div className="menu">
-                        {menuItems.map((i, k) => (
-                            <React.Fragment key={k}>
-                                {!!i.link && (
-                                    <Link to={i.link} aria-label={`${k} +1`} ><div>{i.title}</div></Link>
-                                )}
-                                {!i.link && (
-                                    <DropDown title={i.title} options={i.items} openDropDown={openDropDown} setOpenDropDown={setOpenDropDown} scrollEvent={scrollEvent} isMobile={mobile} />
-                                )}
-                            </React.Fragment>
-                        ))}
-                    </div>
+                <div className="menu">
+                    {menuItems.map((i, k) => (
+                        <React.Fragment key={k}>
+                            {!!i.link && (
+                                <Link to={i.link} aria-label={`${k} +1`} ><div>{i.title}</div></Link>
+                            )}
+                            {!i.link && (
+                                <DropDown title={i.title} options={i.items} openDropDown={openDropDown} setOpenDropDown={setOpenDropDown} scrollEvent={scrollEvent} isMobile={mobile} />
+                            )}
+                        </React.Fragment>
+                    ))}
+                    <Link to="https://fwork.io" aria-label="start">Get started</Link>
                 </div>
             )}
         </StyledHeader >
