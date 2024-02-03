@@ -9,7 +9,7 @@ import Markdown from "../components/markdown";
 import AskQuestion from "../components/ask-question";
 import BlogCard from "../components/blog-card";
 import OutSourcing from "../components/outsourcing";
-import { StyledButton } from "../components/button";
+import { StyledButton, Up2Button } from "../components/button";
 import ParticlesContainer from "../components/particle-content";
 import data from "./context/service.json";
 import PageTransition from "../components/page-transition";
@@ -175,6 +175,7 @@ const Service = () => {
                                     {status.article && <Markdown text={status.article} />}
                                 </div>
                             </section>
+                            <Up2Button />
                         </StyledService>
                     </Layout>
                 </PageTransition>
