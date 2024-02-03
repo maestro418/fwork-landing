@@ -161,7 +161,7 @@ const HireDetail = ({ slug, category }: HireDetailProps) => {
                                     <div className="row">
                                         <div className="col-md-4 text-header">
                                             <label className="h1 mb-1">{status?.item?.faq.title}</label>
-                                            <div>Everything you need to know about DevTeam.Space. Can’t find the answer you’re looking for?</div>
+                                            <div>Everything you need to know about Fwork LLC. Can’t find the answer you’re looking for?</div>
                                         </div>
                                         <div className="col-md-8 pt-2">
                                             {status?.item?.faq.item.map((i, k) => (
