@@ -67,7 +67,7 @@ const buttonStyle = css`
     }
 `
 const hireBtnStyle = css`
-    padding: 15px 30px;
+    padding: .5em 0;
     text-align: center;
     text-transform: uppercase;
     transition: 0.5s;
@@ -76,12 +76,12 @@ const hireBtnStyle = css`
     border-radius: 10px;
     font-weight: 700;
     border: 0;
-    background-image: linear-gradient(45deg, rgba(0, 98, 255, 0.94) 0%, rgba(2, 96, 247, 0.52) 51%,rgba(0, 41, 107, 0.94) 100%);
+    background-image: linear-gradient(45deg, rgba(0, 98, 255, 0.94) 0%, rgba(41, 118, 250, 0.52) 51%,rgba(0, 41, 107, 0.94) 100%);
     cursor: pointer;
     user-select: none;
     -webkit-user-select: none;
     touch-action: manipulation;
-
+    box-shadow: inset 0 0 10px rgba(175, 175, 255, 0.6), 0 0 9px 3px#282f5e;
     &:hover {
         background-position: right center;
         color: #fff;
@@ -91,7 +91,6 @@ const hireBtnStyle = css`
     &:active {
         transform: scale(0.95);
     }
-
 `
 
 const StyledUp2Button = styled.div`
