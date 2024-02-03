@@ -17,11 +17,7 @@ export const Markdown = ({ text }: { text: string }) => {
 	const [html, setHtml] = React.useState(md.render(text));
 	React.useEffect(() => {
 		let _html = md.render(text);
-		_html = _html.replace(/\$\$?([^\$]*)\$?\$/g, (full: any, a: any) => {
-			return katex.renderToString(a, {
-				throwOnError: false,
-			});
-		})
+
 		setHtml(_html);
 	}, [text])
 
