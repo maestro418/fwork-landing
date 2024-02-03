@@ -10,11 +10,12 @@ interface DropDownProps {
     scrollEvent: boolean
     openDropDown: boolean,
     setOpenDropDown: React.Dispatch<React.SetStateAction<boolean>>;
-    isMobile: boolean
+    isMobile: boolean,
+    is404?: boolean | undefined
 }
 
 
-const DropDown = ({ title, options, openDropDown, setOpenDropDown, scrollEvent, isMobile }: DropDownProps) => {
+const DropDown = ({ title, options, openDropDown, setOpenDropDown, scrollEvent, isMobile, is404 }: DropDownProps) => {
 
     const dropdownRef = React.useRef<HTMLDivElement | null>(null);
 
@@ -33,19 +34,19 @@ const DropDown = ({ title, options, openDropDown, setOpenDropDown, scrollEvent, 
     return (
         <StyledDropwDown>
             {!isMobile && (
-                <>
+                <div ref={dropdownRef}>
                     <div className="d middle cursor-pointer" onClick={() => setOpenDropDown(!openDropDown)}>
                         <div>{title}</div>
-                        <div style={{ 'color': `${!!scrollEvent ? "black" : "white"}` }} >
+                        <div style={{ 'color': `${(!!scrollEvent || !!is404) ? "black" : "white"}` }} >
                             <Icon icon={`${!!openDropDown ? "UpArrow" : "DownArrow"}`} />
                         </div>
                     </div>
-                    <div className="dropdown" ref={dropdownRef}>
+                    <div className="dropdown">
                         {!!openDropDown && options.map((i, k) => (
                             <Link to={i.link} aria-label={`${k} +1`} key={k} onClick={() => setOpenDropDown(false)}>{i.title}</Link>
                         ))}
                     </div>
-                </>
+                </div>
             )}
             {!!isMobile && (
                 <>
