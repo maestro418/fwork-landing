@@ -10,12 +10,14 @@ interface DropDownProps {
     scrollEvent: boolean
     openDropDown: boolean,
     setOpenDropDown: React.Dispatch<React.SetStateAction<boolean>>;
+    setOpenSideBar?: React.Dispatch<React.SetStateAction<boolean>>;
     isMobile: boolean,
-    is404?: boolean | undefined
+    is404?: boolean | undefined,
+
 }
 
 
-const DropDown = ({ title, options, openDropDown, setOpenDropDown, scrollEvent, isMobile, is404 }: DropDownProps) => {
+const DropDown = ({ title, options, openDropDown, setOpenDropDown, setOpenSideBar, scrollEvent, isMobile, is404 }: DropDownProps) => {
 
     const dropdownRef = React.useRef<HTMLDivElement | null>(null);
 
@@ -51,10 +53,10 @@ const DropDown = ({ title, options, openDropDown, setOpenDropDown, scrollEvent, 
             {!!isMobile && (
                 <>
                     <Link to="#" onClick={() => setOpenDropDown(!openDropDown)} aria-label="dropdown-menu"><div>{title}</div></Link>
-                    {!!isMobile && !!openDropDown && (
+                    {!!isMobile && !!openDropDown && !!setOpenSideBar && (
                         <>
                             {options.map((i, k) => (
-                                <Link to={i.link} aria-label={`${k} +1`} key={k} className="ml">{i.title}</Link>
+                                <Link to={i.link} aria-label={`${k} +1`} key={k} className="ml" onClick={() => setOpenSideBar(false)}>{i.title}</Link>
                             ))}
                         </>
                     )}
