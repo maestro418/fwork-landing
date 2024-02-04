@@ -293,12 +293,12 @@ const Home = () => {
                             <label className="h1 mb-1">Witness the magic of our expert developers and designers in action!</label>
                             <div className="row">
                                 {cases.map(i => (
-                                    <div key={i._id} className="col-md-4" >
+                                    <div key={i._id} className="col-md-4 mt mb" >
                                         <CaseCard title={i.title} tech={i.tech} img={i.img} team={i.team} smallScreen={smallScreen} />
                                     </div>
                                 ))}
                             </div>
-                            <div className="d center gap mt-2 mb-2">
+                            <div>
                                 <Link to='https://fwork.io/freelancers' aria-label="top-hire"><StyledOutlineButton>Hire Top-notch Developer
                                 </StyledOutlineButton></Link>
                                 <Link to="https://fwork.io/blogs" aria-label="more-case">
@@ -467,14 +467,32 @@ const StyledHome = styled.div`
             color: white;
         }
 
-        button {
-            color: white;
-            border: 1px solid white;
-            border-radius: 0.3em;
-            background: inherit;
-            padding-top: 0.5em 0.7em;
-            font-size: 1em;
-            cursor: pointer;
+        &>:first-child >:last-child {
+            display: flex;
+            justify-content: center;
+            gap: 1em;
+            margin: 2em 0;
+
+            button {
+                color: white;
+                border: 1px solid white;
+                border-radius: 0.3em;
+                background: inherit;
+                padding-top: 0.5em 0.7em;
+                font-size: 1em;
+                cursor: pointer;
+            }
+
+            @media (max-width: 714px) {
+                display: flex;
+                flex-direction: column;
+                
+                button {
+                    width: 100%;
+                    display: flex;
+                    justify-content: center;
+                }
+            }
         }
     }
     .col-md-3 .col-lg-6 {
