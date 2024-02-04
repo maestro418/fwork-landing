@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
 
-import HireData from '../context/hiring.json'
 import Layout from "../../components/layout";
 import CaseCard from "../../components/case-card";
 
@@ -16,46 +15,13 @@ import PageTransition from "../../components/page-transition";
 
 interface HireDetailProps {
     category: string,
-    slug: string
-}
-
-interface ProjectItemType {
-    img: string,
-    title: string,
-    tech: string,
     slug: string,
-    team: Array<{ gender: string, member: string }>
-}
-
-interface ListItemType {
-    title: string,
-    desc: string,
-    project: {
-        title: string,
-        item: Array<ProjectItemType>
-    }
-    faq: {
-        title: string,
-        item: Array<{
-            title: string,
-            desc: string
-        }>
-    }
-    article: string
-}
-
-interface DataListType {
-    link: string,
-    img: string,
-    name: string,
-    slug: string,
-    item: ListItemType
-
+    allData: DataType[]
 }
 
 const overview = 'Fwork LLC is a vetted community of expert development teams supported by an AI-powered Agile process. Top companies and startups rely on us to help them to build great products. We can help you too, by enabling you to hire and effortlessly manage expert developers.'
 
-const HireDetail = ({ slug, category }: HireDetailProps) => {
+const HireDetail = ({ slug, category, allData }: HireDetailProps) => {
     const [status, setStatus] = useState({} as DataListType);
     const [smallScreen, setSmallScreen] = React.useState(false);
     const [cases, setCases] = React.useState<Array<ProjectItemType>>()
@@ -90,9 +56,8 @@ const HireDetail = ({ slug, category }: HireDetailProps) => {
     ]
 
     React.useEffect(() => {
-        const dataSlug = HireData.find((i) => i.slug === category)
+        const dataSlug = allData.find((i) => i.slug === category)
         const data = dataSlug?.list.find((i) => i.slug === slug);
-        console.log("detail ::: data", data)
         if (data) {
             setStatus(data)
             setCases(data?.item.project.item)
@@ -102,16 +67,20 @@ const HireDetail = ({ slug, category }: HireDetailProps) => {
     }, []);
 
     React.useEffect(() => {
+
         const handleScreen = () => {
             setSmallScreen(window.innerWidth <= 768)
         }
         window.addEventListener("resize", handleScreen);
+
         return () => window.removeEventListener("resize", handleScreen);
     }, [])
 
     React.useEffect(() => {
         window.scrollTo(0, 0);
     }, [status])
+
+
 
     return (
         <>
@@ -185,7 +154,6 @@ const HireDetail = ({ slug, category }: HireDetailProps) => {
                         </StyledHireDetail>
                     </Layout>
                 </PageTransition>
-
             )}
             {!!notFound && (
                 <E404 />
