@@ -143,6 +143,16 @@ const StyledBanner = styled.div<StyledBannerProps>`
             line-height: 2;
         }
     }   
+    &::before {
+        position: absolute;
+        content: "";
+        background: rgb(8, 33, 99);
+        width: 100%;
+        height: 100%;
+        top: 0px;
+        left: 0px;
+        z-index: -1;
+    }
 `
 
 export default IntroBanner
