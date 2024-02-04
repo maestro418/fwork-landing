@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
 
-import { StyledButton } from "./button";
+import { StyledOutlineButton } from "./button";
 
 interface ServiceCardProps {
     icon?: string,
@@ -31,7 +31,7 @@ const ServiceCard = ({ title, icon, desc, bgColor, btnContent, btnLink }: Servic
             </div>
             {btnLink && (
                 <Link to={btnLink} aria-label="service-card">
-                    <StyledButton className="btn">{btnContent}</StyledButton>
+                    <StyledOutlineButton className="btn">{btnContent}</StyledOutlineButton>
                 </Link >
             )}
 

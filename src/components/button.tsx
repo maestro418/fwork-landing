@@ -33,7 +33,7 @@ export const Up2Button = () => {
     );
 }
 
-const buttonStyle = css`
+const outlinebuttonStyle = css`
     font-size: 15px;
     padding: 0.7em 2.7em;
     letter-spacing: 0.06em;
@@ -66,19 +66,18 @@ const buttonStyle = css`
         transform: translateX(40em);
     }
 `
-const hireBtnStyle = css`
+const buttonStyle = css`
     position: relative;
     overflow: hidden;
     padding: .5em 0;
     text-align: center;
-    text-transform: uppercase;
     transition: 0.5s;
     background-size: 200% auto;
     color: white;
     border-radius: 10px;
     font-weight: 700;
     border: 0;
-    background-image: linear-gradient(45deg, rgba(0, 98, 255, 0.94) 0%, rgba(41, 118, 250, 0.52) 51%,rgba(0, 41, 107, 0.94) 100%);
+    background-color: rgba(0, 98, 255, 0.94);
     box-shadow: rgba(0, 0, 0, 0.09) 0px 3px 12px;
     cursor: pointer;
     user-select: none;
@@ -121,10 +120,10 @@ const StyledUp2Button = styled.div`
 `;
 
 
-export const StyledButton = styled.button`
-  ${buttonStyle}
+export const StyledOutlineButton = styled.button`
+  ${outlinebuttonStyle}
 `;
 
-export const HireBtn = styled.button`
-  ${hireBtnStyle}
+export const StyledButton = styled.button`
+  ${buttonStyle}
 `;

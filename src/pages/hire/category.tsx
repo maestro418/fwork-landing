@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 import Layout from "../../components/layout";
 import CaseCard from "../../components/case-card";
 import HireProcess from "../../components/hire-process";
-import { StyledButton, Up2Button } from "../../components/button";
+import { StyledOutlineButton, Up2Button } from "../../components/button";
 import ParticlesContainer from "../../components/particle-content";
 import PageTransition from "../../components/page-transition";
 
@@ -143,13 +143,13 @@ const HireCategory = ({ allData }: CategoryProps) => {
                                 ))}
                             </div>
                             <div className="d center gap">
-                                <Link to='https://fwork.io/freelancers' aria-label="category-top"><StyledButton>Hire Top-notch Developer
-                                </StyledButton></Link>
+                                <Link to='https://fwork.io/freelancers' aria-label="category-top"><StyledOutlineButton>Hire Top-notch Developer
+                                </StyledOutlineButton></Link>
                                 <Link to="https://fwork.io/blogs" aria-label="category-more" >
-                                    <StyledButton className="d middle" >
+                                    <StyledOutlineButton className="d middle" >
                                         <div className="pr">See More Case Studies</div>
                                         <img src="/img/icon/right-arrow.svg" width={16} alt="No image" />
-                                    </StyledButton>
+                                    </StyledOutlineButton>
                                 </Link>
                             </div>
                         </div>

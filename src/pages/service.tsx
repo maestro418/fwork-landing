@@ -9,7 +9,7 @@ import Markdown from "../components/markdown";
 import AskQuestion from "../components/ask-question";
 import BlogCard from "../components/blog-card";
 import OutSourcing from "../components/outsourcing";
-import { StyledButton, Up2Button } from "../components/button";
+import { StyledButton, StyledOutlineButton, Up2Button } from "../components/button";
 import ParticlesContainer from "../components/particle-content";
 import data from "./context/service.json";
 import PageTransition from "../components/page-transition";
@@ -126,13 +126,13 @@ const Service = () => {
                                     </div>
                                 </div>
                                 <div className="d center gap mt-2 mb-2">
-                                    <Link to='https://fwork.io/freelancers' aria-label="service-top"><StyledButton>Hire Top-notch Developer
-                                    </StyledButton></Link>
+                                    <Link to='https://fwork.io/freelancers' aria-label="service-top"><StyledOutlineButton>Hire Top-notch Developer
+                                    </StyledOutlineButton></Link>
                                     <Link to="https://fwork.io/blogs" araia-lang="service-more">
-                                        <StyledButton className="d middle" >
+                                        <StyledOutlineButton className="d middle" >
                                             <div className="pr">See More Case Studies</div>
                                             <img src="/img/icon/right-arrow.svg" width={16} alt="No image" />
-                                        </StyledButton>
+                                        </StyledOutlineButton>
                                     </Link>
                                 </div>
                             </section>
@@ -141,6 +141,7 @@ const Service = () => {
                                     <div className="col-md-4 text-header">
                                         <label className="h1">{status.faq?.title}</label>
                                         <div>Everything you need to know about DevTeam.Space. Can’t find the answer you’re looking for?</div>
+                                        <Link to='https://fwork.io/contact-us'><StyledButton className="mt-2 pt-1 pb-1 pl-1 pr-1">Ask Fwork LLC Support Team</StyledButton></Link>
                                     </div>
                                     <div className="col-md-8 pt-2">
                                         {status.faq?.item.map((i, k) => (
@@ -221,7 +222,7 @@ const StyledService = styled.div`
     .text-header {
         margin-bottom: 1.5em;
 
-        &>:last-child {
+        &>:nth-child(2) {
             color: #6c757d;
             line-height: 2em;
             font-size: .9em;
