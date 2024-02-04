@@ -77,7 +77,7 @@ const StyledBlogCard = styled.div`
         flex-direction: column;
         gap: 0.5em;
         padding: 1em;
-        height: 100px;
+        height: 120px;
         .desc {
             color: #6c757d;
             line-height: 2em;

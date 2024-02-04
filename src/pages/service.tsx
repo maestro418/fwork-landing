@@ -124,16 +124,16 @@ const Service = () => {
                                             </div>
                                         ))}
                                     </div>
-                                </div>
-                                <div>
-                                    <Link to='https://fwork.io/freelancers' aria-label="service-top"><StyledOutlineButton>Hire Top-notch Developer
-                                    </StyledOutlineButton></Link>
-                                    <Link to="https://fwork.io/blogs" araia-lang="service-more">
-                                        <StyledOutlineButton className="d middle" >
-                                            <div className="pr">See More Case Studies</div>
-                                            <img src="/img/icon/right-arrow.svg" width={16} alt="No image" />
-                                        </StyledOutlineButton>
-                                    </Link>
+                                    <div>
+                                        <Link to='https://fwork.io/freelancers' aria-label="service-top"><StyledOutlineButton>Hire Top-notch Developer
+                                        </StyledOutlineButton></Link>
+                                        <Link to="https://fwork.io/blogs" araia-lang="service-more">
+                                            <StyledOutlineButton className="d middle" >
+                                                <div className="pr">See More Case Studies</div>
+                                                <img src="/img/icon/right-arrow.svg" width={16} alt="No image" />
+                                            </StyledOutlineButton>
+                                        </Link>
+                                    </div>
                                 </div>
                             </section>
                             <section className="container">

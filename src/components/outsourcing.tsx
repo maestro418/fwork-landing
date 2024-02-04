@@ -14,7 +14,7 @@ const OutSourcing = (props: OutSourcingType) => {
 
     return (
         <StyledOutSourcing style={id === 1 ? { backgroundColor: 'rgb(47, 78, 131)', color: "white", height: "100%" } : { backgroundColor: '', color: "", height: "100%" }}>
-            <div className="pl-1 pr-1">
+            <div>
                 <img src={`/img/icon/${img}`} alt="No image" />
             </div>
             <div>
@@ -34,7 +34,10 @@ const StyledOutSourcing = styled.div`
     box-shadow: rgba(0, 0, 0, 0.09) 0px 3px 12px;
     border-radius: 0.5em;
     transition: all .35s;
-    
+    &>:first-child {
+        padding-inline: 1em;
+    }
+
     &>:nth-child(2) {
         span {
             font-size: 1em;
@@ -46,6 +49,17 @@ const StyledOutSourcing = styled.div`
             font-size: .85em;
             line-height: 1.5em;
             color: #6c757d;
+        }
+    }
+
+    @media screen and (max-width: 489px) {
+        display: flex;
+        flex-direction: column;
+        gap: .5em;
+        align-items: start;
+
+        &>:first-child {
+            padding-inline: 0em;
         }
     }
 `
