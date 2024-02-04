@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
+import { StyledButton } from "./button";
 
 interface BlogCardPropsType {
     banner: string
@@ -24,7 +25,6 @@ const BlogCard = (props: BlogCardPropsType) => {
                 <div className="card-body">
                     <div className="desc">{desc}</div>
                 </div>
-
             </Link>
         </StyledBlogCard>
     )
@@ -77,7 +77,7 @@ const StyledBlogCard = styled.div`
         flex-direction: column;
         gap: 0.5em;
         padding: 1em;
-        height: 170px;
+        height: 100px;
         .desc {
             color: #6c757d;
             line-height: 2em;

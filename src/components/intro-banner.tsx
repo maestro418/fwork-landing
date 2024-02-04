@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
 
-import { HireBtn } from "./button";
+import { StyledButton } from "./button";
 import Loading from "../pages/loading";
 
 interface IntroBannerProps {
@@ -47,14 +47,14 @@ const IntroBanner = ({ title, desc, bgImg }: IntroBannerProps) => {
                         <div className="h4">
                             {desc}
                         </div>
-                        <HireBtn className={`${!!mobile ? 'btn-mobile' : 'w-50'}`}>
+                        <StyledButton className={`${!!mobile ? 'btn-mobile' : 'w-50'}`}>
                             <Link to="https://fwork.io/freelancers" aria-label="hire-btn" className={`btn-hire d center middle `}>
                                 <div className="h4">
                                     Hire Developers
                                 </div>
                                 <img src="/img/hire.svg" alt="No image" width={25} />
                             </Link>
-                        </HireBtn>
+                        </StyledButton>
                     </div>
                 </div>
             </div>

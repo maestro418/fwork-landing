@@ -8,7 +8,7 @@ import CaseCard from "../../components/case-card";
 import HireProcess from "../../components/hire-process";
 import Markdown from "../../components/markdown";
 import AskQuestion from "../../components/ask-question";
-import { StyledButton, Up2Button } from "../../components/button";
+import { StyledButton, StyledOutlineButton, Up2Button } from "../../components/button";
 import E404 from "../e404";
 import ParticlesContainer from "../../components/particle-content";
 import PageTransition from "../../components/page-transition";
@@ -113,13 +113,13 @@ const HireDetail = ({ slug, category, allData }: HireDetailProps) => {
                                             ))}
                                         </div>
                                         <div className="d center gap">
-                                            <Link to='https://fwork.io/freelancers' aria-label="detail-top"><StyledButton>Hire Top-notch Developer
-                                            </StyledButton></Link>
+                                            <Link to='https://fwork.io/freelancers' aria-label="detail-top"><StyledOutlineButton>Hire Top-notch Developer
+                                            </StyledOutlineButton></Link>
                                             <Link to="https://fwork.io/blogs" aria-label="detail-more">
-                                                <StyledButton className="d middle" >
+                                                <StyledOutlineButton className="d middle" >
                                                     <div className="pr">See More Case Studies</div>
                                                     <img src="/img/icon/right-arrow.svg" width={16} alt="No image" />
-                                                </StyledButton>
+                                                </StyledOutlineButton>
                                             </Link>
                                         </div>
                                     </div>
@@ -131,6 +131,7 @@ const HireDetail = ({ slug, category, allData }: HireDetailProps) => {
                                         <div className="col-md-4 text-header">
                                             <label className="h1 mb-1">{status?.item?.faq.title}</label>
                                             <div>Everything you need to know about Fwork LLC. Can’t find the answer you’re looking for?</div>
+                                            <Link to='https://fwork.io/contact-us'><StyledButton className="mt-2 pt-1 pb-1 pl-1 pr-1">Ask Fwork LLC Support Team</StyledButton></Link>
                                         </div>
                                         <div className="col-md-8 pt-2">
                                             {status?.item?.faq.item.map((i, k) => (
@@ -195,7 +196,7 @@ const StyledHireDetail = styled.div`
     }
 
     .text-header {
-        &>:last-child {
+        &>:nth-child(2) {
             color: #6c757d;
             line-height: 2em;
             font-size: .9em;

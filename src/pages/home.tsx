@@ -4,7 +4,7 @@ import styled from "styled-components";
 
 import Layout from "../components/layout";
 import HireProcess from "../components/hire-process";
-import { StyledButton, Up2Button } from "../components/button";
+import { StyledButton, StyledOutlineButton, Up2Button } from "../components/button";
 import CaseCard from "../components/case-card";
 import BlogCard from "../components/blog-card";
 import ServiceCard from "../components/service-card";
@@ -250,7 +250,7 @@ const Home = () => {
                                 </div>
                                 <div className={`${smallScreen ? "mb-1" : ""} d gap`}>
                                     {devbtns.map((i, k) => (
-                                        <StyledButton key={k}>{i}</StyledButton>
+                                        <StyledOutlineButton key={k}>{i}</StyledOutlineButton>
                                     ))}
                                 </div>
                             </div>
@@ -283,13 +283,13 @@ const Home = () => {
                                 ))}
                             </div>
                             <div className="d center gap mt-2 mb-2">
-                                <Link to='https://fwork.io/freelancers' aria-label="top-hire"><StyledButton>Hire Top-notch Developer
-                                </StyledButton></Link>
+                                <Link to='https://fwork.io/freelancers' aria-label="top-hire"><StyledOutlineButton>Hire Top-notch Developer
+                                </StyledOutlineButton></Link>
                                 <Link to="https://fwork.io/blogs" aria-label="more-case">
-                                    <StyledButton className="d middle" >
+                                    <StyledOutlineButton className="d middle" >
                                         <div className="pr">See More Case Studies</div>
                                         <img src="/img/icon/right-arrow.svg" width={16} alt="No image" />
-                                    </StyledButton>
+                                    </StyledOutlineButton>
                                 </Link>
                             </div>
                         </div>
@@ -319,6 +319,7 @@ const Home = () => {
                             <div className="col-lg-4 p-0 text-header">
                                 <div className="h1 mb-1">Frequently Asked Questions</div>
                                 <p className="m-0 mb-1 mt-1">Everything you need to know about Fwork LLC. Can’t find the answer you’re looking for?</p>
+                                <Link to='https://fwork.io/contact-us'><StyledButton className="mt-2 pt-1 pb-1 pl-1 pr-1">Ask Fwork LLC Support Team</StyledButton></Link>
                             </div>
                             <div className="col-lg-8 pt-3">
                                 {faq.map((i, k) => (
@@ -464,17 +465,6 @@ const StyledHome = styled.div`
         padding-inline: 0 !important;
     }   
 
-    .faq-content {
-        button {
-            color: #0f258b;
-            border: 1px solid #0f258b;
-            border-radius: 0.3em;
-            background: inherit;
-            padding: 0.5em 0.7em;
-            font-size: 1em;
-            cursor: pointer;
-        }
-    }
     #blog {
         .d {
             gap: 1em;
@@ -482,7 +472,7 @@ const StyledHome = styled.div`
     }
 
     .text-header {
-        &>:last-child {
+        &>:nth-child(2) {
             color: #6c757d;
             line-height: 2em;
             font-size: .9em;
