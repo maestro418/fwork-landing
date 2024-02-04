@@ -38,36 +38,21 @@ const IntroBanner = ({ title, desc, bgImg }: IntroBannerProps) => {
 
     return (
         <StyledBanner $isMobile={mobile} $bgImg={bgImg}>
-            {(title && desc && bgImg) ? (
-                <div className="container">
-                    <div className="row main-content">
-                        <div className="">
-                            <div className="h1 bold-550">
-                                {title}
-                            </div>
-                            <div className="h4">
-                                {desc}
-                            </div>
-                            <HireBtn className={`${!!mobile ? 'btn-mobile' : 'w-50'}`}>
-                                <Link to="https://fwork.io/freelancers" aria-label="hire-btn" className={`btn-hire d center middle `}>
-                                    <div className="h4">
-                                        Hire Developers
-                                    </div>
-                                    <img src="/img/hire.svg" alt="No image" width={25} />
-                                </Link>
-                            </HireBtn>
+            <div className="container">
+                <div className="row main-content">
+                    <div className="">
+                        <div className="h1 bold-550">
+                            {title}
                         </div>
                     </div>
                 </div>
-            ) : (<Loading />)}
+            </div>
         </StyledBanner>
     )
 }
 
 const StyledBanner = styled.div<StyledBannerProps>`
     width: 100%;
-    background-color: #072163;
-    
     padding: 6em 0 5em 0;
     background-image: url(${(props) => `${!!props.$isMobile ? `/img/header.png` : `${props.$bgImg}`}`});
     background-repeat: no-repeat;
@@ -84,20 +69,6 @@ const StyledBanner = styled.div<StyledBannerProps>`
             flex-direction: column;
             padding: 1em;
             gap: 2em;    
-            /* .h1 {
-                font-size: 2.5em;
-                @media screen and (max-width:668px) {
-                    font-size: 2em;
-                }
-            }
-            .h4 {
-                font-size: 1em;
-                line-height: 2;
-                @media screen and (max-width:668px) {
-                    font-size: 0.8em;
-                    line-height: 2;
-                }
-            }                                            */
         }
         .btn-mobile {
             width: 50%;
@@ -134,7 +105,7 @@ const StyledBanner = styled.div<StyledBannerProps>`
         }
     }
     .h1 {
-        font-size: 2.5em;
+        font-size: 2.2em;
         @media screen and (max-width:668px) {
             font-size: 2em;
         }
@@ -159,9 +130,6 @@ const StyledBanner = styled.div<StyledBannerProps>`
             line-height: 2;
         }
     }   
-    .noImg-content {
-        background-color: "rgb(31, 48, 122)";
-    }
 `
 
 export default IntroBanner
