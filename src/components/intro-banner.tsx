@@ -44,17 +44,6 @@ const IntroBanner = ({ title, desc, bgImg }: IntroBannerProps) => {
                         <div className="h1 bold-550">
                             {title}
                         </div>
-                        <div className="h4">
-                            {desc}
-                        </div>
-                        <HireBtn className={`${!!mobile ? 'btn-mobile' : 'w-50'}`}>
-                            <Link to="https://fwork.io/freelancers" aria-label="hire-btn" className={`btn-hire d center middle `}>
-                                <div className="h4">
-                                    Hire Developers
-                                </div>
-                                <img src="/img/hire.svg" alt="No image" width={25} />
-                            </Link>
-                        </HireBtn>
                     </div>
                 </div>
             </div>
@@ -69,6 +58,7 @@ const StyledBanner = styled.div<StyledBannerProps>`
     background-repeat: no-repeat;
     background-size: cover;
     color: var(--text-tertiary);
+
     .main-content {
         position: relative;
         z-index: 1;

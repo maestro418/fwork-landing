@@ -26,7 +26,7 @@ export const Up2Button = () => {
         <StyledUp2Button>
             {isVisible &&
                 <div onClick={scrollToTop}>
-                    <Icon icon="UpArrow"  />
+                    <Icon icon="UpArrow" />
                 </div>
             }
         </StyledUp2Button>
@@ -120,9 +120,6 @@ const StyledUp2Button = styled.div`
     }
 `;
 
-const ScrollToTopButtonStyled = styled.button`
- 
-`;
 
 export const StyledButton = styled.button`
   ${buttonStyle}

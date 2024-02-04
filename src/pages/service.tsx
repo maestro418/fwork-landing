@@ -179,7 +179,6 @@ const Service = () => {
                         </StyledService>
                     </Layout>
                 </PageTransition>
-
             )}
             {!isValidId && (
                 <E404 />

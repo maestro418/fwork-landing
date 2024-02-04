@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
 
-import HireData from '../context/hiring.json'
 import Layout from "../../components/layout";
 import CaseCard from "../../components/case-card";
 import HireProcess from "../../components/hire-process";
@@ -11,18 +10,14 @@ import ParticlesContainer from "../../components/particle-content";
 import PageTransition from "../../components/page-transition";
 
 
-interface CategoryType {
-    title: string,
-    slug: string,
-    list: Array<{
-        name: string,
-        slug: string,
-        img: string
-    }>
+
+
+interface CategoryProps {
+    allData: DataType[]
 }
 
 
-const HireCategory = () => {
+const HireCategory = ({ allData }: CategoryProps) => {
     const [status, setStatus] = useState<Array<CategoryType>>();
     const [smallScreen, setSmallScreen] = React.useState(false);
 
@@ -92,7 +87,7 @@ const HireCategory = () => {
 
     React.useEffect(() => {
         const initData: Array<CategoryType> = []
-        HireData.map((i, k) => {
+        allData.map((i, k) => {
             const tmpData = { title: i.title, slug: i.slug, list: [] } as CategoryType
             i.list.map((j, key) => {
                 const listTmp = { name: j.name, slug: j.slug, img: j.img }

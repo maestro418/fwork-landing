@@ -15,10 +15,10 @@ const ParticlesContainer = ({ title, desc, bgImg }: { title: string, desc: strin
             },
             interactivity: {
                 events: {
-                    // onClick: {
-                    //     enable: true, 
-                    //     mode: "push", 
-                    // },
+                    onClick: {
+                        enable: true,
+                        mode: "push",
+                    },
                     onHover: {
                         enable: true,
                         mode: "repulse",
@@ -29,7 +29,7 @@ const ParticlesContainer = ({ title, desc, bgImg }: { title: string, desc: strin
                         quantity: 10,
                     },
                     repulse: {
-                        distance: 80, 
+                        distance: 100,
                     },
                 },
             },

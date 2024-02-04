@@ -1,8 +1,6 @@
 import React, { Suspense } from "react";
 import { useParams } from "react-router";
 
-
-
 import HireData from '../context/hiring.json'
 import E404 from "../e404";
 import Loading from "../loading";
@@ -22,11 +20,11 @@ const HireDev = () => {
     const { slug, category } = useParams();
     if (!!slug && !!category) {
         return (
-            <Suspense fallback={<Loading />}><HireDetail slug={slug} category={category} /></Suspense>
+            <Suspense fallback={<Loading />}><HireDetail slug={slug} category={category} allData={HireData} /></Suspense>
         )
     } else if ((!slug && !!category && !!validateCategory(category) || (!slug && !category))) {
         return (
-            <Suspense fallback={<Loading />}> <HireCategory /></Suspense >
+            <Suspense fallback={<Loading />}> <HireCategory allData={HireData} /></Suspense >
         )
     } else {
         return (
