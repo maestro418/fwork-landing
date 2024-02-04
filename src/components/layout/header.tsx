@@ -99,7 +99,7 @@ const Header = ({ menuItems, is404 }: HeaderProps) => {
                                 <Link to={i.link} aria-label={`${k} +1`} ><div>{i.title}</div></Link>
                             )}
                             {!i.link && (
-                                <DropDown title={i.title} options={i.items} openDropDown={openDropDown} setOpenDropDown={setOpenDropDown} scrollEvent={scrollEvent} isMobile={mobile} />
+                                <DropDown title={i.title} options={i.items} openDropDown={openDropDown} setOpenDropDown={setOpenDropDown} scrollEvent={scrollEvent} isMobile={mobile} setOpenSideBar={setOpenSideBar} />
                             )}
                         </React.Fragment>
                     ))}
