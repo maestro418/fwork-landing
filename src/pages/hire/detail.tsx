@@ -107,7 +107,7 @@ const HireDetail = ({ slug, category, allData }: HireDetailProps) => {
                                         <label className="h1 mb-1">{status?.item.project.title}</label>
                                         <div className="row">
                                             {cases?.map((i, k) => (
-                                                <div className="col-md-4 mt mb" >
+                                                <div className="col-md-4 mt mb" key={k} >
                                                     <CaseCard title={i.title} tech={i.tech} img={`hiring/${i.img}`} team={i.team} smallScreen={smallScreen} />
                                                 </div>
                                             ))}
@@ -140,6 +140,7 @@ const HireDetail = ({ slug, category, allData }: HireDetailProps) => {
                                                     desc={i.desc}
                                                     isOpen={activeIndex === k}
                                                     onAccordian={() => onAccordian(k)}
+                                                    key={k}
                                                 />
                                             ))}
                                         </div>
