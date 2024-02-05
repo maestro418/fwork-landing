@@ -197,7 +197,20 @@ const faq = [
     }
 ]
 
-const devbtns = ["AI", "BlockChain", "Mobile"];
+const devbtns = [
+    {
+        title: "AI",
+        link: "/service/ai-development"
+    },
+    {
+        title: "Blockchain",
+        link: "/service/blockchain-development"
+    },
+    {
+        title: "Mobile",
+        link: "/service/mobile-app-development"
+    },
+];
 
 const Home = () => {
 
@@ -250,7 +263,10 @@ const Home = () => {
                                 </div>
                                 <div className={`${smallScreen ? "mb-1" : ""} d gap`}>
                                     {devbtns.map((i, k) => (
-                                        <StyledButton key={k}>{i}</StyledButton>
+                                        <Link to={i.link} key={k}>
+                                            <StyledButton>{i.title}</StyledButton>
+                                        </Link>
+
                                     ))}
                                 </div>
                             </div>
