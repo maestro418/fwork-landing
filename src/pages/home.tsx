@@ -119,7 +119,7 @@ const service = [
     },
     {
         icon: '/img/icon/hiring-icon-2.svg',
-        desc: 'Build a world-class MVP to hit the market',
+        desc: 'Build a world-class MVP(Minimum Viable Product) to hit the market',
         btnLink: 'https://fwork.io/services',
         btnContent: 'Get started',
         bgColor: '#ebeaea'
