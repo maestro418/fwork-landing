@@ -119,7 +119,7 @@ const service = [
     },
     {
         icon: '/img/icon/hiring-icon-2.svg',
-        desc: 'To develop a world-class MVP and introduce it to the market.',
+        desc: 'Build a world-class MVP to hit the market',
         btnLink: 'https://fwork.io/services',
         btnContent: 'Get started',
         bgColor: '#ebeaea'
@@ -238,15 +238,15 @@ const Home = () => {
                                     <div className="number">62</div>
                                     <div className="pl">
                                         <p>EXPERT</p>
-                                        <p>DEVELOPMENT</p>
+                                        <p>DEVELOPMERS</p>
                                         <p>TEAMS</p>
                                     </div>
                                 </div>
                             </div>
                             <div className="col-md-4 col-sm-6 pr-2 pl-2">
                                 <div>
-                                    <div className="number">$140M+</div>
-                                    <p >Raised by early-stage startups who worked with us.</p>
+                                    <div className="number">300+</div>
+                                    <p >Successfully completed projects. Our expertise and commitment are showcased through each project.</p>
                                 </div>
                                 <div className={`${smallScreen ? "mb-1" : ""} d gap`}>
                                     {devbtns.map((i, k) => (
